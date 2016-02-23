@@ -50,7 +50,7 @@ the API.
 - [ ] create `Post` model
 - [ ] create `Comment` model
 - [ ] seed the database with a small amount of test data
-- [ ] CRD API for images (`PostsController`)
+- [ ] CRUD API for images (`PostsController`)
 - [ ] jBuilder views for notes
 - [ ] setup Webpack & Flux scaffold
 - [ ] setup `APIUtil` to interact with the API
