@@ -42,7 +42,7 @@ using Ruby on Rails and React.js. Dogstagram allows users to:
 - [ ] user signup/signin pages
 - [ ] landing page after signin
 
-### Phase 2: Images Model, API, and basic APIUtil (1.5 days)
+### Phase 2: Posts Model, API, and basic APIUtil (1.5 days)
 
 **Objective:** Posts can be created, read, and destroyed through
 the API.
