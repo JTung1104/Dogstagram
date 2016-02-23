@@ -34,7 +34,7 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 name        | string    | not null
-post_id     | integer   | not null, foreign key (references notes), indexed, unique [tag_id]
+post_id     | integer   | not null, foreign key (references posts), indexed, unique [tag_id]
 tag_id      | integer   | not null, foreign key (references tags), indexed
 
 ## users

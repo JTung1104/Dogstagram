@@ -3,17 +3,22 @@ class Api::PostsController < ApplicationController
     @posts = Post.all
   end
 
-  def new
-  end
-
   def show
     @post = Post.find(params[:id])
   end
 
   def update
+    @post = Post.find(params[:id])
+    if @post.save!(post_params)
+      render :show
+    else
+      render json: { error: "no bueno" }, status: 422    #TODO FIX
+    end
   end
 
   def destroy
+    @post = Post.find(params[:id])
+    render :show if @post.destroy!
   end
 
   def create

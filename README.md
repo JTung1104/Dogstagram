@@ -47,11 +47,13 @@ using Ruby on Rails and React.js. Dogstagram allows users to:
 **Objective:** Posts can be created, read, updated, and destroyed through
 the API.
 
-- [ ] create `Post` model
+- [x] create `Post` model
 - [ ] create `Comment` model
 - [ ] seed the database with a small amount of test data
 - [ ] CRUD API for posts (`PostsController`)
+- [ ] CRUD API for comments (`CommentsController`)
 - [ ] jBuilder views for posts
+- [ ] jBuilder views for comments
 - [ ] setup Webpack & Flux scaffold
 - [ ] setup `APIUtil` to interact with the API
 - [ ] test out API interaction in the console.
@@ -87,8 +89,8 @@ user interface.
 
 - [ ] create `Tag` model and join table
 - build out API, Flux loop, and components for:
-  - [ ] fetching tags for image
-  - [ ] adding tags to image
+  - [ ] fetching tags for post
+  - [ ] adding tags to post
   - [ ] searching posts by tag
 
 ### Phase 6: Likes (0.5 days)

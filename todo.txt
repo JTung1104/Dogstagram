@@ -1,0 +1,19 @@
+1. Create a route to create/destroy tags that is not nested
+  The reason being tags don't seem to belong to posts but they exist independently
+
+2. Taggings are the ones to be nested, they belong to a post.
+  Create a tagging, just a connection, similar to follow model
+
+For API stuff - BenchBnB example
+
+  render back json
+  never redirect
+
+  make sure to test it out that things are rendering correctly
+
+
+EXAMPLES TO REFER TO FOR LIKES / TAGS / COMMENTS
+
+Twitter for Likes
+
+CodePen.io for sign-in page css stuff

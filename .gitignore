@@ -17,3 +17,6 @@
 
 # Ignore bundle.js
 /app/assets/javascripts/bundle.js
+
+# Ignore todo.txt
+todo.txt
