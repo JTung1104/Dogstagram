@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :users, only: [:create, :new, :update]
   resource :session, only: [:create, :destroy, :new]
 
-  namespace :api do
+  namespace :api, defaults: { format: :json } do
     resources :tags, only: [:index]
     resources :posts do
       resources :tags, only: [:create, :destroy]

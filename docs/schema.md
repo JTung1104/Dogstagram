@@ -4,7 +4,6 @@
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-body        | text      | not null
 image_url   | string    | not null
 user_id     | integer   | not null, foreign key (references users), indexed
 
