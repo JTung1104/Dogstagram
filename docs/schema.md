@@ -5,11 +5,8 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 body        | text      | not null
-<<<<<<< HEAD
 image_url   | text      | not null
-=======
 image       | picture   | not null
->>>>>>> 08d35e8ae699fea13616d36403e33f3b08403a50
 user_id     | integer   | not null, foreign key (references users), indexed
 
 ## relationships

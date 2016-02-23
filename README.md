@@ -118,13 +118,8 @@ user interface.
 - [ ] Add modals, transitions, and other styling flourishes.
 
 ### Bonus Features (TBD)
-<<<<<<< HEAD
 - [ ] Edit images with filters
 - [ ] Pagination / infinite scroll for Images feed
-=======
-- [ ] Pagination / infinite scroll for Images feed
-- [ ] Edit images with filters
->>>>>>> 08d35e8ae699fea13616d36403e33f3b08403a50
 - [ ] Add videos
 - [ ] Add notifications and user tagging
 
