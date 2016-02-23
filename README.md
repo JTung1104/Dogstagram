@@ -36,11 +36,11 @@ using Ruby on Rails and React.js. Dogstagram allows users to:
 
 **Objective:** Functioning rails project with Authentication
 
-- [ ] create new project
-- [ ] create `User` model
-- [ ] authentication
-- [ ] user signup/signin pages
-- [ ] landing page after signin
+- [x] create new project
+- [x] create `User` model
+- [x] authentication
+- [x] user signup/signin pages
+- [x] landing page after signin
 
 ### Phase 2: Posts Model, API, and basic APIUtil (1.5 days)
 
