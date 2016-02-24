@@ -26,6 +26,15 @@
 - `PATCH /api/posts/:id`
 - `DELETE /api/posts/:id`
 
+### COMMENTS
+
+- `GET /api/posts/:id/comments`
+  - comments index/search
+- `POST /api/posts/:id/comments`
+- `GET /api/posts/:id/comments/:id`
+- `PATCH /api/posts/:id/comments/:id`
+- `DELETE /api/posts/:id/comments/:id`
+
 ### Tags
 
 - A post's tags will be included in the post show template

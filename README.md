@@ -50,11 +50,11 @@ the API.
 - [x] create `Post` model
 - [x] create `Comment` model
 - [x] seed the database with a small amount of test data
-- [ ] CRUD API for posts (`PostsController`)
-- [ ] CRUD API for comments (`CommentsController`)
-- [ ] jBuilder views for posts
-- [ ] jBuilder views for comments
-- [ ] setup Webpack & Flux scaffold
+- [x] CRUD API for posts (`PostsController`)
+- [x] CRUD API for comments (`CommentsController`)
+- [x] jBuilder views for posts
+- [x] jBuilder views for comments
+- [x] setup Webpack & Flux scaffold
 - [ ] setup `APIUtil` to interact with the API
 - [ ] test out API interaction in the console.
 
