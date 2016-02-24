@@ -12,10 +12,10 @@ using Ruby on Rails and React.js. Dogstagram allows users to:
 - [ ] Create an account
 - [ ] Log in / Log out
 - [ ] Follow Users
-- [ ] Create, Read, Update, and Delete Images
-- [ ] Like Images
-- [ ] Create, Read, Update, and Delete comments
-- [ ] Tag images with multiple tags
+- [ ] Create, Read, Update, and Delete Posts
+- [ ] Like Posts
+- [ ] Create, Read, Update, and Delete Comments
+- [ ] Tag Posts with multiple tags
 
 ## Design Docs
 * [View Wireframes][views]

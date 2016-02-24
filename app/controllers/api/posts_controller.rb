@@ -9,10 +9,11 @@ class Api::PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
+
     if @post.save!(post_params)
       render :show
     else
-      render json: { error: "no bueno" }, status: 422    #TODO FIX
+      render json: { error: "no bueno" }, status: 422
     end
   end
 
@@ -23,6 +24,7 @@ class Api::PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    render :show if @post.save!
   end
 
   private
