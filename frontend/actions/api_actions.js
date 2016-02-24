@@ -13,7 +13,8 @@ var ApiActions = {
       actionType: PostConstants.POST_RECEIVED,
       post: post
     });
-  }
+  },
+  
 };
 
 module.exports = ApiActions;

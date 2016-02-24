@@ -20,6 +20,16 @@ var ApiUtil = {
       },
       dataType: "json"
     });
+  },
+  createPost: function (data) {
+    $.ajax({
+      method: "POST",
+      url: "api/posts/",
+      success: function (post) {
+        ApiActions.receiveSinglePost([post]);
+      },
+      dataType: "json"
+    });
   }
 };
 
