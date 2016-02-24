@@ -3,6 +3,7 @@ json.array! @posts do |post|
   time_in_minutes = time_in_seconds / 60
   time_in_hours = time_in_minutes / 60
 
+  json.id post.id
   json.image_url post.image_url
   json.user post.user.username
   json.created_hours_ago time_in_hours
