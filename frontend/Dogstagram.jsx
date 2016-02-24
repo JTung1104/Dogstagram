@@ -5,7 +5,6 @@ var Route = require('react-router').Route;
 var ApiUtil = require('./util/api_util');
 var PostStore = require('./stores/post');
 var App = require('./components/app');
-var hashHistory = require('react-router').hashHistory;
 
 var routes = (
   <Route component={App} path="/" />
@@ -13,7 +12,7 @@ var routes = (
 
 $(document).ready(function (){
   ReactDOM.render(
-    <Router history={hashHistory}>{routes}</Router>,
+    <Router>{routes}</Router>,
     document.getElementById('root')
   );
 });
