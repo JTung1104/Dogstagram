@@ -10,5 +10,17 @@ var ApiUtil = {
       },
       dataType: "json"
     });
+  },
+  fetchSinglePost: function (id) {
+    $.ajax({
+      method: "GET",
+      url: "api/posts/" + id,
+      success: function (data) {
+        ApiActions.receiveSinglePost(data);
+      },
+      dataType: "json"
+    });
   }
 };
+
+module.exports = ApiUtil;

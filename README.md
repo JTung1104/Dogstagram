@@ -55,8 +55,8 @@ the API.
 - [x] jBuilder views for posts
 - [x] jBuilder views for comments
 - [x] setup Webpack & Flux scaffold
-- [ ] setup `APIUtil` to interact with the API
-- [ ] test out API interaction in the console.
+- [x] setup `APIUtil` to interact with the API
+- [x] test out API interaction in the console.
 
 ### Phase 3: Flux Architecture and Router (1.5 days)
 

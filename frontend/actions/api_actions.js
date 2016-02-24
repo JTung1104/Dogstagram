@@ -7,6 +7,12 @@ var ApiActions = {
       actionType: PostConstants.POSTS_RECEIVED,
       posts: posts
     });
+  },
+  receiveSinglePost: function (post) {
+    AppDispatcher.dispatch({
+      actionType: PostConstants.POST_RECEIVED,
+      post: post
+    });
   }
 };
 

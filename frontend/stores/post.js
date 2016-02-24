@@ -15,6 +15,10 @@ PostStore.__onDispatch = function (payload) {
       resetPosts(payload.posts);
       PostStore.__emitChange();
       break;
+    case PostConstants.POST_RECEIVED:
+      resetPosts(payload.post);
+      PostStore.__emitChange();
+      break;
   }
 };
 
