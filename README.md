@@ -63,8 +63,8 @@ the API.
 **Objective:** Posts can be created, read, and destroyed with the
 user interface.
 
-- [ ] setup the flux loop with skeleton files
-- [ ] setup React Router
+- [x] setup the flux loop with skeleton files
+- [x] setup React Router
 - implement each post component, building out the flux loop as needed.
   - [ ] `Image`
   - [ ] `ImageHeader`

@@ -4,7 +4,7 @@ var ApiUtil = {
   fetchPosts: function () {
     $.ajax({
       method: "GET",
-      url: "api/posts",
+      url: "/api/posts",
       success: function (data) {
         ApiActions.receiveAllPosts(data);
       },
@@ -14,7 +14,7 @@ var ApiUtil = {
   fetchSinglePost: function (id) {
     $.ajax({
       method: "GET",
-      url: "api/posts/" + id,
+      url: "/api/posts/" + id,
       success: function (data) {
         ApiActions.receiveSinglePost(data);
       },
@@ -24,7 +24,18 @@ var ApiUtil = {
   createPost: function (data) {
     $.ajax({
       method: "POST",
-      url: "api/posts/",
+      url: "/api/posts/",
+      data: {post: data},
+      success: function (post) {
+        ApiActions.receiveSinglePost([post]);
+      },
+      dataType: "json"
+    });
+  },
+  deletePost: function (id) {
+    $.ajax({
+      method: "DELETE",
+      url: "/api/posts/" + id,
       success: function (post) {
         ApiActions.receiveSinglePost([post]);
       },
