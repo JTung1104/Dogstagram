@@ -48,8 +48,8 @@ using Ruby on Rails and React.js. Dogstagram allows users to:
 the API.
 
 - [x] create `Post` model
-- [ ] create `Comment` model
-- [ ] seed the database with a small amount of test data
+- [x] create `Comment` model
+- [x] seed the database with a small amount of test data
 - [ ] CRUD API for posts (`PostsController`)
 - [ ] CRUD API for comments (`CommentsController`)
 - [ ] jBuilder views for posts

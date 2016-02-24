@@ -1,2 +1,2 @@
-module CommentsHelper
+module Api::CommentsHelper
 end

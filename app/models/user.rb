@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6, allow_nil: true }
 
   has_many :posts
-  
+
   attr_reader :password
 
   after_initialize :ensure_session_token
@@ -29,15 +29,6 @@ class User < ActiveRecord::Base
     self.session_token
   end
 
-  private
-  def user_params
-    params.require(:user).permit(:username, :password_digest, :profile)
-  end
-
-  def ensure_session_token
-    self.session_token ||= generate_session_token
-  end
-
   def generate_session_token
     token = SecureRandom.urlsafe_base64(16)
 
@@ -46,5 +37,14 @@ class User < ActiveRecord::Base
     end
 
     token
+  end
+
+  private
+  def user_params
+    params.require(:user).permit(:username, :password_digest, :profile)
+  end
+
+  def ensure_session_token
+    self.session_token ||= generate_session_token
   end
 end
