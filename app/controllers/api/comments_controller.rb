@@ -1,8 +1,4 @@
 class Api::CommentsController < ApplicationController
-  def index
-    @comments = Comment.all
-  end
-
   def create
     @comment = Comment.new(comment_params)
   end
@@ -14,7 +10,7 @@ class Api::CommentsController < ApplicationController
 
   def update
     @comment = Comment.find(params[:id])
-    if @comment.save!(comment_params)
+    if @comment.save!(body: params[:comment][:body])
       render :show
     else
       render json: { error: "no bueno" }, status: 422    #TODO FIX
@@ -22,7 +18,7 @@ class Api::CommentsController < ApplicationController
   end
 
   def show
-    @comment = Comment.find(params[:id])
+    @comment = Comment.includes(:user).find(params[:id])
   end
 
   private
