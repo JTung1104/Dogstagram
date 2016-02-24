@@ -16,4 +16,4 @@ EXAMPLES TO REFER TO FOR LIKES / TAGS / COMMENTS
 
 Twitter for Likes
 
-CodePen.io for sign-in page css stuff
+CodePen.io for sign-in page css
