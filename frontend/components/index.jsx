@@ -30,7 +30,7 @@ var Index = React.createClass({
       );
     }.bind(this));
 
-    return ( <div>Index{posts}</div> );
+    return ( <div className="index">Index{posts}</div> );
   }
 });
 
