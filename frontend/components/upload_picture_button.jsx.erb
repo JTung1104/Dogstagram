@@ -3,8 +3,14 @@ var React = require('react');
 var UploadPictureButton = React.createClass({
   handleUploadPicture: function (e) {
     e.preventDefault();
+
+    var options = {
+      cloud_name: '<%= ENV["cloud_name"] %>',
+      upload_preset: '<%= ENV["upload_preset"] %>'
+    };
+
     cloudinary.openUploadWidget(
-      {cloud_name: "dsolojfgk", upload_preset: "f7l58upk"},
+      options,
       function (error, result) {
         if (result.length > 1) {
           console.log("Too many photos");
@@ -16,9 +22,9 @@ var UploadPictureButton = React.createClass({
   render: function () {
     return (
       <div>
-        <button
+        <a href="#"
           className="upload-picture-button"
-          onClick={this.handleUploadPicture}>Upload Picture</button>
+          onClick={this.handleUploadPicture}>Upload Picture</a>
       </div>
     )
   }

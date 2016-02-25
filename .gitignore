@@ -20,3 +20,6 @@
 
 # Ignore todo.txt
 todo.txt
+
+# Ignore application configuration
+/config/application.yml

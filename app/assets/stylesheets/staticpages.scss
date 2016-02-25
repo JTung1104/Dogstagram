@@ -216,6 +216,10 @@ h1, h2, p, strong, em, a {
   -webkit-transform-origin: 96px 14px;
 }
 
+.search-field:focus {
+  outline: 0;
+}
+
 #root {
   background-color: #FAFAFA;
 }
