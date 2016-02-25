@@ -10,10 +10,21 @@
 </head>
 <body>
 
-<!-- <% if signed_in? %>
-  <h2><%= current_user.username %></h2>
-  <%= button_to "Logout", session_url, method: :delete %>
-<% end %> -->
+  <script>
+    <% if signed_in? %>
+      window.currentUserId = <%= current_user.id %>;
+    <% else %>
+      window.currentUserId = null;
+    <% end %>
+  </script>
+
+  <script type="text/javascript">
+    window.CLOUDINARY = {
+      upload_preset: "<%=ENV['upload_preset']%>",
+      cloud_name: "<%=ENV['cloud_name']%>",
+      theme: 'white'
+    };
+  </script>
 
 <%= flash[:errors].join("<br>").html_safe if flash[:errors] %>
 

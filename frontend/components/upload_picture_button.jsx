@@ -4,13 +4,8 @@ var UploadPictureButton = React.createClass({
   handleUploadPicture: function (e) {
     e.preventDefault();
 
-    var options = {
-      cloud_name: '<%= ENV["cloud_name"] %>',
-      upload_preset: '<%= ENV["upload_preset"] %>'
-    };
-
     cloudinary.openUploadWidget(
-      options,
+      CLOUDINARY,
       function (error, result) {
         if (result.length > 1) {
           console.log("Too many photos");
@@ -24,9 +19,13 @@ var UploadPictureButton = React.createClass({
       <div>
         <a href="#"
           className="upload-picture-button"
-          onClick={this.handleUploadPicture}>Upload Picture</a>
+          onClick={this.handleUploadPicture}>
+          <img
+            src="http://res.cloudinary.com/dsolojfgkabc/image/upload/v1456438256/instagram-photo-camera-logo-outline_xfplow.png"
+            className="icon"/>
+        </a>
       </div>
-    )
+    );
   }
 });
 

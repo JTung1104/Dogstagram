@@ -66,7 +66,7 @@ user interface.
 - [x] setup the flux loop with skeleton files
 - [x] setup React Router
 - implement each post component, building out the flux loop as needed.
-  - [ ] `NavBar`
+  - [x] `NavBar`
   - [x] `Picture`
   - [ ] `UploadPictureForm`
   - [x] `PostHeader`
