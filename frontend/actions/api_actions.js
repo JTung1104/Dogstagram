@@ -1,5 +1,6 @@
 var AppDispatcher = require('../dispatcher/dispatcher');
 var PostConstants = require('../constants/post_constants');
+var UserConstants = require('../constants/user_constants');
 
 var ApiActions = {
   receiveAllPosts: function (posts) {
@@ -14,7 +15,12 @@ var ApiActions = {
       post: post
     });
   },
-  
+  receiveUser: function (user) {
+    AppDispatcher.dispatch({
+      actionType: UserConstants.USER_RECEIVED,
+      user: user
+    });
+  }
 };
 
 module.exports = ApiActions;
