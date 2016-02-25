@@ -10,10 +10,10 @@
 </head>
 <body>
 
-<% if signed_in? %>
+<!-- <% if signed_in? %>
   <h2><%= current_user.username %></h2>
   <%= button_to "Logout", session_url, method: :delete %>
-<% end %>
+<% end %> -->
 
 <%= flash[:errors].join("<br>").html_safe if flash[:errors] %>
 

@@ -70,9 +70,9 @@ user interface.
   - [x] `Picture`
   - [ ] `UploadPictureForm`
   - [x] `PostHeader`
-  - [ ] `CommentBox`
-  - [ ] `CommentTable`
-  - [ ] `CommentItem`
+  - [x] `CommentBox`
+  - [x] `CommentTable`
+  - [x] `CommentItem`
   - [ ] `NumLikes`
   - [ ] `CommentForm`
   - [ ] `LikeButton`

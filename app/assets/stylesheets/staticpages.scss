@@ -104,11 +104,118 @@ h1, h2, p, strong, em, a {
 .comment-username {
   display: inline-block;
   color: #125688;
+  position: relative;
+  right: 1%;
   font-size: 15px;
   line-height: 18px;
   font-weight: 600;
 }
 
+.nav-header {
+  cursor: default;
+  height: 88px;
+  width: 1282px;
+  perspective-origin: 641px 44.5px;
+  transform-origin: 641px 44.5px;
+  background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+  border-bottom: 1px solid rgb(238, 238, 238);
+  font: normal normal normal normal 16px / normal Times;
+  -webkit-border-after: 1px solid rgb(238, 238, 238);
+  -webkit-transform-origin: 641px 44.5px;
+}
+
+.nav {
+  height: 88px;
+  width: 600px;
+  perspective-origin: 300px 44px;
+  transform-origin: 300px 44px;
+  font: normal normal normal normal 16px / normal Times;
+  margin: 0px auto;
+  -webkit-transform-origin: 300px 44px;
+}
+
+.nav:after {
+  clear: both;
+  content: "";
+  display: block;
+  width: 600px;
+  perspective-origin: 300px 0px;
+  transform-origin: 300px 0px;
+  -webkit-transform-origin: 300px 0px;
+}
+
+.logo-header {
+  color: rgb(45, 101, 153);
+  float: left;
+  height: 23px;
+  width: 81.9375px;
+  -webkit-column-rule-color: rgb(45, 101, 153);
+  perspective-origin: 40.9688px 41.5px;
+  -webkit-text-emphasis-color: rgb(45, 101, 153);
+  -webkit-text-fill-color: rgb(45, 101, 153);
+  -webkit-text-stroke-color: rgb(45, 101, 153);
+  transform-origin: 40.9688px 41.5px;
+  border: 0px none rgb(45, 101, 153);
+  font: normal normal normal normal 18px / normal 'Lobster Two';
+  margin: 0px;
+  outline: rgb(45, 101, 153) none 0px;
+  padding: 30px 0px;
+  -webkit-border-after: 0px none rgb(45, 101, 153);
+  -webkit-border-before: 0px none rgb(45, 101, 153);
+  -webkit-border-end: 0px none rgb(45, 101, 153);
+  -webkit-border-start: 0px none rgb(45, 101, 153);
+  -webkit-transform-origin: 40.9688px 41.5px;
+}
+
+.logo {
+  color: rgb(45, 101, 153);
+  text-decoration: none;
+  -webkit-column-rule-color: rgb(45, 101, 153);
+  -webkit-text-decorations-in-effect: none;
+  -webkit-text-emphasis-color: rgb(45, 101, 153);
+  -webkit-text-fill-color: rgb(45, 101, 153);
+  -webkit-text-stroke-color: rgb(45, 101, 153);
+  border: 0px none rgb(45, 101, 153);
+  font: normal normal normal normal 18px / normal 'Lobster Two';
+  outline: rgb(45, 101, 153) none 0px;
+  -webkit-border-after: 0px none rgb(45, 101, 153);
+  -webkit-border-before: 0px none rgb(45, 101, 153);
+  -webkit-border-end: 0px none rgb(45, 101, 153);
+  -webkit-border-start: 0px none rgb(45, 101, 153);
+}
+
+.search {
+  float: left;
+  height: 28px;
+  width: 192px;
+  perspective-origin: 96px 44px;
+  transform-origin: 96px 44px;
+  font: normal normal normal normal 16px / normal Times;
+  margin: 0px 0px 0px 120px;
+  padding: 30px 0px;
+  -webkit-transform-origin: 96px 44px;
+}
+
+.search-field {
+  box-sizing: content-box;
+  height: 16px;
+  text-align: center;
+  width: 180px;
+  -webkit-appearance: none;
+  perspective-origin: 96px 14px;
+  transform-origin: 96px 14px;
+  background: rgb(250, 250, 250) none repeat scroll 0% 0% / auto padding-box border-box;
+  border: 1px solid rgb(238, 238, 238);
+  border-radius: 15px 15px 15px 15px;
+  font: normal normal normal normal 14px / normal Helvetica;
+  padding: 5px;
+  -webkit-border-after: 1px solid rgb(238, 238, 238);
+  -webkit-border-before: 1px solid rgb(238, 238, 238);
+  -webkit-border-end: 1px solid rgb(238, 238, 238);
+  -webkit-border-start: 1px solid rgb(238, 238, 238);
+  -webkit-transform-origin: 96px 14px;
+}
+
 #root {
-  background-color: #fafafa;
+  background-color: #FAFAFA;
 }

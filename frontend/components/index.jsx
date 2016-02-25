@@ -2,6 +2,7 @@ var React = require('react');
 var PostStore = require('../stores/post');
 var ApiUtil = require('../util/api_util');
 var Post = require('./post');
+var NavBar = require('./nav_bar');
 
 var Index = React.createClass({
   getInitialState: function () {
@@ -24,7 +25,12 @@ var Index = React.createClass({
       return ( <Post key={idx} post={post}/> );
     }.bind(this));
 
-    return ( <div className="index">{posts}</div> );
+    return (
+      <div>
+        <NavBar/>
+        <div className="index">{posts}</div>
+      </div>
+  );
   }
 });
 
