@@ -67,9 +67,9 @@ user interface.
 - [x] setup React Router
 - implement each post component, building out the flux loop as needed.
   - [ ] `NavBar`
-  - [ ] `Picture`
+  - [x] `Picture`
   - [ ] `UploadPictureForm`
-  - [ ] `PictureHeader`
+  - [ ] `PostHeader`
   - [ ] `CommentBox`
   - [ ] `CommentTable`
   - [ ] `CommentItem`

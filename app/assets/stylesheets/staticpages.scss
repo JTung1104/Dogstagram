@@ -40,6 +40,34 @@ h1, h2, p, strong, em, a {
   -webkit-box-orient: vertical;
 }
 
+.post {
+  background-color: #FFF;
+  border: 1px solid #edeeee;
+  border-radius: 3px;
+  margin-bottom: 60px;
+  margin-left: -1px;
+  margin-right: -1px;
+}
+
+.post-header {
+  height: 64px;
+  padding: 14px, 20px;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 600;
+  color: #125688;
+}
+
+.post-header a, a:visited {
+  color: #125688;
+}
+
+.picture {
+  border-top: 1px solid #eeefef;
+  border-bottom: 1px solid #eeefef;
+  box-shadow: inset 0px 0px 20px 0px #edeeee;
+}
+
 #root {
   background-color: #fafafa;
 }
