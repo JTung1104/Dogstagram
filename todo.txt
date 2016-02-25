@@ -25,5 +25,5 @@ See feed when logging in
 make Index component
   contain a bunch of posts
   fetch request for all the posts
-  
-Create Follows, Tags, Relationships
+
+Create Tags, Relationships

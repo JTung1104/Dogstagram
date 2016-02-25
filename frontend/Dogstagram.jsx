@@ -6,12 +6,13 @@ var ApiUtil = require('./util/api_util');
 var PostStore = require('./stores/post');
 var App = require('./components/app');
 var Index = require('./components/index');
+var IndexRoute = require('react-router').IndexRoute;
 
 var routes = (
   <Route component={App} path="/">
-    <IndexRoute component={Index}></IndexRoute>
+    <IndexRoute component={Index}/>
   </Route>
-)
+);
 
 $(document).ready(function (){
   ReactDOM.render(

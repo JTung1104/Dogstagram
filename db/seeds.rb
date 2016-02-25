@@ -23,51 +23,51 @@ sammilicious404 = User.create!(
 )
 
 post1 = Post.create!(
-  image_url: "https://unsplash.com/photos/OK1y_pUVupw",
+  image_url: "photo-1456254394237-131c81cd1f58_ljbwto.jpg",
   user_id: herrokitty.id
 )
 post2 = Post.create!(
-  image_url: "https://unsplash.com/photos/aMIFcgCSz5M",
+  image_url: "photo-1456242951842-39924e7a7876_puig4w.jpg",
   user_id: herrokitty.id
 )
 post3 = Post.create!(
-  image_url: "https://unsplash.com/photos/fpHlXbLAlsk",
+  image_url: "photo-1456235933389-79d1d5251811_np2y4h.jpg",
   user_id: juliehuang802.id
 )
-post4 =Post.create!(
-  image_url: "https://unsplash.com/photos/wwzQKvY6PvA",
+post4 = Post.create!(
+  image_url: "photo-1456231148835-214082199cd2_y0usou.jpg",
   user_id: juliehuang802.id
 )
-Post.create!(
-  image_url: "https://unsplash.com/photos/iPKkaPQH8vw",
+post12 = Post.create!(
+  image_url: "photo-1456221670210-b0227a67f655_l2gebz.jpg",
   user_id: juliehuang802.id
 )
 post5 = Post.create!(
-  image_url: "https://unsplash.com/photos/pChE-f_gqVc",
+  image_url: "photo-1426287658398-5a912ce1ed0a_znpotx.jpg",
   user_id: doglover1027.id
 )
 post6 = Post.create!(
-  image_url: "https://unsplash.com/photos/z_eFLP9aS6s",
+  image_url: "photo-1455757618770-0a58b0b28ebd_qw3han.jpg",
   user_id: doglover1027.id
 )
 post7 = Post.create!(
-  image_url: "https://unsplash.com/photos/NUMlxTPsznM",
+  image_url: "photo-1415904663467-dfdc16cae794_xujxyk.jpg",
   user_id: doglover1027.id
 )
 post8 = Post.create!(
-  image_url: "https://unsplash.com/photos/AdJTW_dqGhY",
+  image_url: "photo-1444204091080-d0e664341e6b_d09xh2.jpg",
   user_id: sammilicious404.id
 )
 post9 = Post.create!(
-  image_url: "https://unsplash.com/photos/JMD2xOvcLVw",
+  image_url: "photo-1414496213569-23220f1033cd_b6koju.jpg",
   user_id: sammilicious404.id
 )
 post10 = Post.create!(
-  image_url: "https://unsplash.com/photos/8VcxFe_FKa4",
+  image_url: "photo-1447887781034-d96bb36d5e00_p61juk.jpg",
   user_id: sammilicious404.id
 )
 post11 = Post.create!(
-  image_url: "https://unsplash.com/photos/bClr95glx6k",
+  image_url: "photo-1452800185063-6db5e12b8e2e_rkapil.jpg",
   user_id: sammilicious404.id
 )
 Comment.create!(
@@ -129,4 +129,44 @@ Comment.create!(
   body: "First here too!!",
   user_id: sammilicious404.id,
   post_id: post10.id
+)
+Relationship.create!(
+  follower_id: 1,
+  followed_id: 2
+)
+Relationship.create!(
+  follower_id: 1,
+  followed_id: 3
+)
+Relationship.create!(
+  follower_id: 1,
+  followed_id: 4
+)
+Relationship.create!(
+  follower_id: 2,
+  followed_id: 1
+)
+Relationship.create!(
+  follower_id: 2,
+  followed_id: 3
+)
+Relationship.create!(
+  follower_id: 2,
+  followed_id: 4
+)
+Relationship.create!(
+  follower_id: 3,
+  followed_id: 1
+)
+Relationship.create!(
+  follower_id: 3,
+  followed_id: 2
+)
+Relationship.create!(
+  follower_id: 3,
+  followed_id: 4
+)
+Relationship.create!(
+  follower_id: 4,
+  followed_id: 1
 )

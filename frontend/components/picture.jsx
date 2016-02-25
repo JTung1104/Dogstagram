@@ -6,7 +6,7 @@ var Picture = React.createClass({
 
     return (
       <div className="picture">
-        <img src={url + this.props.photoOptions + this.props.image_url} />
+        <img src={url + this.props.photoOptions + this.props.imageUrl} />
       </div>
     );
   }
