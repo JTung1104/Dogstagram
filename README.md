@@ -69,7 +69,7 @@ user interface.
   - [ ] `NavBar`
   - [x] `Picture`
   - [ ] `UploadPictureForm`
-  - [ ] `PostHeader`
+  - [x] `PostHeader`
   - [ ] `CommentBox`
   - [ ] `CommentTable`
   - [ ] `CommentItem`
@@ -108,9 +108,9 @@ user interface.
 
 **Objective:** User can be follow multiple users, and feed gets populated with followed users' content.
 
-- [ ] create `Relationship` model and join table
+- [x] create `Relationship` model and join table
 - build out API, Flux loop, and components for:
-  - [ ] fetching images for feed
+  - [x] fetching images for feed
   - [ ] searching images by username
 
 ### Phase 8: Styling Cleanup and Seeding (1 day)

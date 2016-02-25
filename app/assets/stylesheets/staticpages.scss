@@ -68,6 +68,19 @@ h1, h2, p, strong, em, a {
   box-shadow: inset 0px 0px 20px 0px #edeeee;
 }
 
+.username {
+  display: inline-block;
+  position: relative;
+  left: 3%;
+  top: 23px;
+}
+
+.timestamp {
+  display: inline-block;
+  position: relative;
+  left: 77%;
+  top: 23px;
+}
 #root {
   background-color: #fafafa;
 }

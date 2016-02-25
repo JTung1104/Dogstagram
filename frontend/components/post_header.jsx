@@ -4,8 +4,12 @@ var PostHeader = React.createClass({
   render: function () {
     return (
       <header className="post-header">
-        {this.props.username}
-        <div>{this.props.timeAgo}</div>
+        <div className="username">
+          {this.props.username}
+        </div>
+        <div className="timestamp">
+          {this.props.timeAgo}
+        </div>
       </header>
       );
   }
