@@ -17,3 +17,13 @@ EXAMPLES TO REFER TO FOR LIKES / TAGS / COMMENTS
 Twitter for Likes
 
 CodePen.io for sign-in page css
+
+
+Position everything first
+Index page
+See feed when logging in
+make Index component
+  contain a bunch of posts
+  fetch request for all the posts
+  
+Create Follows, Tags, Relationships

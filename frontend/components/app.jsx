@@ -6,10 +6,7 @@ var App = React.createClass({
   render: function () {
     return (
       <div>
-        Picture
-        <br/>
-        <Picture/>
-        <UploadPictureButton/>
+        {this.props.children}
       </div>
     );
   }
