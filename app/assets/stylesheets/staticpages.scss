@@ -68,6 +68,19 @@ h1, h2, p, strong, em, a {
   box-shadow: inset 0px 0px 20px 0px #edeeee;
 }
 
+.comment-box {
+  padding: 0px 24px;
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+  box-sizing: border-box;
+  -webkit-box-align: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  align-items: stretch;
+}
+
 .username {
   display: inline-block;
   position: relative;
@@ -81,6 +94,21 @@ h1, h2, p, strong, em, a {
   left: 77%;
   top: 23px;
 }
+
+.comment-body {
+  display: inline-block;
+  position: relative;
+  left: 4px;
+}
+
+.comment-username {
+  display: inline-block;
+  color: #125688;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 600;
+}
+
 #root {
   background-color: #fafafa;
 }
