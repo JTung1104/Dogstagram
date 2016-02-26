@@ -4,10 +4,10 @@ var UserStore = require('../stores/user');
 
 var HeaderProfileLink = React.createClass({
   getInitialState: function () {
-    return { username: username };
+    return { username: "username" };
   },
   onChange: function () {
-    this.setState({ username: UserStore.all()[0] })
+    this.setState({ username: UserStore.all()[0].username })
   },
   componentDidMount: function () {
     this.token = UserStore.addListener(this.onChange);
@@ -19,7 +19,7 @@ var HeaderProfileLink = React.createClass({
   render: function () {
     return (
       <a className="header-profile-link" href="#">
-
+        {this.state.username}
       </a>
     );
   }

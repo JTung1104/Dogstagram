@@ -10,6 +10,9 @@ var UploadPictureButton = React.createClass({
         if (result.length > 1) {
           console.log("Too many photos");
         } else {
+          // style modal
+          // push state to trigger second modal
+          // pass it the savePhotoUrl
           this.props.savePhotoUrl(result[0].url.slice(61));
         }
     }.bind(this));

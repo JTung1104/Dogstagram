@@ -4,7 +4,7 @@ var CommentItem = React.createClass({
   render: function () {
     return (
       <div className="comment-item">
-        <div className="comment-username">{this.props.comment.user}</div>
+        <a href="#" className="comment-username">{this.props.comment.user}</a>
         <p className="comment-body">{this.props.comment.body}</p>
       </div>
     );

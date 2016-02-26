@@ -73,7 +73,7 @@ user interface.
   - [x] `CommentBox`
   - [x] `CommentTable`
   - [x] `CommentItem`
-  - [ ] `NumLikes`
+  - [x] `NumLikes`
   - [ ] `CommentForm`
   - [ ] `LikeButton`
 

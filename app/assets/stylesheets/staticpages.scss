@@ -65,23 +65,22 @@ h1, h2, p, strong, em, a {
 .picture {
   border-top: 1px solid #eeefef;
   border-bottom: 1px solid #eeefef;
-  box-shadow: inset 0px 0px 20px 0px #edeeee;
 }
 
 .comment-box {
-  padding: 0px 24px;
-  font-size: 15px;
-  line-height: 18px;
-  display: flex;
-  box-sizing: border-box;
-  -webkit-box-align: stretch;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column;
-  align-items: stretch;
+  height: 219px;
+  text-align: left;
+  width: 558px;
+  perspective-origin: 299px 119.5px;
+  transform-origin: 299px 119.5px;
+  font: normal normal normal normal 15px / normal Montserrat;
+  padding: 20px 20px 0px;
+  -webkit-transform-origin: 299px 119.5px;
 }
 
 .username {
+  font: normal normal normal normal 14px / normal Montserrat;
+  color: #125688;
   display: inline-block;
   position: relative;
   left: 3%;
@@ -95,20 +94,68 @@ h1, h2, p, strong, em, a {
   top: 23px;
 }
 
+.comment-item {
+  height: 35px;
+  text-align: left;
+  width: 558px;
+  perspective-origin: 279px 17.5px;
+  transform-origin: 279px 17.5px;
+  font: normal normal normal normal 15px / normal Helvetica;
+  margin: 10px 0px;
+  -webkit-transform-origin: 279px 17.5px;
+}
+
 .comment-body {
-  display: inline-block;
-  position: relative;
-  left: 4px;
+  display: inline;
+  height: auto;
+  text-align: left;
+  width: auto;
+  font: normal normal normal normal 15px / normal Helvetica;
+  margin: 0px;
+}
+
+.comment-table {
+  height: 101px;
+  text-align: left;
+  width: 558px;
+  perspective-origin: 279px 61px;
+  transform-origin: 279px 61px;
+  border-bottom: 1px solid rgb(238, 238, 238);
+  font: normal normal normal normal 15px / normal Helvetica;
+  padding: 0px 0px 20px;
+  -webkit-border-after: 1px solid rgb(238, 238, 238);
+  -webkit-transform-origin: 279px 61px;
+}
+
+.comment-table:after {
+  clear: both;
+  content: '';
+  display: block;
+  text-align: left;
+  width: 558px;
+  perspective-origin: 279px 0px;
+  transform-origin: 279px 0px;
+  font: normal normal normal normal 15px / normal Helvetica;
+  -webkit-transform-origin: 279px 0px;
 }
 
 .comment-username {
-  display: inline-block;
   color: #125688;
-  position: relative;
-  right: 1%;
-  font-size: 15px;
-  line-height: 18px;
-  font-weight: 600;
+  text-align: left;
+  text-decoration: none;
+  -webkit-column-rule-color: rgb(18, 86, 136);
+  -webkit-text-decorations-in-effect: none;
+  -webkit-text-emphasis-color: rgb(18, 86, 136);
+  -webkit-text-fill-color: rgb(18, 86, 136);
+  -webkit-text-stroke-color: rgb(18, 86, 136);
+  border: 0px none rgb(18, 86, 136);
+  font: normal normal normal normal 14px / normal Montserrat;
+  outline: rgb(18, 86, 136) none 0px;
+  padding: 0px 10px 0px 0px;
+  -webkit-border-after: 0px none rgb(18, 86, 136);
+  -webkit-border-before: 0px none rgb(18, 86, 136);
+  -webkit-border-end: 0px none rgb(18, 86, 136);
+  -webkit-border-start: 0px none rgb(18, 86, 136);
 }
 
 .nav-header {
@@ -295,6 +342,29 @@ h1, h2, p, strong, em, a {
   line-height: 18px;
   font-weight: 600;
   font-size: 15px;
+}
+
+.num-likes {
+  color: rgb(75, 79, 84);
+  display: block;
+  height: 17px;
+  text-align: left;
+  width: 558px;
+  -webkit-column-rule-color: rgb(75, 79, 84);
+  perspective-origin: 279px 8.5px;
+  -webkit-text-emphasis-color: rgb(75, 79, 84);
+  -webkit-text-fill-color: rgb(75, 79, 84);
+  -webkit-text-stroke-color: rgb(75, 79, 84);
+  transform-origin: 279px 8.5px;
+  border: 0px none rgb(75, 79, 84);
+  font: normal normal bold normal 15px / normal Helvetica;
+  margin: 0px 0px 10px;
+  outline: rgb(75, 79, 84) none 0px;
+  -webkit-border-after: 0px none rgb(75, 79, 84);
+  -webkit-border-before: 0px none rgb(75, 79, 84);
+  -webkit-border-end: 0px none rgb(75, 79, 84);
+  -webkit-border-start: 0px none rgb(75, 79, 84);
+  -webkit-transform-origin: 279px 8.5px;
 }
 
 #root {
