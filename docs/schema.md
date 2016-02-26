@@ -37,6 +37,13 @@ name        | string    | not null
 post_id     | integer   | not null, foreign key (references posts), indexed, unique [tag_id]
 tag_id      | integer   | not null, foreign key (references tags), indexed
 
+## likes
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+post_id     | integer   | not null, foreign key (references posts), indexed, unique [user_id]
+user_id     | integer   | not null, foreign key (references users), indexed 
+
 ## users
 column name     | data type | details
 ----------------|-----------|-----------------------

@@ -27,3 +27,5 @@ make Index component
   fetch request for all the posts
 
 Create Tags, Relationships
+
+Moment.js

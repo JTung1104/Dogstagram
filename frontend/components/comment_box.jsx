@@ -9,7 +9,7 @@ var CommentBox = React.createClass({
       <div className="comment-box">
         <NumLikes/>
         <CommentTable comments={this.props.post.comments}/>
-        <CommentForm/>
+        <CommentForm post={this.props.post}/>
       </div> );
   }
 });

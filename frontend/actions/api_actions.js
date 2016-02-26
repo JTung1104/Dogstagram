@@ -20,6 +20,13 @@ var ApiActions = {
       actionType: UserConstants.USER_RECEIVED,
       user: user
     });
+  },
+  receiveComment: function (comment, post) {
+    AppDispatcher.dispatch({
+      actionType: PostConstants.COMMENT_RECEIVED,
+      comment: comment,
+      posts: post
+    })
   }
 };
 

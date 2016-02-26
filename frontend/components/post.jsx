@@ -4,6 +4,9 @@ var PostHeader = require('./post_header');
 var CommentBox = require('./comment_box');
 
 var Post = React.createClass({
+  componentDidMount: function () {
+    
+  },
   render: function () {
     return (
       <article className="post">

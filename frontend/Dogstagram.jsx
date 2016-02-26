@@ -8,6 +8,11 @@ var PostStore = require('./stores/post');
 var App = require('./components/app');
 var Index = require('./components/index');
 
+//     <Route path="photos/:photoId" component={StuffShow}>
+//       <Route path="photoDetail" componet
+//
+// <Link to="photos/" + this.state.photo_id
+//
 var routes = (
   <Route component={App} path="/">
     <IndexRoute component={Index}/>

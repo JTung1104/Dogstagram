@@ -19,6 +19,8 @@ PostStore.__onDispatch = function (payload) {
       resetPosts(payload.post);
       PostStore.__emitChange();
       break;
+    case PostConstants.COMMENT_RECEIVED:
+      break;
   }
 };
 

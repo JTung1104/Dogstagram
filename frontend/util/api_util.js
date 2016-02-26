@@ -51,6 +51,18 @@ var ApiUtil = {
       },
       dataType: "json"
     });
+  },
+  createComment: function (comment, post, callback) {
+    $.ajax({
+      method: "POST",
+      url: "/api/posts/" + comment.post_id + "/comments/",
+      data: {comment: comment},
+      success: function (comment) {
+        ApiActions.receiveComment(comment, [post]);
+        callback && callback();
+      },
+      dataType: "json"
+    });
   }
 };
 
