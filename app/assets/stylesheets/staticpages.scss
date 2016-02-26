@@ -88,10 +88,14 @@ h1, h2, p, strong, em, a {
 }
 
 .timestamp {
-  display: inline-block;
+  font-family: Helvetica;
+  font-size: 15px;
+  color: #a5a7aa;
   position: relative;
-  left: 77%;
-  top: 23px;
+  left: 92%;
+  top: 6px;
+  height: 20px;
+  width: 20px;
 }
 
 .comment-item {
@@ -365,6 +369,92 @@ h1, h2, p, strong, em, a {
   -webkit-border-end: 0px none rgb(75, 79, 84);
   -webkit-border-start: 0px none rgb(75, 79, 84);
   -webkit-transform-origin: 279px 8.5px;
+}
+
+.comment-form-div {
+  height: 70px;
+  text-align: left;
+  width: 558px;
+  perspective-origin: 279px 35px;
+  transform-origin: 279px 35px;
+  font: normal normal normal normal 15px / normal Helvetica;
+  -webkit-transform-origin: 279px 35px;
+}
+
+.comment-form-div:after {
+  clear: both;
+  content: '';
+  display: block;
+  text-align: left;
+  width: 558px;
+  perspective-origin: 279px 0px;
+  transform-origin: 279px 0px;
+  font: normal normal normal normal 15px / normal Helvetica;
+  -webkit-transform-origin: 279px 0px;
+}
+
+.comment-form {
+  height: 17px;
+  text-align: left;
+  width: 400px;
+  perspective-origin: 200px 8.5px;
+  transform-origin: 200px 8.5px;
+  font: normal normal normal normal 15px / normal Helvetica;
+  margin: 0px;
+  -webkit-transform-origin: 200px 8.5px;
+}
+
+.comment-field {
+  position: relative;
+  left: 48px;
+  bottom: 43px;
+  box-sizing: content-box;
+  height: 17px;
+  text-align: left;
+  width: 400px;
+  -webkit-appearance: none;
+  perspective-origin: 200px 8.5px;
+  transform-origin: 200px 8.5px;
+  background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
+  border: 0px none rgb(0, 0, 0);
+  font: normal normal normal normal 15px / normal Helvetica;
+  padding: 0px;
+  -webkit-border-after: 0px none rgb(0, 0, 0);
+  -webkit-border-before: 0px none rgb(0, 0, 0);
+  -webkit-border-end: 0px none rgb(0, 0, 0);
+  -webkit-border-start: 0px none rgb(0, 0, 0);
+  -webkit-transform-origin: 200px 8.5px;
+}
+
+.comment-field:focus {
+  outline: 0;
+}
+
+.like-button {
+  box-sizing: content-box;
+  color: rgb(189, 189, 189);
+  display: block;
+  float: left;
+  height: 32px;
+  text-align: left;
+  width: 32px;
+  -webkit-column-rule-color: rgb(189, 189, 189);
+  perspective-origin: 15px 35px;
+  -webkit-text-emphasis-color: rgb(189, 189, 189);
+  -webkit-text-fill-color: rgb(189, 189, 189);
+  -webkit-text-stroke-color: rgb(189, 189, 189);
+  transform-origin: 15px 35px;
+  background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
+  border: 0px none rgb(189, 189, 189);
+  font: normal normal normal normal 15px / normal Helvetica;
+  margin: 0px 10px 0px 0px;
+  outline: rgb(189, 189, 189) none 0px;
+  padding: 20px 0px;
+  -webkit-border-after: 0px none rgb(189, 189, 189);
+  -webkit-border-before: 0px none rgb(189, 189, 189);
+  -webkit-border-end: 0px none rgb(189, 189, 189);
+  -webkit-border-start: 0px none rgb(189, 189, 189);
+  -webkit-transform-origin: 15px 35px;
 }
 
 #root {
