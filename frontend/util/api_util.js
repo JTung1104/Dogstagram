@@ -63,6 +63,16 @@ var ApiUtil = {
       },
       dataType: "json"
     });
+  },
+  deleteComment: function (comment, callback) {
+    $.ajax({
+      method: "DELETE",
+      url: "/api/posts/" + comment.post_id + "/comments/" + comment.id,
+      success: function (comment) {
+        ApiActions.deleteComment(comment);
+      },
+      dataType: "json"
+    })
   }
 };
 

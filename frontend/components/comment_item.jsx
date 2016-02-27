@@ -9,7 +9,7 @@ var CommentItem = React.createClass({
   },
   handleDelete: function (e) {
     e.preventDefault();
-
+    ApiUtil.deleteComment(this.props.comment);
   },
   render: function () {
     return (

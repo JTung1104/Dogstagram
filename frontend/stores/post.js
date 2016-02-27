@@ -19,6 +19,21 @@ var attachComment = function (comment) {
   }
 };
 
+var deleteComment = function (comment) {
+  var post = _posts.find(function (post) {
+    return post.id === comment.post_id;
+  });
+
+  if (post) {
+    for (var i = 0; i < post.comments.length; i++) {
+      if (post.comments[i].id === comment.id) {
+        post.comments.splice(i, 1);
+        break;
+      }
+    }
+  }
+};
+
 PostStore.__onDispatch = function (payload) {
   switch(payload.actionType) {
     case PostConstants.POSTS_RECEIVED:
@@ -32,6 +47,10 @@ PostStore.__onDispatch = function (payload) {
     case PostConstants.COMMENT_RECEIVED:
       attachComment(payload.comment);
       PostStore.__emitChange();
+      break;
+    case PostConstants.COMMENT_DELETED:
+      PostStore.__emitChange();
+      deleteComment(payload.comment);
       break;
   }
 };

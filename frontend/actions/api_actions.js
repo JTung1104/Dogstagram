@@ -26,6 +26,12 @@ var ApiActions = {
       actionType: PostConstants.COMMENT_RECEIVED,
       comment: comment
     })
+  },
+  deleteComment: function (comment) {
+    AppDispatcher.dispatch({
+      actionType: PostConstants.COMMENT_DELETED,
+      comment: comment
+    })
   }
 };
 
