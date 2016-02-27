@@ -129,6 +129,8 @@ h1, h2, p, strong, em, a {
   padding: 0px 0px 20px;
   -webkit-border-after: 1px solid rgb(238, 238, 238);
   -webkit-transform-origin: 279px 61px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .comment-table:after {

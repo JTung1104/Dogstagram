@@ -9,6 +9,16 @@ var resetPosts = function (posts) {
   _posts = posts;
 };
 
+var attachComment = function (comment) {
+  var post =_posts.find(function (post) {
+    return post.id === comment.post_id;
+  });
+
+  if (post) {
+    post.comments.push(comment);
+  }
+};
+
 PostStore.__onDispatch = function (payload) {
   switch(payload.actionType) {
     case PostConstants.POSTS_RECEIVED:
@@ -20,6 +30,8 @@ PostStore.__onDispatch = function (payload) {
       PostStore.__emitChange();
       break;
     case PostConstants.COMMENT_RECEIVED:
+      attachComment(payload.comment);
+      PostStore.__emitChange();
       break;
   }
 };

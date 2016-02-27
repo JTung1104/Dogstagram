@@ -74,16 +74,16 @@ user interface.
   - [x] `CommentTable`
   - [x] `CommentItem`
   - [x] `NumLikes`
-  - [ ] `CommentForm`
+  - [x] `CommentForm`
   - [ ] `LikeButton`
 
 ### Phase 4: Start Styling (0.5 days)
 
 **Objective:** Existing pages (including signup/signin) will look good.
 
-- [ ] create a basic style guide
-- [ ] position elements on the page
-- [ ] add basic colors & styles
+- [x] create a basic style guide
+- [x] position elements on the page
+- [x] add basic colors & styles
 
 ### Phase 5: Tags (1.5 days)
 

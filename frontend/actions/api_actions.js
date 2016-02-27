@@ -21,11 +21,10 @@ var ApiActions = {
       user: user
     });
   },
-  receiveComment: function (comment, post) {
+  receiveComment: function (comment) {
     AppDispatcher.dispatch({
       actionType: PostConstants.COMMENT_RECEIVED,
-      comment: comment,
-      posts: post
+      comment: comment
     })
   }
 };

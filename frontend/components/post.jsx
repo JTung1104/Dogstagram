@@ -5,7 +5,7 @@ var CommentBox = require('./comment_box');
 
 var Post = React.createClass({
   componentDidMount: function () {
-    
+
   },
   render: function () {
     return (

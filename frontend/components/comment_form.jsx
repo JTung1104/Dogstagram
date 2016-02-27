@@ -17,9 +17,8 @@ var CommentForm = React.createClass({
       post_id: this.props.post.id
     }
 
-    ApiUtil.createComment(comment, this.props.post, function () {
-      that.setState({ body: "" });
-      ApiUtil.fetchPosts();
+    ApiUtil.createComment(comment, function () {
+      that.setState({body: ""});    
     });
   },
   handleLike: function (e) {

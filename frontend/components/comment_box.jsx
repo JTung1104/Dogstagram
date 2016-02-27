@@ -5,6 +5,7 @@ var CommentForm = require('./comment_form');
 
 var CommentBox = React.createClass({
   render: function () {
+    // debugger
     return (
       <div className="comment-box">
         <NumLikes/>
