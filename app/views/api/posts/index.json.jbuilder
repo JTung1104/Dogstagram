@@ -18,6 +18,7 @@ json.array! @posts do |post|
   json.comments post.comments do |comment|
     json.id comment.id
     json.user comment.user.username
+    json.user_id comment.user_id
     json.body comment.body
   end
 end

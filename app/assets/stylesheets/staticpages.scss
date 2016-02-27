@@ -459,6 +459,66 @@ h1, h2, p, strong, em, a {
   -webkit-transform-origin: 15px 35px;
 }
 
+.delete-comment {
+  color: rgb(165, 167, 170);
+  cursor: pointer;
+  display: block;
+  float: right;
+  position: relative;
+  right: 23px;
+  height: 15px;
+  overflow-wrap: break-word;
+  width: 15px;
+  word-wrap: break-word;
+  -webkit-column-rule-color: rgb(165, 167, 170);
+  -webkit-locale: "en";
+  perspective-origin: 7.5px 7.5px;
+  -webkit-text-emphasis-color: rgb(165, 167, 170);
+  -webkit-text-fill-color: rgb(165, 167, 170);
+  -webkit-text-stroke-color: rgb(165, 167, 170);
+  transform-origin: 7.5px 7.5px;
+  background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
+  border: 0px none rgb(165, 167, 170);
+  font: normal normal normal normal 15px / 18px;
+  margin: 0px 0px 0px 10px;
+  outline: rgb(165, 167, 170) none 0px;
+  overflow: hidden;
+  padding: 0px;
+  -webkit-border-after: 0px none rgb(165, 167, 170);
+  -webkit-border-before: 0px none rgb(165, 167, 170);
+  -webkit-border-end: 0px none rgb(165, 167, 170);
+  -webkit-border-start: 0px none rgb(165, 167, 170);
+  -webkit-transform-origin: 7.5px 7.5px;
+}
+
+.delete-comment:before {
+  color: rgb(165, 167, 170);
+  content: '✕';
+  cursor: pointer;
+  display: block;
+  height: 18px;
+  overflow-wrap: break-word;
+  width: 15px;
+  word-wrap: break-word;
+  -webkit-column-rule-color: rgb(165, 167, 170);
+  align-self: flex-start;
+  -webkit-locale: "en";
+  perspective-origin: 7.5px 9px;
+  -webkit-text-emphasis-color: rgb(165, 167, 170);
+  -webkit-text-fill-color: rgb(165, 167, 170);
+  -webkit-text-stroke-color: rgb(165, 167, 170);
+  transform-origin: 7.5px 9px;
+  border: 0px none rgb(165, 167, 170);
+  font: normal normal normal normal 15px / 18px;
+  list-style: none outside none;
+  outline: rgb(165, 167, 170) none 0px;
+  -webkit-border-after: 0px none rgb(165, 167, 170);
+  -webkit-border-before: 0px none rgb(165, 167, 170);
+  -webkit-border-end: 0px none rgb(165, 167, 170);
+  -webkit-border-start: 0px none rgb(165, 167, 170);
+  -webkit-transform-origin: 7.5px 9px;
+}
+
 #root {
   background-color: #FAFAFA;
 }
