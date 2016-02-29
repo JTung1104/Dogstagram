@@ -99,9 +99,9 @@ user interface.
 
 **Objective:** Posts can be liked
 
-- [ ] create `Like` model and join table
+- [x] create `Like` model and join table
 - build out API, Flux loop, and components for:
-  - [ ] fetching likes for post
+  - [x] fetching likes for post
   - [ ] adding likes to post
 
 ###Phase 7: Follows (1.5 days)

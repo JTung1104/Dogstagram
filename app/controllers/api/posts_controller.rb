@@ -8,7 +8,7 @@ class Api::PostsController < ApplicationController
   end
 
   def show
-    @post = Post.includes(:comments).find(params[:id])
+    @post = Post.includes(:user, :likes, comments: [:user]).find(params[:id])
   end
 
   def update

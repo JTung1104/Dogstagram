@@ -7,6 +7,9 @@ var CommentForm = React.createClass({
   getInitialState: function () {
     return { body: "" }
   },
+  componentDidMount: function () {
+
+  },
   handleSubmit: function (e) {
     e.preventDefault();
     var that = this;
@@ -30,6 +33,11 @@ var CommentForm = React.createClass({
     }
 
     ApiUtil.addLike(like);
+  },
+  handleUnlike: function (e) {
+    e.preventDefault();
+
+
   },
   render: function () {
     return (

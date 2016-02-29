@@ -6,3 +6,9 @@ json.comments @post.comments do |comment|
   json.user comment.user.username
   json.body comment.body
 end
+json.likes @post.likes do |like|
+  json.id like.id
+  json.post_id post.id
+  json.user_id like.user.id
+  json.user like.user.username
+end
