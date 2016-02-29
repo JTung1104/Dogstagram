@@ -15,6 +15,13 @@ json.array! @posts do |post|
   json.user post.user.username
   json.created_time_ago time
 
+  json.likes post.likes do |like|
+    json.id like.id
+    json.post_id post.id
+    json.user_id like.user.id
+    json.user like.user.username
+  end
+
   json.comments post.comments do |comment|
     json.id comment.id
     json.user comment.user.username

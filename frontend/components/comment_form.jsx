@@ -18,11 +18,18 @@ var CommentForm = React.createClass({
     }
 
     ApiUtil.createComment(comment, function () {
-      that.setState({body: ""});    
+      that.setState({body: ""});
     });
   },
   handleLike: function (e) {
     e.preventDefault();
+
+    var like = {
+      user_id: currentUserId,
+      post_id: this.props.post.id
+    }
+
+    ApiUtil.addLike(like);
   },
   render: function () {
     return (

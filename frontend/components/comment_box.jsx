@@ -5,10 +5,9 @@ var CommentForm = require('./comment_form');
 
 var CommentBox = React.createClass({
   render: function () {
-    // debugger
     return (
       <div className="comment-box">
-        <NumLikes/>
+        <NumLikes post={this.props.post}/>
         <CommentTable post={this.props.post}/>
         <CommentForm post={this.props.post}/>
       </div> );

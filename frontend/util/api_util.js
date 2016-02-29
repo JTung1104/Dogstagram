@@ -73,6 +73,18 @@ var ApiUtil = {
       },
       dataType: "json"
     })
+  },
+  addLike: function (like, callback) {
+    $.ajax({
+      method: "POST",
+      url: "/api/posts/" + like.post_id + "/likes/",
+      data: {like: like},
+      success: function (comment) {
+        ApiActions.receiveLike(like);
+        callback && callback();
+      },
+      dataType: "json"
+    });
   }
 };
 

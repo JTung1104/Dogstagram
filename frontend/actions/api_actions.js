@@ -32,6 +32,12 @@ var ApiActions = {
       actionType: PostConstants.COMMENT_DELETED,
       comment: comment
     })
+  },
+  receiveLike: function (like) {
+    AppDispatcher.dispatch({
+      actionType: PostConstants.LIKE_RECEIVED,
+      like: like
+    });
   }
 };
 

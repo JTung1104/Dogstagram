@@ -34,6 +34,16 @@ var deleteComment = function (comment) {
   }
 };
 
+var addLike = function (like) {
+  var post = _posts.find(function (post) {
+    return post.id === like.post_id;
+  });
+
+  if (post) {
+    post.likes.push(like);
+  }
+}
+
 PostStore.__onDispatch = function (payload) {
   switch(payload.actionType) {
     case PostConstants.POSTS_RECEIVED:
