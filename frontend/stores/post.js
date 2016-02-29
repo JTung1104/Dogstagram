@@ -42,7 +42,22 @@ var addLike = function (like) {
   if (post) {
     post.likes.push(like);
   }
-}
+};
+
+var deleteLike = function (comment) {
+  var post = _posts.find(function (post) {
+    return post.id === like.post_id;
+  });
+
+  if (post) {
+    for (var i = 0; i < post.likes.length; i++) {
+      if (post.likes[i].id === like.id) {
+        post.likes.splice(i, 1);
+        break;
+      }
+    }
+  }
+};
 
 PostStore.__onDispatch = function (payload) {
   switch(payload.actionType) {
@@ -59,8 +74,16 @@ PostStore.__onDispatch = function (payload) {
       PostStore.__emitChange();
       break;
     case PostConstants.COMMENT_DELETED:
-      PostStore.__emitChange();
       deleteComment(payload.comment);
+      PostStore.__emitChange();
+      break;
+    case PostConstants.LIKE_RECEIVED:
+      addLike(payload.like);
+      PostStore.__emitChange();
+      break;
+    case PostConstants.LIKE_DELETED:
+      deleteLike(payload.like);
+      PostStore.__emitChange();
       break;
   }
 };

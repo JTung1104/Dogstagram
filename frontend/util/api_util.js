@@ -64,23 +64,35 @@ var ApiUtil = {
       dataType: "json"
     });
   },
-  deleteComment: function (comment, callback) {
+  destroyComment: function (comment, callback) {
     $.ajax({
       method: "DELETE",
       url: "/api/posts/" + comment.post_id + "/comments/" + comment.id,
       success: function (comment) {
         ApiActions.deleteComment(comment);
+        callback && callback();
       },
       dataType: "json"
-    })
+    });
   },
-  addLike: function (like, callback) {
+  createLike: function (like, callback) {
     $.ajax({
       method: "POST",
       url: "/api/posts/" + like.post_id + "/likes/",
       data: {like: like},
       success: function (comment) {
         ApiActions.receiveLike(like);
+        callback && callback();
+      },
+      dataType: "json"
+    });
+  },
+  destroyLike: function (like, callback) {
+    $.ajax({
+      method: "DELETE",
+      url: "/api/posts/" + like.post_id + "/likes/" + like.id,
+      success: function (comment) {
+        ApiActions.deleteLike(like);
         callback && callback();
       },
       dataType: "json"

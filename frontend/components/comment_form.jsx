@@ -5,10 +5,16 @@ var LinkedStateMixin = require('react-addons-linked-state-mixin');
 var CommentForm = React.createClass({
   mixins:[LinkedStateMixin],
   getInitialState: function () {
-    return { body: "" }
+    return { body: "", liked: this.props.post.likes.liked }
   },
-  componentDidMount: function () {
-
+  componentWillMount: function () {
+    if (this.props.post.likes.liked) {
+      this.src = "http://res.cloudinary.com/dsolojfgkabc/image/upload/valentines-heart_ccvqqz.png";
+      this.onClick = this.handleLike;
+    } else {
+      this.src = "http://res.cloudinary.com/dsolojfgkabc/image/upload/heart-shape-silhouette_sprx13.png";
+      this.onClick = this.handleUnlike;
+    }
   },
   handleSubmit: function (e) {
     e.preventDefault();
@@ -30,21 +36,26 @@ var CommentForm = React.createClass({
     var like = {
       user_id: currentUserId,
       post_id: this.props.post.id
-    }
+    };
 
-    ApiUtil.addLike(like);
+    ApiUtil.createLike(like);
   },
   handleUnlike: function (e) {
     e.preventDefault();
 
+    var like = {
+      user_id: currentUserId,
+      post_id: this.props.post.id
+    };
 
+    ApiUtil.destroyLike(like);
   },
   render: function () {
     return (
       <div className="comment-form-div">
-        <a onClick={this.handleLike} className="like-button" href="#" role="button">
+        <a onClick={this.onClick} className="like-button" href="#" role="button">
           <img className="like-picture"
-               src="http://res.cloudinary.com/dsolojfgkabc/image/upload/heart-shape-silhouette_sprx13.png"
+               src={this.src}
                width="32"
                height="32"/>
         </a>
