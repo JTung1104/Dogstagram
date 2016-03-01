@@ -1,13 +1,47 @@
 var React = require('react');
+var Modal = require('react-modal');
+var LinkedStateMixin = require('react-addons-linked-state-mixin');
+var CommentForm = require('./comment_form');
+
+var customStyle = {
+  overlay : {
+    position          : 'fixed',
+    display           : 'flex',
+    justifyContent    : 'center',
+    alignItems        : 'center',
+    top               : 0,
+    left              : 0,
+    right             : 0,
+    bottom            : 0,
+    backgroundColor   : '#202020'
+  },
+  content : {
+
+    position                   : 'static',
+    display                    : 'flex',
+    justifyContent             : 'space-around',
+    alignItems                 : 'center',
+    flexDirection              : 'column',
+    border                     : '1px solid #ccc',
+    background                 : '#fff',
+    overflow                   : 'auto',
+    WebkitOverflowScrolling    : 'touch',
+    borderRadius               : '4px',
+    outline                    : 'none',
+    padding                    : '20px'
+  }
+};
 
 var UploadPictureButton = React.createClass({
+  mixins: [LinkedStateMixin],
   getInitialState: function () {
-    return { modalIsOpen: false };
+    return { body: "", modalIsOpen: false };
   },
   handleUploadPicture: function (e) {
     e.preventDefault();
 
-    cloudinary.openUploadWidget(
+    cloudinary.applyUploadWidget(
+      document.getElementById('upload-modal-button'),
       CLOUDINARY,
       function (error, result) {
         if (result.length > 1) {
@@ -18,17 +52,38 @@ var UploadPictureButton = React.createClass({
           // pass it the savePhotoUrl
           this.props.savePhotoUrl(result[0].url.slice(61));
         }
-    }.bind(this));
+    }).bind(this);
+  },
+  handleSubmit: function (e) {
+    e.preventDefault();
+  },
+  openModal: function() {
+    this.setState({modalIsOpen: true});
+  },
+  closeModal: function() {
+    this.setState({modalIsOpen: false});
   },
   render: function () {
     return (
       <div>
-        <a href="#"
+        <a onClick={this.openModal} href="#"
           className="upload-picture-button">
           <img
             src="http://res.cloudinary.com/dsolojfgkabc/image/upload/instagram-photo-camera-logo-outline_xfplow.png"
             className="icon"/>
         </a>
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onRequestClose={this.closeModal}
+          style={customStyle}>
+
+          <button id="upload-modal-button"
+            onClick={this.handleUploadPicture}>Select Photo</button>
+
+          <CommentForm className="modal-comment-form"/>
+
+          <button className="upload-modal-button">Upload</button>
+      </Modal>
       </div>
     );
   }
