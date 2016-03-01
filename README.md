@@ -102,7 +102,7 @@ user interface.
 - [x] create `Like` model and join table
 - build out API, Flux loop, and components for:
   - [x] fetching likes for post
-  - [ ] adding likes to post
+  - [x] adding likes to post
 
 ###Phase 7: Follows (1.5 days)
 

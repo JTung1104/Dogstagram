@@ -80,7 +80,7 @@ var ApiUtil = {
       method: "POST",
       url: "/api/posts/" + like.post_id + "/likes/",
       data: {like: like},
-      success: function (comment) {
+      success: function (like) {
         ApiActions.receiveLike(like);
         callback && callback();
       },
@@ -91,7 +91,7 @@ var ApiUtil = {
     $.ajax({
       method: "DELETE",
       url: "/api/posts/" + like.post_id + "/likes/" + like.id,
-      success: function (comment) {
+      success: function (like) {
         ApiActions.deleteLike(like);
         callback && callback();
       },

@@ -44,7 +44,7 @@ var addLike = function (like) {
   }
 };
 
-var deleteLike = function (comment) {
+var deleteLike = function (like) {
   var post = _posts.find(function (post) {
     return post.id === like.post_id;
   });
