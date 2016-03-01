@@ -7,6 +7,7 @@ var ApiUtil = require('./util/api_util');
 var PostStore = require('./stores/post');
 var App = require('./components/app');
 var Index = require('./components/index');
+var UserShow = require('./components/user_show');
 
 //     <Route path="photos/:photoId" component={StuffShow}>
 //       <Route path="photoDetail" componet
@@ -14,8 +15,9 @@ var Index = require('./components/index');
 // <Link to="photos/" + this.state.photo_id
 //
 var routes = (
-  <Route component={App} path="/">
+  <Route path="/" component={App}>
     <IndexRoute component={Index}/>
+    <Route path="users/:id" component={UserShow}/>
   </Route>
 );
 

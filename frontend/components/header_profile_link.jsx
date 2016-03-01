@@ -18,7 +18,7 @@ var HeaderProfileLink = React.createClass({
   },
   render: function () {
     return (
-      <a className="header-profile-link" href="#">
+      <a className="header-profile-link" href={"#/users/" + currentUserId}>
         {this.state.username}
       </a>
     );

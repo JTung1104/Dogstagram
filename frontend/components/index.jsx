@@ -6,9 +6,7 @@ var NavBar = require('./nav_bar');
 
 var Index = React.createClass({
   getInitialState: function () {
-    return {
-      posts: PostStore.all()
-    };
+    return {posts: PostStore.all()};
   },
   componentDidMount: function () {
     this.postListener = PostStore.addListener(this._onPostChange);
