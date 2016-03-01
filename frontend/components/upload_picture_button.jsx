@@ -14,7 +14,8 @@ var customStyle = {
     left              : 0,
     right             : 0,
     bottom            : 0,
-    backgroundColor   : '#202020'
+    backgroundColor   : '#202020',
+    opacity           : 0.4
   },
   content : {
 
@@ -29,7 +30,8 @@ var customStyle = {
     WebkitOverflowScrolling    : 'touch',
     borderRadius               : '4px',
     outline                    : 'none',
-    padding                    : '20px'
+    padding                    : '20px',
+    opacity                    : 1.0
   }
 };
 
@@ -64,7 +66,8 @@ var UploadPictureButton = React.createClass({
     ApiUtil.createPost(post);
     this.closeModal();
   },
-  openModal: function() {
+  openModal: function(e) {
+    e.preventDefault();
     this.setState({modalIsOpen: true});
   },
   closeModal: function() {
@@ -74,7 +77,7 @@ var UploadPictureButton = React.createClass({
     return (
       <div>
         <a onClick={this.openModal} href="#"
-          className="upload-picture-button">
+           className="upload-picture-button">
           <img
             src="http://res.cloudinary.com/dsolojfgkabc/image/upload/instagram-photo-camera-logo-outline_xfplow.png"
             className="icon"/>

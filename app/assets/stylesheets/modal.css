@@ -19,6 +19,8 @@
   display: flex;
   width: 30%;
   height: 40%;
+  min-width: 400px;
+  min-height: 350px;
   background: #FFF;
   padding: 20px;
   border: 1px solid #CCC;
