@@ -67,7 +67,7 @@ var CommentItem = React.createClass({
           onRequestClose={this.closeModal}
           style={customStyle}>
 
-          <button className="confirm-delete">Delete Comment</button>
+          <button className="confirm-delete" onClick={this.handleDelete}>Delete Comment</button>
           <button className="cancel-delete" onClick={this.closeModal}>Cancel</button>
         </Modal>
       </div>
