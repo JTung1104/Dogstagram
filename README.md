@@ -75,7 +75,7 @@ user interface.
   - [x] `CommentItem`
   - [x] `NumLikes`
   - [x] `CommentForm`
-  - [ ] `LikeButton`
+  - [x] `LikeButton`
 
 ### Phase 4: Start Styling (0.5 days)
 

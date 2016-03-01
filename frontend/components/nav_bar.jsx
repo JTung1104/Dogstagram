@@ -5,7 +5,7 @@ var HeaderProfileLink = require('./header_profile_link');
 
 var NavBar = React.createClass({
   savePhotoUrl: function (url) {
-    
+
   },
   render: function () {
     return (

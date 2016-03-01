@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.includes(:posts, :likes, comments: [:user]).find(params[:id])
   end
 
   private
