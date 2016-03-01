@@ -14,8 +14,7 @@ var customStyle = {
     left              : 0,
     right             : 0,
     bottom            : 0,
-    backgroundColor   : '#202020',
-    opacity           : 0.4
+    backgroundColor   : 'rgba(128,128,128,0.4)'
   },
   content : {
 
@@ -30,8 +29,7 @@ var customStyle = {
     WebkitOverflowScrolling    : 'touch',
     borderRadius               : '4px',
     outline                    : 'none',
-    padding                    : '20px',
-    opacity                    : 1.0
+    padding                    : '20px'
   }
 };
 

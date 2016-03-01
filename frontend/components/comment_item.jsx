@@ -12,23 +12,25 @@ var customStyle = {
     left              : 0,
     right             : 0,
     bottom            : 0,
-    backgroundColor   : '#808080',
-    opacity           : 0.4
+    backgroundColor   : 'rgba(128,128,128,0.4)'
   },
   content : {
-
     position                   : 'static',
     display                    : 'flex',
     justifyContent             : 'space-around',
     alignItems                 : 'center',
     flexDirection              : 'column',
-    border                     : '1px solid #ccc',
-    background                 : '#fff',
+    border                     : 'none',
+    backgroundColor            : 'rgba(128,128,128,0.4)',
     overflow                   : 'auto',
     WebkitOverflowScrolling    : 'touch',
     borderRadius               : '4px',
     outline                    : 'none',
-    padding                    : '20px'
+    padding                    : '2px',
+    minWidth                   : '100px',
+    minHeight                  : '100px',
+    height                     : '100px',
+    width                      : '500px'
   }
 };
 
