@@ -12,7 +12,8 @@ var CommentBox = React.createClass({
         <CommentTable post={this.props.post}/>
         <LikeButton post={this.props.post}/>
         <CommentForm post={this.props.post}/>
-      </div> );
+      </div>
+    );
   }
 });
 

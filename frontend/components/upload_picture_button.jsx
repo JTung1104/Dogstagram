@@ -2,6 +2,7 @@ var React = require('react');
 var Modal = require('react-modal');
 var LinkedStateMixin = require('react-addons-linked-state-mixin');
 var CommentForm = require('./comment_form');
+var ApiUtil = require('../util/api_util');
 
 var customStyle = {
   overlay : {
@@ -39,6 +40,7 @@ var UploadPictureButton = React.createClass({
   },
   handleUploadPicture: function (e) {
     e.preventDefault();
+    var that = this;
 
     cloudinary.applyUploadWidget(
       document.getElementById('upload-modal-button'),
@@ -47,15 +49,20 @@ var UploadPictureButton = React.createClass({
         if (result.length > 1) {
           console.log("Too many photos");
         } else {
-          // style modal
-          // push state to trigger second modal
-          // pass it the savePhotoUrl
-          this.props.savePhotoUrl(result[0].url.slice(61));
+          that.url = result[0].url.slice(64);
         }
-    }).bind(this);
+    });
   },
   handleSubmit: function (e) {
     e.preventDefault();
+
+    var post = {
+      user_id: currentUserId,
+      image_url: this.url
+    };
+
+    ApiUtil.createPost(post);
+    this.closeModal();
   },
   openModal: function() {
     this.setState({modalIsOpen: true});
@@ -78,12 +85,11 @@ var UploadPictureButton = React.createClass({
           style={customStyle}>
 
           <button id="upload-modal-button"
-            onClick={this.handleUploadPicture}>Select Photo</button>
+                  onClick={this.handleUploadPicture}>Select Photo</button>
 
-          <CommentForm className="modal-comment-form"/>
-
-          <button className="upload-modal-button">Upload</button>
-      </Modal>
+          <button onClick={this.handleSubmit}
+                  className="upload-modal-button">Upload</button>
+        </Modal>
       </div>
     );
   }

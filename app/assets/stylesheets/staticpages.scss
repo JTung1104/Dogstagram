@@ -65,6 +65,11 @@ h1, h2, p, strong, em, a {
 .picture {
   border-top: 1px solid #eeefef;
   border-bottom: 1px solid #eeefef;
+  height: auto;
+}
+
+.picture > img {
+  margin-bottom: -4px;
 }
 
 .comment-box {
