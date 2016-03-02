@@ -1,5 +1,5 @@
 var React = require('react');
-var NavBar = require('./nav_bar');
+var ProfileNavBar = require('./profile_nav_bar');
 var Picture = require('./picture');
 var UserStore = require('../stores/user');
 var ApiUtil = require('../util/api_util');
@@ -28,7 +28,7 @@ var UserShow = React.createClass({
   render: function () {
     return (
       <div className="user-show">
-        <NavBar/>
+        <ProfileNavBar props={this.props}/>
         <div className="picture-grid">
           {this.pictures()}
         </div>

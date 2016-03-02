@@ -97,6 +97,15 @@ var ApiUtil = {
       },
       dataType: "json"
     });
+  },
+  logout: function (callback) {
+    $.ajax({
+      method: "DELETE",
+      url: "/session",
+      success: function () {
+        callback && callback();
+      }
+    });
   }
 };
 

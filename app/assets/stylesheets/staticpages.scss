@@ -192,6 +192,18 @@ h1, h2, p, strong, em, a {
   -webkit-transform-origin: 300px 44px;
 }
 
+.profile-nav {
+  display: flex;
+  justify-content: space-between;
+  height: 88px;
+  width: 936px;
+  perspective-origin: 300px 44px;
+  transform-origin: 300px 44px;
+  font: normal normal normal normal 16px / normal Times;
+  margin: 0px auto;
+  -webkit-transform-origin: 300px 44px;
+}
+
 .nav:after {
   clear: both;
   content: "";
@@ -234,7 +246,7 @@ h1, h2, p, strong, em, a {
   -webkit-text-fill-color: rgb(45, 101, 153);
   -webkit-text-stroke-color: rgb(45, 101, 153);
   border: 0px none rgb(45, 101, 153);
-  font: normal normal normal normal 18px / normal 'Lobster Two';
+  font: normal normal normal normal 26px / normal 'Lobster Two';
   outline: rgb(45, 101, 153) none 0px;
   -webkit-border-after: 0px none rgb(45, 101, 153);
   -webkit-border-before: 0px none rgb(45, 101, 153);
@@ -300,6 +312,7 @@ h1, h2, p, strong, em, a {
   -webkit-border-start: 0px none rgb(18, 86, 136);
   -webkit-transform-origin: 39.0469px 42px;
 }
+
 
 .nav-right:after {
   clear: both;
@@ -523,6 +536,38 @@ h1, h2, p, strong, em, a {
   -webkit-border-start: 0px none rgb(165, 167, 170);
   -webkit-transform-origin: 7.5px 9px;
 }
+
+.logout {
+  color: rgb(18, 86, 136);
+  display: inline-block;
+  float: left;
+  height: 15px;
+  text-decoration: none;
+  position: relative;
+  bottom: 24px;
+  left: 24px;
+  width: inherit;
+  -webkit-column-rule-color: rgb(18, 86, 136);
+  perspective-origin: 17.0469px 7.5px;
+  -webkit-text-decorations-in-effect: none;
+  -webkit-text-emphasis-color: rgb(18, 86, 136);
+  -webkit-text-fill-color: rgb(18, 86, 136);
+  -webkit-text-stroke-color: rgb(18, 86, 136);
+  transform-origin: 17.0469px 7.5px;
+  border: 0px none rgb(18, 86, 136);
+  font: normal normal bold normal 12px / normal Montserrat;
+  margin: 5px 0px 0px 20px;
+  outline: rgb(18, 86, 136) none 0px;
+  -webkit-border-after: 0px none rgb(18, 86, 136);
+  -webkit-border-before: 0px none rgb(18, 86, 136);
+  -webkit-border-end: 0px none rgb(18, 86, 136);
+  -webkit-border-start: 0px none rgb(18, 86, 136);
+  -webkit-transform-origin: 17.0469px 7.5px;
+  line-height: 18px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
 
 #root {
   background-color: #FAFAFA;

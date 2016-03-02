@@ -18,6 +18,7 @@ Twitter for Likes
 
 CodePen.io for sign-in page css
 
+BENCHBNB for search bar 
 
 Position everything first
 Index page
@@ -32,4 +33,4 @@ Moment.js
 
 Active Record Nested Attributes
 
-accepts_nested_attributes_for 
+accepts_nested_attributes_for
