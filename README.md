@@ -68,7 +68,7 @@ user interface.
 - implement each post component, building out the flux loop as needed.
   - [x] `NavBar`
   - [x] `Picture`
-  - [ ] `UploadPictureForm`
+  - [x] `UploadPictureForm`
   - [x] `PostHeader`
   - [x] `CommentBox`
   - [x] `CommentTable`

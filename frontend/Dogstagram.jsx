@@ -13,8 +13,7 @@ var Modal = require('react-modal');
 //       <Route path="photoDetail" componet
 //
 // <Link to="photos/" + this.state.photo_id
-//
-// debugger
+
 var routes = (
   <Route path="/" component={App}>
     <IndexRoute component={Index}/>

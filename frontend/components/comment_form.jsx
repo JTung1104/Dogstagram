@@ -23,9 +23,9 @@ var CommentForm = React.createClass({
   },
   render: function () {
     return (
-      <div className="comment-form-div modal-comment-div">
-        <form onSubmit={this.handleSubmit} className="comment-form modal-comment-form">
-          <input className="comment-field modal-comment-field"
+      <div className="comment-form-div">
+        <form onSubmit={this.handleSubmit} className="comment-form">
+          <input className="comment-field"
                  type="text"
                  placeholder="Add a comment..."
                  valueLink={this.linkState('body')}/>

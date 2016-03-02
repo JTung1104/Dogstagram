@@ -15,7 +15,7 @@ class Api::CommentsController < ApplicationController
     if @comment.save!(body: params[:comment][:body])
       render :show
     else
-      render json: { error: "no bueno" }, status: 422    #TODO FIX
+      render json: { error: "no bueno" }, status: 422
     end
   end
 

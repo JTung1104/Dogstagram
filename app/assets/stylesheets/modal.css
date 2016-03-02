@@ -73,3 +73,11 @@
   margin-top: 1px;
   color: #125688;
 }
+
+.modal-comment-field {
+  border: none;
+}
+
+.modal-comment-field:focus {
+  outline: none;
+}
