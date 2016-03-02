@@ -58,7 +58,10 @@ var UploadPictureButton = React.createClass({
 
     var post = {
       user_id: currentUserId,
-      image_url: this.url
+      image_url: this.url,
+        comment: {
+          body: this.state.body
+        }
     };
 
     ApiUtil.createPost(post);
@@ -87,6 +90,11 @@ var UploadPictureButton = React.createClass({
 
           <button id="upload-modal-button"
                   onClick={this.handleUploadPicture}>Select Photo</button>
+
+        <input className="modal-comment-field"
+                 type="text"
+                 placeholder="Add a caption..."
+                 valueLink={this.linkState('body')}/>
 
           <button onClick={this.handleSubmit}
                   className="upload-modal-button">Upload</button>

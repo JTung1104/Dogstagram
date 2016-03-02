@@ -4,7 +4,7 @@ var UserStore = require('../stores/user');
 
 var UserShow = React.createClass({
   getInitialState: function () {
-    return { user: UserStore.all()[0] };
+    return { user: UserStore.findById(this.props.params.id) };
   },
   componentDidMount: function () {
   },

@@ -9,6 +9,16 @@ var resetUsers = function (users) {
   _users = users;
 };
 
+UserStore.findById = function (id) {
+  var userFound = null;
+
+  _users.forEach(function(user) {
+    if (user.id === id) {userFound = user;}
+  });
+
+  return userFound;
+};
+
 UserStore.__onDispatch = function (payload) {
   switch(payload.actionType) {
     case UserConstants.USER_RECEIVED:

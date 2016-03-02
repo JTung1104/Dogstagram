@@ -4,9 +4,6 @@ var UploadPictureButton = require('./upload_picture_button');
 var HeaderProfileLink = require('./header_profile_link');
 
 var NavBar = React.createClass({
-  savePhotoUrl: function (url) {
-
-  },
   render: function () {
     return (
       <header className="nav-header">

@@ -4,12 +4,12 @@ var UserStore = require('../stores/user');
 
 var HeaderProfileLink = React.createClass({
   getInitialState: function () {
-    return { username: "username" };
+    return { username: "" };
   },
   onChange: function () {
-    this.setState({ username: UserStore.all()[0].username })
+    this.setState({ username: UserStore.findById(currentUserId).username })
   },
-  componentDidMount: function () {
+  componentWillMount: function () {
     this.token = UserStore.addListener(this.onChange);
     ApiUtil.fetchUser(currentUserId);
   },

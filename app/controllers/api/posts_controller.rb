@@ -28,11 +28,25 @@ class Api::PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    render :show if @post.save!
+    @post.user_id = current_user.id
+
+    @post.transaction do
+      @post.save!
+      @comment = Comment.new(comment_params)
+      @comment.post_id = @post.id
+      @comment.user_id = @post.user_id
+      @comment.save!
+    end
+
+    render :show
   end
 
   private
   def post_params
-    params.require(:post).permit(:image_url, :user_id)
+    params.require(:post).permit(:image_url)
+  end
+
+  def comment_params
+    params.require(:post).require(:comment).permit(:body)
   end
 end

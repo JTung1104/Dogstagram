@@ -29,3 +29,7 @@ make Index component
 Create Tags, Relationships
 
 Moment.js
+
+Active Record Nested Attributes
+
+accepts_nested_attributes_for 
