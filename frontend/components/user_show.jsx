@@ -5,8 +5,18 @@ var UserStore = require('../stores/user');
 var ApiUtil = require('../util/api_util');
 
 var UserShow = React.createClass({
+  getInitialState: function () {
+    return { user: UserStore.findById(parseInt(this.props.params.id)) };
+  },
   componentWillMount: function () {
+    this.userListener = UserStore.addListener(this.handleChange);
     ApiUtil.fetchUser(parseInt(this.props.params.id));
+  },
+  componentWillUnmount: function () {
+    this.userListener.remove();
+  },
+  handleChange: function () {
+    this.setState({ user: UserStore.findById(parseInt(this.props.params.id)) });
   },
   pictures: function () {
     var user = UserStore.findById(parseInt(this.props.params.id));

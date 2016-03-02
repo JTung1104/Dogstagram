@@ -11,12 +11,13 @@ var ApiUtil = {
       dataType: "json"
     });
   },
-  fetchSinglePost: function (id) {
+  fetchSinglePost: function (id, callback) {
     $.ajax({
       method: "GET",
       url: "/api/posts/" + id,
       success: function (data) {
         ApiActions.receiveSinglePost([data]);
+        callback && callback();
       },
       dataType: "json"
     });
