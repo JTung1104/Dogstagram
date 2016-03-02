@@ -16,6 +16,7 @@ json.array! @posts do |post|
   json.id post.id
   json.image_url post.image_url
   json.user post.user.username
+  json.user_id post.user_id
   json.created_time_ago time
 
   json.likes post.likes do |like|

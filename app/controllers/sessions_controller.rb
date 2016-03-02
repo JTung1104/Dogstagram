@@ -19,6 +19,6 @@ class SessionsController < ApplicationController
 
   def destroy
     sign_out
-    render :new
+    render json: {success: "success"}
   end
 end

@@ -28,7 +28,9 @@
     };
   </script>
 
-<%= flash[:errors].join("<br>").html_safe if flash[:errors] %>
+<div className="error">
+  <%= flash[:errors].join("<br>").html_safe if flash[:errors] %>
+</div>
 
 <%= yield %>
 

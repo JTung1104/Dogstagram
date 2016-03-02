@@ -9,12 +9,12 @@
 Dogstagram is a web application for dog selfies inspired by Instagram built
 using Ruby on Rails and React.js. Dogstagram allows users to:
 
-- [ ] Create an account
-- [ ] Log in / Log out
+- [x] Create an account
+- [x] Log in / Log out
 - [ ] Follow Users
-- [ ] Create, Read, Update, and Delete Posts
-- [ ] Like Posts
-- [ ] Create, Read, Update, and Delete Comments
+- [x] Create, Read, and Delete Posts
+- [x] Like Posts
+- [x] Create, Read, and Delete Comments
 - [ ] Tag Posts with multiple tags
 
 ## Design Docs

@@ -5,10 +5,10 @@ var PostHeader = React.createClass({
     return (
       <header className="post-header">
         <div className="username">
-          {this.props.username}
+          {this.props.post.user}
         </div>
         <div className="timestamp">
-          {this.props.timeAgo}
+          {this.props.post.created_time_ago}
         </div>
       </header>
       );
