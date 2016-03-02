@@ -16,18 +16,20 @@ var ApiUtil = {
       method: "GET",
       url: "/api/posts/" + id,
       success: function (data) {
-        ApiActions.receiveSinglePost(data);
+        ApiActions.receiveSinglePost([data]);
       },
       dataType: "json"
     });
   },
-  createPost: function (data) {
+  createPost: function (data, callback) {
     $.ajax({
       method: "POST",
       url: "/api/posts/",
       data: {post: data},
       success: function (post) {
         ApiActions.receiveSinglePost([post]);
+        debugger
+        callback && callback(post);
       },
       dataType: "json"
     });

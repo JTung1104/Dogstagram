@@ -35,6 +35,7 @@ var deleteComment = function (comment) {
 };
 
 var addLike = function (like) {
+  debugger
   var post = _posts.find(function (post) {
     return post.id === like.post_id;
   });
@@ -92,4 +93,11 @@ PostStore.all = function () {
   return _posts.slice();
 };
 
+PostStore.findById = function (id) {
+  var post = _posts.find(function (post) {
+    return post.id === id;
+  });
+
+  return post;
+};
 module.exports = PostStore;

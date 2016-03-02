@@ -6,7 +6,7 @@ var ApiUtil = require('../util/api_util');
 
 var UserShow = React.createClass({
   componentWillMount: function () {
-    ApiUtil.fetchUser(this.props.params.id);
+    ApiUtil.fetchUser(parseInt(this.props.params.id));
   },
   pictures: function () {
     var user = UserStore.findById(parseInt(this.props.params.id));

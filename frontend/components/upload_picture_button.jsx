@@ -3,6 +3,8 @@ var Modal = require('react-modal');
 var LinkedStateMixin = require('react-addons-linked-state-mixin');
 var CommentForm = require('./comment_form');
 var ApiUtil = require('../util/api_util');
+var History = require('react-router').History;
+var PostStore = require('../stores/post');
 
 var customStyle = {
   overlay : {
@@ -34,7 +36,7 @@ var customStyle = {
 };
 
 var UploadPictureButton = React.createClass({
-  mixins: [LinkedStateMixin],
+  mixins: [LinkedStateMixin, History],
   getInitialState: function () {
     return { body: "", modalIsOpen: false };
   },
@@ -63,8 +65,12 @@ var UploadPictureButton = React.createClass({
         }
     };
 
-    ApiUtil.createPost(post);
-    this.closeModal();
+    var that = this;
+    ApiUtil.createPost(post, function (post) {
+      that.history.pushState({}, "/posts/" + post.id, {});
+    });
+
+    // this.closeModal();
   },
   openModal: function(e) {
     e.preventDefault();
