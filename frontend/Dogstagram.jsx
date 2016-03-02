@@ -25,13 +25,13 @@ var routes = (
   </Route>
 );
 
-$(document).ready(function (){
+$(function (){
   var appElement = document.getElementById('root');
   Modal.setAppElement(appElement);
 
   ReactDOM.render(
     <Router>{routes}</Router>,
-    document.getElementById("root")
+    appElement
   );
 });
 

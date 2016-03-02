@@ -21,6 +21,7 @@ var UserShow = React.createClass({
     return (
       <div className="user-show">
         <ProfileNavBar props={this.props}/>
+
         <div className="picture-grid">
           {this.pictures()}
         </div>

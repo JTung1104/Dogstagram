@@ -28,7 +28,6 @@ var ApiUtil = {
       data: {post: data},
       success: function (post) {
         ApiActions.receiveSinglePost([post]);
-        debugger
         callback && callback(post);
       },
       dataType: "json"

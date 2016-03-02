@@ -35,7 +35,6 @@ var deleteComment = function (comment) {
 };
 
 var addLike = function (like) {
-  debugger
   var post = _posts.find(function (post) {
     return post.id === like.post_id;
   });

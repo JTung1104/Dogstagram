@@ -36,13 +36,13 @@ var LikeButton = React.createClass({
     if (this.state.liked) {
       this.props.post.likes.forEach(function(like) {
         if (like.user_id === currentUserId) {
-          that.id = like.id;
+          that.like_id = like.id;
         }
       });
     }
 
     var like = {
-      id: this.id,
+      id: this.like_id,
       user_id: currentUserId,
       post_id: this.props.post.id
     };

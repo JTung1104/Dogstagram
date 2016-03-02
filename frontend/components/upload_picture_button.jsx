@@ -70,7 +70,7 @@ var UploadPictureButton = React.createClass({
       that.history.pushState({}, "/posts/" + post.id, {});
     });
 
-    // this.closeModal();
+    this.closeModal();
   },
   openModal: function(e) {
     e.preventDefault();
