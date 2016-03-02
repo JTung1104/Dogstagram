@@ -42,6 +42,16 @@ var ApiUtil = {
       dataType: "json"
     });
   },
+  fetchUsers: function () {
+    $.ajax({
+      method: "GET",
+      url: "/users/",
+      success: function (users) {
+        ApiActions.receiveUsers(users);
+      },
+      dataType: "json"
+    });
+  },
   fetchUser: function (id) {
     $.ajax({
       method: "GET",

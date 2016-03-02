@@ -15,6 +15,12 @@ var ApiActions = {
       post: post
     });
   },
+  receiveUsers: function (users) {
+    AppDispatcher.dispatch({
+      actionType: UserConstants.USERS_RECEIVED,
+      users: users
+    });
+  },
   receiveUser: function (user) {
     AppDispatcher.dispatch({
       actionType: UserConstants.USER_RECEIVED,
