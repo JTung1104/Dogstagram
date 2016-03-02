@@ -21,7 +21,6 @@ var LikeButton = React.createClass({
     var that = this;
 
     var like = {
-      user_id: currentUserId,
       post_id: this.props.post.id
     };
 

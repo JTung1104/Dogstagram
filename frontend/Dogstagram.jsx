@@ -5,6 +5,7 @@ var Route = require('react-router').Route;
 var IndexRoute = require('react-router').IndexRoute;
 var ApiUtil = require('./util/api_util');
 var PostStore = require('./stores/post');
+var UserStore = require('./stores/user');
 var App = require('./components/app');
 var Index = require('./components/index');
 var UserShow = require('./components/user_show');
@@ -33,3 +34,4 @@ $(document).ready(function (){
 
 window.ApiUtil = ApiUtil;
 window.PostStore = PostStore;
+window.UserStore = UserStore;

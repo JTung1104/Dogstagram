@@ -1,0 +1,24 @@
+.user-show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.picture-grid {
+  display: flex;
+  height: 100%;
+  width: 936px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.picture-grid > div {
+  border: 1px solid #eeefef;
+  margin-bottom: 28px;
+}
+
+.nav-header {
+  width: 100%;
+}

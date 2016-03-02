@@ -14,7 +14,7 @@ var customStyle = {
     left              : 0,
     right             : 0,
     bottom            : 0,
-    backgroundColor   : 'rgba(128,128,128,0.4)'
+    backgroundColor   : 'rgba(0,0,0,0.5)'
   },
   content : {
 
@@ -57,7 +57,6 @@ var UploadPictureButton = React.createClass({
     e.preventDefault();
 
     var post = {
-      user_id: currentUserId,
       image_url: this.url,
         comment: {
           body: this.state.body

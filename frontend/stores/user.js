@@ -10,13 +10,11 @@ var resetUsers = function (users) {
 };
 
 UserStore.findById = function (id) {
-  var userFound = null;
-
-  _users.forEach(function(user) {
-    if (user.id === id) {userFound = user;}
+  var user = _users.find(function(user) {
+    return (user.id === id);
   });
 
-  return userFound;
+  return user;
 };
 
 UserStore.__onDispatch = function (payload) {

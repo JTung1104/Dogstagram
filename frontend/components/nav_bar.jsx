@@ -9,7 +9,7 @@ var NavBar = React.createClass({
       <header className="nav-header">
         <nav className="nav">
           <h1 className="logo-header">
-            <a href="#"  className="logo">Dogstagram</a>
+            <a href="#" className="logo">Dogstagram</a>
           </h1>
           <SearchBar/>
           <div className="nav-right">
