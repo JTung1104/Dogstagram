@@ -15,3 +15,38 @@ h1, h2, p, strong, em, a {
   color: inherit;
   background: transparent;
 }
+
+.signup {
+  background-color: #FAFAFA;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+}
+
+.login {
+  background-color: #FAFAFA;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+}
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 313px;
+  width: 350px;
+  border-radius: 1px;
+  border: 1px solid #edeeee;
+  background-color: #FFF;
+  margin: auto;
+}
+
+.login-form > * {
+  display: block;
+}
