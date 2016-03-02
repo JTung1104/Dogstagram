@@ -1,29 +1,36 @@
 <div class="login">
 
-  <h2 class="login-header">Log In</h2>
-
   <%= link_to "Sign Up", new_user_url %>
 
-  <form class="login-form" action="<%= session_url %>" method="post">
-    <input
-      type="hidden"
-      name="authenticity_token"
-      value="<%= form_authenticity_token %>">
+  <div class="login-form-box">
+    <form class="login-form" action="<%= session_url %>" method="post">
+      <h2 class="login-header">Dogstagram</h2>
 
-  <input type="text" placeholder="Username" name="user[username]">
-  <input type="password" placeholder="Password" name="user[password]">
-  <input class="login-submit" type="submit" name="name" value="Log In">
+      <input
+        type="hidden"
+        name="authenticity_token"
+        value="<%= form_authenticity_token %>">
 
-  </form>
-  <form class="guest-login" action="<%= session_url %>" method="post">
-    <input
-      type="hidden"
-      name="authenticity_token"
-      value="<%= form_authenticity_token %>">
+      <input type="text" placeholder="Username" name="user[username]">
+      <input type="password" placeholder="Password" name="user[password]">
+      <input class="login-submit" type="submit" name="name" value="Log In">
 
-    <input type="hidden" name="user[username]" value="herrokitty">
-    <input type="hidden" name="user[password]" value="kittykitty">
-    <input class="guest-login-submit" type="submit" name="name" value="Guest Log In">
-  </form>
+      <div class="login-divider">
+        <div class="divider-line"></div>
+        <div class="or">OR</div>
+        <div class="divider-line"></div>
+      </div>
+    </form>
 
+    <form class="guest-login" action="<%= session_url %>" method="post">
+      <input
+        type="hidden"
+        name="authenticity_token"
+        value="<%= form_authenticity_token %>">
+
+      <input type="hidden" name="user[username]" value="herrokitty">
+      <input type="hidden" name="user[password]" value="kittykitty">
+      <input class="guest-login-submit" type="submit" name="name" value="Log In As Guest">
+    </form>
+  </div>
 </div>

@@ -34,12 +34,27 @@ h1, h2, p, strong, em, a {
   bottom: 0px;
 }
 
-.login-form {
+.login-form-box {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 313px;
+  height: 370px;
+  width: 350px;
+  border-radius: 1px;
+  border: none;
+  background-color: #FAFAFA;
+  margin: auto;
+}
+
+.login-form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 370px;
   width: 350px;
   border-radius: 1px;
   border: 1px solid #edeeee;
@@ -49,4 +64,107 @@ h1, h2, p, strong, em, a {
 
 .login-form > * {
   display: block;
+  margin: 5px;
+}
+
+.login-form > input {
+  background-color: #fdfdfd;
+  border: 1px solid #edeeee;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 9px 8px 7px;
+  width: 268px;
+  font-family: Arial, sans-serif;
+}
+
+.login-header {
+  color: #125688;
+  font: normal normal normal normal 46px / normal 'Lobster Two';
+  position: relative;
+  bottom: 22px;
+}
+
+.login-form > input.login-submit {
+  width: 286px;
+  color: white;
+  background-color: #4090DB;
+  border-color: #4090DB;
+}
+
+.login-form > input.login-submit:hover {
+  background-color: #2D6599;
+  border-color: #2D6599;
+}
+
+.guest-login-submit {
+  position: relative;
+  bottom: 53px;
+  left: 1px;
+  width: 286px;
+  color: white;
+  background-color: #4090DB;
+  border-color: #4090DB;
+  border: 1px;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 9px 8px 7px;
+  font-family: Arial, sans-serif;
+}
+
+.guest-login-submit:hover {
+  background-color: #2D6599;
+  border-color: #2D6599;
+}
+
+.login-divider {
+  box-sizing: border-box;
+  display: flex;
+  height: 15px;
+  min-height: auto;
+  min-width: auto;
+  position: relative;
+  width: 268px;
+  perspective-origin: 134px 7.5px;
+  transform-origin: 134px 7.5px;
+  border: 0px solid rgb(0, 0, 0);
+  flex: 0 0 auto;
+  font-size: 16px;
+  margin: 5px 40px 8px;
+}
+
+.divider-line {
+  box-sizing: border-box;
+  display: flex;
+  height: 1px;
+  min-height: auto;
+  min-width: auto;
+  position: relative;
+  width: 116.953px;
+  perspective-origin: 58.4688px 0.5px;
+  transform-origin: 58.4688px 0.5px;
+  background: rgb(237, 238, 238) none repeat scroll 0% 0% / auto padding-box border-box;
+  border: 0px solid rgb(0, 0, 0);
+  flex: 1 1 auto;
+  flex-flow: column nowrap;
+  font-size: 16px;
+  margin: 7px 0px;
+}
+
+.or {
+  box-sizing: border-box;
+  color: rgb(165, 167, 170);
+  display: flex;
+  height: 15px;
+  min-height: auto;
+  min-width: auto;
+  position: relative;
+  text-transform: uppercase;
+  width: 18.1094px;
+  perspective-origin: 9.04688px 7.5px;
+  transform-origin: 9.04688px 7.5px;
+  border: 0px solid rgb(0, 0, 0);
+  flex: 0 0 auto;
+  flex-flow: column nowrap;
+  margin: 0px 8px;
+  outline: rgb(165, 167, 170) none 0px;
 }
