@@ -16,11 +16,11 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.includes(:posts, :likes, :comments)
+    @users = User.includes(posts: [:likes, :comments])
   end
 
   def show
-    @user = User.includes(:posts, :likes, :comments).find(params[:id])
+    @user = User.includes(posts: [:likes, :comments]).find(params[:id])
   end
 
   private

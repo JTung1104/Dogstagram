@@ -3,13 +3,13 @@ class Api::PostsController < ApplicationController
     following_ids = "SELECT followed_id FROM relationships
                      WHERE  follower_id = :user_id"
 
-    @posts = Post.includes(:user, :likes, :comments)
+    @posts = Post.includes(:user, :likes, comments: [:user])
       .where("user_id IN (#{following_ids})
               OR user_id = :user_id", user_id: current_user.id)
   end
 
   def show
-    @post = Post.includes(:user, :likes, :comments).find(params[:id])
+    @post = Post.includes(:user, :likes, comments: [:user]).find(params[:id])
   end
 
   def update

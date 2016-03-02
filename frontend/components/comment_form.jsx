@@ -12,7 +12,6 @@ var CommentForm = React.createClass({
     var that = this;
 
     var comment = {
-      user_id: currentUserId,
       body: this.state.body,
       post_id: this.props.post.id
     }
