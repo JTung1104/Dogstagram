@@ -5,7 +5,9 @@ var PostHeader = React.createClass({
     return (
       <header className="post-header">
         <div className="username">
-          {this.props.post.user}
+          <a href={"#/users/" + this.props.post.user_id}>
+            {this.props.post.user}
+          </a>
         </div>
         <div className="timestamp">
           {this.props.post.created_time_ago}

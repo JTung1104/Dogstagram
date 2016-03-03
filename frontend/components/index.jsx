@@ -24,7 +24,7 @@ var Index = React.createClass({
     }.bind(this));
 
     return (
-      <div>
+      <div className="index-background">
         <NavBar/>
         <div className="index">{posts}</div>
       </div>

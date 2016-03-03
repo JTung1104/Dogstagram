@@ -5,7 +5,7 @@ var HeaderProfileLink = require('./header_profile_link');
 var LogoutLink = require('./logout_link');
 
 var ProfileNavBar = React.createClass({
-  link: function () {
+  getLink: function () {
     if (parseInt(this.props.props.params.id) === currentUserId) {
       return (<LogoutLink/>);
     } else {
@@ -24,7 +24,7 @@ var ProfileNavBar = React.createClass({
           </div>
           <div className="nav-right">
             <UploadPictureButton/>
-            {this.link()}
+            {this.getLink()}
           </div>
         </nav>
       </header>

@@ -27,6 +27,7 @@ var PostShow = React.createClass({
       return (
         <div>
           <NavBar/>
+
           <div className="index">
             <Post post={this.state.post}/>
           </div>

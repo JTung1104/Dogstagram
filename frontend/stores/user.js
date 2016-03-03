@@ -13,6 +13,12 @@ var resetUsers = function (users) {
   });
 };
 
+var addUsers = function (users) {
+  users.forEach(function(user) {
+    _users[user.id] = user;
+  });
+};
+
 UserStore.findById = function (id) {
   return _users[id];
 };
@@ -20,11 +26,11 @@ UserStore.findById = function (id) {
 UserStore.__onDispatch = function (payload) {
   switch(payload.actionType) {
     case UserConstants.USER_RECEIVED:
-      resetUsers(payload.user);
+      addUsers(payload.user);
       UserStore.__emitChange();
       break;
     case UserConstants.USERS_RECEIVED:
-      resetUsers(payload.users);
+      addUsers(payload.users);
       UserStore.__emitChange();
       break;
   }

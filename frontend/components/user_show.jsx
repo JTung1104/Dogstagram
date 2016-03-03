@@ -30,11 +30,13 @@ var UserShow = React.createClass({
   render: function () {
     if (this.state.user) {
       return (
-        <div className="user-show">
-          <ProfileNavBar props={this.props}/>
+        <div className="user-show-background">
+          <div className="user-show">
+            <ProfileNavBar props={this.props}/>
 
-          <div className="picture-grid">
-            {this.pictures()}
+            <div className="picture-grid">
+              {this.pictures()}
+            </div>
           </div>
         </div>
       );
