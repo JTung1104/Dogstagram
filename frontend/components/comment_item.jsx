@@ -45,7 +45,7 @@ var CommentItem = React.createClass({
   closeModal: function() {
     this.setState({modalIsOpen: false});
   },
-  deleteCommentButton: function () {
+  getDeleteCommentButton: function () {
     if (this.props.comment.user_id === currentUserId) {
       return (
         <button title="Delete Comment"
@@ -61,16 +61,29 @@ var CommentItem = React.createClass({
   render: function () {
     return (
       <div className="comment-item">
-        <a href="#" className="comment-username">{this.props.comment.user}</a>
-        <p className="comment-body">{this.props.comment.body}</p>
-        {this.deleteCommentButton()}
+        <a href={"#/users/" + this.props.comment.user_id}
+           className="comment-username">
+          {this.props.comment.user}
+        </a>
+
+        <p className="comment-body">
+          {this.props.comment.body}
+        </p>
+
+        {this.getDeleteCommentButton()}
+
         <Modal
           isOpen={this.state.modalIsOpen}
           onRequestClose={this.closeModal}
           style={customStyle}>
 
-          <button className="confirm-delete" onClick={this.handleDelete}>Delete Comment</button>
-          <button className="cancel-delete" onClick={this.closeModal}>Cancel</button>
+          <button className="confirm-delete" onClick={this.handleDelete}>
+            Delete Comment
+          </button>
+
+          <button className="cancel-delete" onClick={this.closeModal}>
+            Cancel
+          </button>
         </Modal>
       </div>
     );
