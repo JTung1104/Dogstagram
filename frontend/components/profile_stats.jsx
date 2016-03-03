@@ -1,6 +1,9 @@
 var React = require('react');
 
 var ProfileStats = React.createClass({
+  getText: function () {
+    return ("");
+  },
   render: function () {
     return (
       <div className="profile-stats-box">
@@ -47,7 +50,7 @@ var ProfileStats = React.createClass({
               </span>
 
               <span className="profile-span-2">
-                {this.props.user.followers}
+                {this.props.user.followers.length}
               </span>
 
               <span className="profile-span-1">
@@ -62,7 +65,7 @@ var ProfileStats = React.createClass({
               </span>
 
               <span className="profile-span-2">
-                {this.props.user.followed_users}
+                {this.props.user.followed_users.length}
               </span>
 
               <span className="profile-span-1">

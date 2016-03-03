@@ -13,6 +13,8 @@
   display: flex;
   height: 100%;
   width: 936px;
+  position: relative;
+  top: 77px;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -23,10 +25,12 @@
 }
 
 .nav-header {
+  position: absolute;
+  height: 76px;
   width: 100%;
 }
 
-#HEADER_1 {
+.profile-header {
     box-sizing: border-box;
     cursor: default;
     display: flex;
@@ -34,17 +38,18 @@
     min-height: auto;
     min-width: auto;
     position: relative;
-    width: 935px;
+    top: 77px;
+    width: 936px;
     perspective-origin: 467.5px 89px;
     transform-origin: 467.5px 89px;
     border: 0px solid rgb(0, 0, 0);
     flex: 0 0 auto;
     font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     margin: 0px 0px 45px;
-    padding: 20px 0px;
-}/*#HEADER_1*/
+    padding: 40px 0px;
+}
 
-#DIV_2 {
+.profile-picture-box {
     box-sizing: border-box;
     cursor: default;
     display: flex;
@@ -60,9 +65,9 @@
     flex-flow: column nowrap;
     font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     margin: 0px 30px 0px 0px;
-}/*#DIV_2*/
+}
 
-#DIV_3 {
+.profile-picture-square {
     box-sizing: border-box;
     cursor: default;
     height: 152px;
@@ -80,9 +85,9 @@
     font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     margin: -7px 69.8281px;
     overflow: hidden;
-}/*#DIV_3*/
+}
 
-#BUTTON_4 {
+.change-profile-picture {
     cursor: pointer;
     height: 150px;
     width: 150px;
@@ -91,9 +96,9 @@
     border: 0px none rgb(0, 0, 0);
     font: normal normal normal normal 11px / normal proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     padding: 0px;
-}/*#BUTTON_4*/
+}
 
-#IMG_5 {
+.change-profile-picture > img {
     cursor: pointer;
     display: block;
     height: 150px;
@@ -105,30 +110,7 @@
     perspective-origin: 75px 75px;
     transform-origin: 75px 75px;
     font: normal normal normal normal 11px / normal proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-}/*#IMG_5*/
-
-#FORM_6 {
-    cursor: default;
-    width: 150px;
-    perspective-origin: 75px 0px;
-    transform-origin: 75px 0px;
-    font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    margin: 0px;
-}/*#FORM_6*/
-
-#INPUT_7 {
-    box-sizing: content-box;
-    display: none;
-    height: auto;
-    width: auto;
-    align-items: baseline;
-    perspective-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
-    border: 0px none rgb(0, 0, 0);
-    font: normal normal normal normal 11px / normal proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    padding: 0px;
-}/*#INPUT_7*/
+}
 
 .profile-stats-box {
     box-sizing: border-box;

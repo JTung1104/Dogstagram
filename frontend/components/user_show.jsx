@@ -1,6 +1,7 @@
 var React = require('react');
 var ProfileNavBar = require('./profile_nav_bar');
 var Picture = require('./picture');
+var ProfileHeader = require('./profile_header');
 var UserStore = require('../stores/user');
 var ApiUtil = require('../util/api_util');
 
@@ -18,7 +19,7 @@ var UserShow = React.createClass({
   handleChange: function () {
     this.setState({ user: UserStore.findById(parseInt(this.props.params.id)) });
   },
-  pictures: function () {
+  getPictures: function () {
     var user = UserStore.findById(parseInt(this.props.params.id));
 
     var pictures = user.posts.map(function(post, i) {
@@ -34,8 +35,10 @@ var UserShow = React.createClass({
           <div className="user-show">
             <ProfileNavBar props={this.props}/>
 
+            <ProfileHeader user={this.state.user}/>
+
             <div className="picture-grid">
-              {this.pictures()}
+              {this.getPictures()}
             </div>
           </div>
         </div>

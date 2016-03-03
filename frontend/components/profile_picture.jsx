@@ -1,4 +1,5 @@
 var React = require('react');
+var Modal = require('react-modal');
 
 var ProfilePicture = React.createClass({
   render: function () {

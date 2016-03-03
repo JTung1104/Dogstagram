@@ -1,9 +1,7 @@
 var React = require('react');
 var ApiUtil = require('../util/api_util');
-var History = require('react-router').History;
 
 var LogoutLink = React.createClass({
-  mixins: [History],
   redirectToNewSession: function () {
     window.location.href = "/session/new";
   },
