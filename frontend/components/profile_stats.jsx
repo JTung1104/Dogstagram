@@ -23,7 +23,7 @@ var ProfileStats = React.createClass({
   getButton: function () {
     if (this.props.user.id === currentUserId) { return }
 
-    if (this.state.followed) {
+    if (this.props.user.followed) {
       return (
         <a className="follow-link" href="#" onClick={this.handleUnfollow}>
           <button className="unfollow-button">Unfollow</button>
