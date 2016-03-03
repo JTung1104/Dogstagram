@@ -1,19 +1,21 @@
 var React = require('react');
 var ApiUtil = require('../util/api_util');
+var UserStore = require('../stores/user');
 
 var ProfileStats = React.createClass({
   getInitialState: function () {
-    return { disabled: false };
+    return {disabled: false};
   },
   handleFollow: function (e) {
     e.preventDefault();
     this.setState({disabled: true});
-    ApiUtil.createFollow(this.props.user.id, this.enableButton);
+    var relationship = {followed_id: this.props.user.id};
+    ApiUtil.createFollow(relationship, this.enableButton);
   },
   handleUnfollow: function (e) {
     e.preventDefault();
-    this.setState({disabled: true});
-    ApiUtil.destroyFollow(this.props.user.id, this.enableButton)
+    var relationship = {followed_id: this.props.user.id};
+    ApiUtil.destroyFollow(relationship, this.enableButton);
   },
   enableButton: function () {
     this.setState({disabled: false});

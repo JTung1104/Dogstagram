@@ -6,7 +6,8 @@ class Api::RelationshipsController < ApplicationController
   end
 
   def destroy
-    @relationship = Relationship.find(params[:id])
+    @relationship = Relationship
+      .where("followed_id = ? AND follower_id = ?", params[:id], current_user.id)
     render :show if @relationship.destroy!
   end
 

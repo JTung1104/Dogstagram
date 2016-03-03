@@ -111,7 +111,7 @@ var ApiUtil = {
       dataType: "json"
     });
   },
-  createFollow: function (id, callback) {
+  createFollow: function (relationship, callback) {
     $.ajax({
       method: "POST",
       url: "/api/relationships",
@@ -123,10 +123,10 @@ var ApiUtil = {
       dataType: "json"
     });
   },
-  destroyFollow: function (id, callback) {
+  destroyFollow: function (relationship, callback) {
     $.ajax({
       method: "DELETE",
-      url: "/api/relationships/" + id,
+      url: "/api/relationships/" + relationship.followed_id,
       success: function (relationship) {
         ApiActions.deleteFollow(relationship);
         callback && callback();
