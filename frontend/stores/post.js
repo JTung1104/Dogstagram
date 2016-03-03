@@ -95,4 +95,5 @@ PostStore.findById = function (id) {
 
   return post;
 };
+
 module.exports = PostStore;

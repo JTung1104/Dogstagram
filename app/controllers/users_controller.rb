@@ -16,7 +16,12 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.includes(:followed_users, :followers, posts: [:likes, :comments])
+    if query.length > 0
+      @users = User.where("username LIKE ?", "%#{query}%")
+      render :query
+    else
+      @users = User.includes(:followed_users, :followers, posts: [:likes, :comments])
+    end
   end
 
   def show
@@ -26,5 +31,9 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:password, :username)
+  end
+
+  def query
+    params[:query]
   end
 end

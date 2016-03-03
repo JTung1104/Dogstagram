@@ -30,3 +30,7 @@ accepts_nested_attributes_for
 
 refactor by putting the modals on pictures only such that there is only one modal
 per picture and just pass in the comment
+
+USE PERCENTAGES FOR WIDTHS AND THINGS WILL SCALE WITH CONTAINER
+
+GOOGLE FADE TRANSITION EASE IN EASE OUT

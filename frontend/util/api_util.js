@@ -1,4 +1,5 @@
 var ApiActions = require('../actions/api_actions');
+var SearchActions = require('../actions/search_actions');
 
 var ApiUtil = {
   fetchPosts: function () {
@@ -60,6 +61,18 @@ var ApiUtil = {
       url: "/users/" + id,
       success: function (user) {
         ApiActions.receiveUser([user]);
+        callback && callback();
+      },
+      dataType: "json"
+    });
+  },
+  fetchSearchResults: function (query, callback) {
+    $.ajax({
+      method: "GET",
+      url: "/users/",
+      data: {query: query},
+      success: function (results) {
+        SearchActions.receiveSearchResults(results);
         callback && callback();
       },
       dataType: "json"
