@@ -93,7 +93,7 @@ var UploadPictureButton = React.createClass({
           onRequestClose={this.closeModal}
           style={customStyle}>
 
-          <button id="upload-modal-button"
+          <button className="upload-modal-button"
                   onClick={this.handleUploadPicture}>Select Photo</button>
 
         <input className="modal-comment-field"

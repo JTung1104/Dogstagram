@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resources :tags, only: [:index, :create, :destroy]
     resources :posts do
       resources :likes, only: [:create, :destroy]
-      resources :comments, only: [:create, :destroy, :update]
+      resources :comments, only: [:create, :destroy]
       resources :taggings, only: [:create, :destroy]
     end
   end

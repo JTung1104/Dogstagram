@@ -10,15 +10,6 @@ class Api::CommentsController < ApplicationController
     render :show if @comment.destroy!
   end
 
-  def update
-    @comment = Comment.find(params[:id])
-    if @comment.save!(body: params[:comment][:body])
-      render :show
-    else
-      render json: { error: "no bueno" }, status: 422
-    end
-  end
-
   def show
     @comment = Comment.includes(:user).find(params[:id])
   end

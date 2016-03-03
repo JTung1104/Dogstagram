@@ -25,3 +25,335 @@
 .nav-header {
   width: 100%;
 }
+
+#HEADER_1 {
+    box-sizing: border-box;
+    cursor: default;
+    display: flex;
+    height: 178px;
+    min-height: auto;
+    min-width: auto;
+    position: relative;
+    width: 935px;
+    perspective-origin: 467.5px 89px;
+    transform-origin: 467.5px 89px;
+    border: 0px solid rgb(0, 0, 0);
+    flex: 0 0 auto;
+    font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    margin: 0px 0px 45px;
+    padding: 20px 0px;
+}/*#HEADER_1*/
+
+#DIV_2 {
+    box-sizing: border-box;
+    cursor: default;
+    display: flex;
+    height: 138px;
+    min-height: auto;
+    min-width: auto;
+    position: relative;
+    width: 291.672px;
+    perspective-origin: 145.828px 69px;
+    transform-origin: 145.828px 69px;
+    border: 0px solid rgb(0, 0, 0);
+    flex: 1 0 0px;
+    flex-flow: column nowrap;
+    font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    margin: 0px 30px 0px 0px;
+}/*#DIV_2*/
+
+#DIV_3 {
+    box-sizing: border-box;
+    cursor: default;
+    height: 152px;
+    min-height: auto;
+    min-width: auto;
+    position: relative;
+    width: 152px;
+    perspective-origin: 76px 76px;
+    transform-origin: 76px 76px;
+    background: rgb(251, 251, 251) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 1px solid rgb(204, 207, 208);
+    border-radius: 50% 50% 50% 50%;
+    flex: 0 0 auto;
+    flex-flow: column nowrap;
+    font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    margin: -7px 69.8281px;
+    overflow: hidden;
+}/*#DIV_3*/
+
+#BUTTON_4 {
+    cursor: pointer;
+    height: 150px;
+    width: 150px;
+    perspective-origin: 75px 75px;
+    transform-origin: 75px 75px;
+    border: 0px none rgb(0, 0, 0);
+    font: normal normal normal normal 11px / normal proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    padding: 0px;
+}/*#BUTTON_4*/
+
+#IMG_5 {
+    cursor: pointer;
+    display: block;
+    height: 150px;
+    left: 0px;
+    position: absolute;
+    text-align: center;
+    top: 0px;
+    width: 150px;
+    perspective-origin: 75px 75px;
+    transform-origin: 75px 75px;
+    font: normal normal normal normal 11px / normal proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}/*#IMG_5*/
+
+#FORM_6 {
+    cursor: default;
+    width: 150px;
+    perspective-origin: 75px 0px;
+    transform-origin: 75px 0px;
+    font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    margin: 0px;
+}/*#FORM_6*/
+
+#INPUT_7 {
+    box-sizing: content-box;
+    display: none;
+    height: auto;
+    width: auto;
+    align-items: baseline;
+    perspective-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(0, 0, 0);
+    font: normal normal normal normal 11px / normal proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    padding: 0px;
+}/*#INPUT_7*/
+
+.profile-stats-box {
+    box-sizing: border-box;
+    color: rgb(75, 79, 84);
+    cursor: default;
+    display: flex;
+    height: 138px;
+    min-height: auto;
+    min-width: auto;
+    position: relative;
+    width: 613.328px;
+    perspective-origin: 306.656px 69px;
+    transform-origin: 306.656px 69px;
+    border: 0px solid rgb(0, 0, 0);
+    flex: 2 0 30px;
+    flex-flow: column nowrap;
+    font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    outline: rgb(75, 79, 84) none 0px;
+}
+
+.profile-header-name {
+    box-sizing: border-box;
+    color: rgb(75, 79, 84);
+    cursor: default;
+    display: flex;
+    height: 40px;
+    min-height: auto;
+    min-width: auto;
+    position: relative;
+    width: 613.328px;
+    align-items: center;
+    perspective-origin: 306.656px 20px;
+    transform-origin: 306.656px 20px;
+    border: 0px solid rgb(0, 0, 0);
+    flex: 0 0 auto;
+    font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    outline: rgb(75, 79, 84) none 0px;
+}
+
+.profile-header-header {
+    color: rgb(75, 79, 84);
+    cursor: default;
+    height: 40px;
+    min-height: auto;
+    min-width: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 124.469px;
+    align-self: center;
+    perspective-origin: 62.2344px 20px;
+    transform-origin: 62.2344px 20px;
+    border: 0px none rgb(75, 79, 84);
+    font: normal normal 300 normal 34px / 40px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    margin: 0px;
+    outline: rgb(75, 79, 84) none 0px;
+    overflow: hidden;
+}
+
+.follow-link {
+    color: rgb(18, 86, 136);
+    display: block;
+    height: 31px;
+    min-height: auto;
+    min-width: auto;
+    text-decoration: none;
+    width: 112.156px;
+    align-self: center;
+    perspective-origin: 56.0781px 15.5px;
+    transform-origin: 56.0781px 15.5px;
+    border: 0px none rgb(18, 86, 136);
+    flex: 0 0 auto;
+    font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    margin: 0px 0px 0px 20px;
+    outline: rgb(18, 86, 136) none 0px;
+}
+
+.follow-button {
+    color: rgb(129, 132, 136);
+    cursor: pointer;
+    height: 31px;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 112.156px;
+    perspective-origin: 56.0781px 15.5px;
+    transform-origin: 56.0781px 15.5px;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 1px solid rgb(129, 132, 136);
+    border-radius: 3px 3px 3px 3px;
+    font: normal normal 600 normal 14px / 29px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    outline: rgb(129, 132, 136) none 0px;
+    overflow: hidden;
+    padding: 0px 11px;
+}
+
+.profile-stats-name {
+    box-sizing: border-box;
+    color: rgb(75, 79, 84);
+    cursor: default;
+    height: 24px;
+    min-height: auto;
+    min-width: auto;
+    position: relative;
+    width: 613.328px;
+    perspective-origin: 306.656px 12px;
+    transform-origin: 306.656px 12px;
+    border: 0px solid rgb(0, 0, 0);
+    flex: 0 0 auto;
+    flex-flow: column nowrap;
+    font: normal normal normal normal 17px / 24px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    margin: 14px 0px 0px;
+    outline: rgb(75, 79, 84) none 0px;
+}
+
+.profile-stats-name-header {
+    color: rgb(75, 79, 84);
+    cursor: default;
+    display: inline;
+    height: auto;
+    width: auto;
+    border: 0px none rgb(75, 79, 84);
+    font: normal normal 600 normal 17px / 24px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    margin: 0px;
+    outline: rgb(75, 79, 84) none 0px;
+}
+
+.name-span {
+    color: rgb(75, 79, 84);
+    cursor: default;
+    border: 0px none rgb(75, 79, 84);
+    font: normal normal normal normal 17px / 24px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    outline: rgb(75, 79, 84) none 0px;
+}
+
+.profile-stats-ul {
+    color: rgb(75, 79, 84);
+    cursor: default;
+    display: flex;
+    height: 17px;
+    min-height: auto;
+    min-width: auto;
+    width: 613.328px;
+    perspective-origin: 306.656px 8.5px;
+    transform-origin: 306.656px 8.5px;
+    border: 0px none rgb(75, 79, 84);
+    font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    list-style: none outside none;
+    margin: 17px 0px 0px;
+    outline: rgb(75, 79, 84) none 0px;
+    padding: 0px;
+}
+
+.post-count-li {
+    color: rgb(75, 79, 84);
+    cursor: default;
+    height: 17px;
+    min-height: auto;
+    min-width: auto;
+    width: 71.3594px;
+    perspective-origin: 35.6719px 8.5px;
+    transform-origin: 35.6719px 8.5px;
+    border: 0px none rgb(75, 79, 84);
+    font: normal normal normal normal 17px / 17px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    list-style: none outside none;
+    margin: 0px 40px 0px 0px;
+    outline: rgb(75, 79, 84) none 0px;
+}
+
+.profile-span-1 {
+    color: rgb(75, 79, 84);
+    cursor: default;
+    text-align: left;
+    border: 0px none rgb(75, 79, 84);
+    font: normal normal normal normal 17px / 17px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    list-style: none outside none;
+    outline: rgb(75, 79, 84) none 0px;
+}
+
+.profile-span-2 {
+    color: rgb(52, 55, 59);
+    cursor: default;
+    text-align: left;
+    border: 0px none rgb(52, 55, 59);
+    font: normal normal 600 normal 17px / 17px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    list-style: none outside none;
+    outline: rgb(52, 55, 59) none 0px;
+}
+
+.follower-count-li {
+    color: rgb(75, 79, 84);
+    cursor: default;
+    height: 17px;
+    min-height: auto;
+    min-width: auto;
+    width: 101.594px;
+    perspective-origin: 50.7969px 8.5px;
+    transform-origin: 50.7969px 8.5px;
+    border: 0px none rgb(75, 79, 84);
+    font: normal normal normal normal 17px / 17px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    list-style: none outside none;
+    margin: 0px 40px 0px 0px;
+    outline: rgb(75, 79, 84) none 0px;
+}
+
+.profile-span-3 {
+    color: rgb(75, 79, 84);
+    cursor: default;
+    text-align: left;
+    border: 0px none rgb(75, 79, 84);
+    font: normal normal normal normal 17px / 17px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    list-style: none outside none;
+    outline: rgb(75, 79, 84) none 0px;
+}
+
+.follower-count-li {
+    color: rgb(75, 79, 84);
+    cursor: default;
+    height: 17px;
+    min-height: auto;
+    min-width: auto;
+    width: 98.5312px;
+    perspective-origin: 49.2656px 8.5px;
+    transform-origin: 49.2656px 8.5px;
+    border: 0px none rgb(75, 79, 84);
+    font: normal normal normal normal 17px / 17px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    list-style: none outside none;
+    outline: rgb(75, 79, 84) none 0px;
+}
