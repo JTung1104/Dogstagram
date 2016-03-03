@@ -66,13 +66,7 @@ UserStore.__onDispatch = function (payload) {
 };
 
 UserStore.all = function () {
-  var users = {};
-
-  Object.keys(_users).forEach(function(key) {
-    users[key] = _users[key];
-  });
-
-  return users;
+  return Object.assign({}, _users);
 };
 
 module.exports = UserStore;
