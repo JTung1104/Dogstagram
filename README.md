@@ -11,7 +11,7 @@ using Ruby on Rails and React.js. Dogstagram allows users to:
 
 - [x] Create an account
 - [x] Log in / Log out
-- [ ] Follow Users
+- [x] Follow Users
 - [x] Create, Read, and Delete Posts
 - [x] Like Posts
 - [x] Create, Read, and Delete Comments
@@ -44,7 +44,7 @@ using Ruby on Rails and React.js. Dogstagram allows users to:
 
 ### Phase 2: Posts Model, API, and basic APIUtil (1.5 days)
 
-**Objective:** Posts can be created, read, updated, and destroyed through
+**Objective:** Posts can be created, read, and destroyed through
 the API.
 
 - [x] create `Post` model

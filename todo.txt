@@ -4,17 +4,7 @@
 2. Taggings are the ones to be nested, they belong to a post.
   Create a tagging, just a connection, similar to follow model
 
-For API stuff - BenchBnB example
 
-  render back json
-  never redirect
-
-  make sure to test it out that things are rendering correctly
-
-
-EXAMPLES TO REFER TO FOR LIKES / TAGS / COMMENTS
-
-Twitter for Likes
 
 CodePen.io for sign-in page css
 
@@ -37,3 +27,6 @@ accepts_nested_attributes_for
 
 //.classList.add transition opacity timeout
 // taggings and hashtag search
+
+refactor by putting the modals on pictures only such that there is only one modal
+per picture and just pass in the comment

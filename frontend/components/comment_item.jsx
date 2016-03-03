@@ -46,7 +46,7 @@ var CommentItem = React.createClass({
     this.setState({modalIsOpen: false});
   },
   getDeleteCommentButton: function () {
-    if (this.props.comment.user_id === currentUserId) {
+    if (this.props.comment.user_id === currentUserId || this.props.post.user_id === currentUserId) {
       return (
         <button title="Delete Comment"
                 className="delete-comment"
@@ -57,6 +57,7 @@ var CommentItem = React.createClass({
   handleDelete: function (e) {
     e.preventDefault();
     ApiUtil.destroyComment(this.props.comment);
+    this.closeModal();
   },
   render: function () {
     return (
