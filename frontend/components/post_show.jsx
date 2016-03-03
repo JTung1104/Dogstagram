@@ -23,15 +23,21 @@ var PostShow = React.createClass({
     this.setState({ post: PostStore.findById(parseInt(this.props.params.id)) });
   },
   render: function () {
-    debugger
-    return (
-      <div>
-        <NavBar/>
-        <div className="index">
-          <Post post={this.state.post}/>
+    if (this.state.post) {
+      return (
+        <div>
+          <NavBar/>
+          <div className="index">
+            <Post post={this.state.post}/>
+          </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div>
+        </div>
+      );
+    }
   }
 });
 

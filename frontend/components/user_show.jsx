@@ -28,15 +28,22 @@ var UserShow = React.createClass({
     return pictures;
   },
   render: function () {
-    return (
-      <div className="user-show">
-        <ProfileNavBar props={this.props}/>
+    if (this.state.user) {
+      return (
+        <div className="user-show">
+          <ProfileNavBar props={this.props}/>
 
-        <div className="picture-grid">
-          {this.pictures()}
+          <div className="picture-grid">
+            {this.pictures()}
+          </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div>
+        </div>
+      );
+    }
   }
 });
 

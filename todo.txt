@@ -18,7 +18,7 @@ Twitter for Likes
 
 CodePen.io for sign-in page css
 
-BENCHBNB for search bar 
+BENCHBNB for search bar
 
 Position everything first
 Index page
@@ -34,3 +34,7 @@ Moment.js
 Active Record Nested Attributes
 
 accepts_nested_attributes_for
+
+//.classList.add transition opacity timeout
+// taggings and hashtag search
+//user page - wrap in an if because if i run into bug etc
