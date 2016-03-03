@@ -1,8 +1,39 @@
 var React = require('react');
+var ApiUtil = require('../util/api_util');
 
 var ProfileStats = React.createClass({
-  getText: function () {
-    return ("");
+  getInitialState: function () {
+    return { disabled: false };
+  },
+  handleFollow: function (e) {
+    e.preventDefault();
+    this.setState({disabled: true});
+    ApiUtil.createFollow(this.props.user.id, this.enableButton);
+  },
+  handleUnfollow: function (e) {
+    e.preventDefault();
+    this.setState({disabled: true});
+    ApiUtil.destroyFollow(this.props.user.id, this.enableButton)
+  },
+  enableButton: function () {
+    this.setState({disabled: false});
+  },
+  getButton: function () {
+    if (this.props.user.id === currentUserId) { return }
+
+    if (this.state.followed) {
+      return (
+        <a className="follow-link" href="#" onClick={this.handleUnfollow}>
+          <button className="unfollow-button">Unfollow</button>
+        </a>
+      );
+    } else {
+      return (
+        <a className="follow-link" href="#" onClick={this.handleFollow}>
+          <button className="follow-button">Follow</button>
+        </a>
+      );
+    }
   },
   render: function () {
     return (
@@ -11,21 +42,14 @@ var ProfileStats = React.createClass({
           <h1 className="profile-header-header">
             {this.props.user.username}
           </h1>
-          <a className="follow-link" href="#">
-            <button className="follow-button">
-              {this.getText()}
-            </button>
-          </a>
+
+          {this.getButton()}
         </div>
 
         <div className="profile-stats-name">
-          <h2 className="profile-stats-name-header">
-            Your Name Here
-          </h2>
-          <span className="name-span">
-          </span>
-          <span className="name-span">
-          </span>
+          <h2 className="profile-stats-name-header">Kitty</h2>
+          <span className="name-span"></span>
+          <span className="name-span"></span>
         </div>
 
         <ul className="profile-stats-ul">
@@ -39,7 +63,7 @@ var ProfileStats = React.createClass({
               </span>
 
               <span className="profile-span-1">
-                posts
+                {" "}posts
               </span>
             </span>
           </li>
@@ -54,7 +78,7 @@ var ProfileStats = React.createClass({
               </span>
 
               <span className="profile-span-1">
-                followers
+                {" "}followers
               </span>
             </span>
           </li>
@@ -69,7 +93,7 @@ var ProfileStats = React.createClass({
               </span>
 
               <span className="profile-span-1">
-                following
+                {" "}following
               </span>
             </span>
           </li>

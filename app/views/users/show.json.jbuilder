@@ -25,12 +25,18 @@ json.posts @user.posts do |post|
   json.liked liked
 end
 
+followed = false
+
 json.followers @user.followers do |follower|
   json.id follower.id
   json.user follower.username
+
+  followed = true if follower.id == current_user.id
 end
 
 json.followed_users @user.followed_users do |followed_user|
   json.id followed_user.id
   json.user followed_user.username
 end
+
+json.followed followed

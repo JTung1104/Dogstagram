@@ -7,7 +7,8 @@ var ProfilePicture = React.createClass({
       <div className="profile-picture-box">
         <div className="profile-picture-square">
           <button className="change-profile-picture">
-            <img alt="Change profile photo" src=""/>
+            <img title="Change profile photo"
+                 src="http://res.cloudinary.com/dsolojfgkabc/image/upload/Empty_Profile_qvvkdi.jpg"/>
           </button>
         </div>
 

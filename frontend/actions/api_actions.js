@@ -49,7 +49,19 @@ var ApiActions = {
     AppDispatcher.dispatch({
       actionType: PostConstants.LIKE_DELETED,
       like: like
-    })
+    });
+  },
+  receiveFollow: function (relationship) {
+    AppDispatcher.dispatch({
+      actionType: UserConstants.FOLLOW_RECEIVED,
+      relationship: relationship
+    });
+  },
+  deleteFollow: function (relationship) {
+    AppDispatcher.dispatch({
+      actionType: UserConstants.FOLLOW_DELETED,
+      relationship: relationship
+    });
   }
 };
 

@@ -54,12 +54,13 @@ var ApiUtil = {
       dataType: "json"
     });
   },
-  fetchUser: function (id) {
+  fetchUser: function (id, callback) {
     $.ajax({
       method: "GET",
       url: "/users/" + id,
       success: function (user) {
         ApiActions.receiveUser([user]);
+        callback && callback();
       },
       dataType: "json"
     });
@@ -105,6 +106,29 @@ var ApiUtil = {
       url: "/api/posts/" + like.post_id + "/likes/" + like.id,
       success: function (like) {
         ApiActions.deleteLike(like);
+        callback && callback();
+      },
+      dataType: "json"
+    });
+  },
+  createFollow: function (id, callback) {
+    $.ajax({
+      method: "POST",
+      url: "/api/relationships",
+      data: {relationship: relationship},
+      success: function (relationship) {
+        ApiActions.receiveFollow(relationship);
+        callback && callback();
+      },
+      dataType: "json"
+    });
+  },
+  destroyFollow: function (id, callback) {
+    $.ajax({
+      method: "DELETE",
+      url: "/api/relationships/" + id,
+      success: function (relationship) {
+        ApiActions.deleteFollow(relationship);
         callback && callback();
       },
       dataType: "json"

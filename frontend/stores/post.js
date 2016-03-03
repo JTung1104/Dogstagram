@@ -14,9 +14,7 @@ var attachComment = function (comment) {
     return post.id === comment.post_id;
   });
 
-  if (post) {
-    post.comments.push(comment);
-  }
+  if (post) { post.comments.push(comment); }
 };
 
 var deleteComment = function (comment) {
@@ -39,9 +37,7 @@ var addLike = function (like) {
     return post.id === like.post_id;
   });
 
-  if (post) {
-    post.likes.push(like);
-  }
+  if (post) { post.likes.push(like); }
 };
 
 var deleteLike = function (like) {
