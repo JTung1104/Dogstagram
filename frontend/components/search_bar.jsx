@@ -1,6 +1,7 @@
 var React = require('react');
 var UserStore = require('../stores/user');
 var SearchStore = require('../stores/search');
+var ApiUtil = require('../util/api_util');
 
 var SearchBar = React.createClass({
   getInitialState: function () {
