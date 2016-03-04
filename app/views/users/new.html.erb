@@ -1,31 +1,24 @@
-<div class="signup">
+<div class="login">
+  <div class="login-form-box sign-up">
+    <form class="login-form sign-up" action="<%= users_url %>" method="post">
+      <h2 class="login-header sign-up">Dogstagram</h2>
 
-  <h2 class="signup-header">Sign Up</h2>
-
-  <%= link_to "Log In", new_session_url %>
-
-  <div class="signup-background">
-
-  </div>
-
-  <form class="signup-form" action="<%= users_url %>" method="post">
-    <input
+      <input
       type="hidden"
       name="authenticity_token"
       value="<%= form_authenticity_token %>">
 
-  <label for="user[username]">
-    Username
-    <input class="signup-username" type="text" name="user[username]">
-  </label>
-  <br>
+      <div class="error sign-up">
+        <%= flash[:errors].join("<br>").html_safe if flash[:errors] %>
+      </div>
 
-  <label for="user[password]">
-    Password
-    <input class="signup-password" type="password" name="user[password]">
-  </label>
-  <br>
+        <input placeholder="Username" type="text" name="user[username]">
+        <input placeholder="Password" type="password" name="user[password]">
+        <input class="login-submit" type="submit" value="Sign Up">
 
-  <input class="signup-submit" type="submit" name="name" value="Sign Up">
-  </form>
+      <div class="sign-up-link login">
+        <p>Have an account? <a href="/session/new">Click here</a> to login.</p>
+      </div>
+    </form>
+  </div>
 </div>

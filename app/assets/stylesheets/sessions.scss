@@ -49,6 +49,12 @@ h1, h2, p, strong, em, a {
   margin: auto;
 }
 
+.login-form-box.sign-up {
+  border-bottom: 1px solid #EDEEEE;
+  justify-content: space-between;
+  height: 300px;
+}
+
 .login-form {
   position: relative;
   display: flex;
@@ -71,6 +77,18 @@ h1, h2, p, strong, em, a {
   margin: 5px;
 }
 
+.login-form.sign-up > input {
+  background-color: #fdfdfd;
+  border: 1px solid #edeeee;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 9px 8px 7px;
+  position: relative;
+  top: 30px;
+  width: 268px;
+  font-family: Arial, sans-serif;
+}
+
 .login-form > input {
   background-color: #fdfdfd;
   border: 1px solid #edeeee;
@@ -86,6 +104,10 @@ h1, h2, p, strong, em, a {
   font: normal normal normal normal 46px / normal 'Lobster Two';
   position: relative;
   bottom: 22px;
+}
+
+.login-header.sign-up {
+  bottom: 24px;
 }
 
 .login-form > input.login-submit {
@@ -185,6 +207,11 @@ h1, h2, p, strong, em, a {
   font-size: 15px;
 }
 
+.error.sign-up {
+  right: 6%;
+  top: 74px;
+}
+
 .sign-up-link {
   display: flex;
     position: relative;
@@ -200,4 +227,10 @@ h1, h2, p, strong, em, a {
     height: 40px;
     width: 350px;
     align-items: inherit;
+}
+
+.sign-up-link.login {
+  border-bottom: none;
+  position: relative;
+  top: 26px;
 }
