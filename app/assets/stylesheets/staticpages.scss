@@ -259,6 +259,7 @@ h1, h2, p, strong, em, a {
   float: left;
   height: 28px;
   width: 192px;
+  position: relative;
   perspective-origin: 96px 44px;
   transform-origin: 96px 44px;
   font: normal normal normal normal 16px / normal Times;
@@ -289,6 +290,179 @@ h1, h2, p, strong, em, a {
 
 .search-field:focus {
   outline: 0;
+}
+
+.results-outer-box {
+  box-shadow: rgba(0, 0, 0, 0.129412) 0px 0px 5px 0px;
+  box-sizing: border-box;
+  height: 364px;
+  min-height: auto;
+  min-width: auto;
+  position: absolute;
+  right: -13%;
+  top: 77%;
+  width: 243px;
+  z-index: 2;
+  perspective-origin: 121.5px 182px;
+  transform-origin: 121.5px 182px;
+  background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+  border: 1px solid rgb(237, 238, 238);
+  border-radius: 3px 3px 3px 3px;
+  flex: 0 0 auto;
+  flex-flow: column nowrap;
+  font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.results-outer-box:after {
+  content: "";
+  display: block;
+  left: 110px;
+  position: absolute;
+  top: -10px;
+  z-index: 3;
+  perspective-origin: 10px 5px;
+  transform-origin: 10px 5px;
+  border-top: 0px solid rgba(0, 0, 0, 0);
+  border-right: 10px solid rgba(0, 0, 0, 0);
+  border-bottom: 10px solid #edeeee;
+  border-left: 10px solid rgba(0, 0, 0, 0);
+  font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.results-inner-box {
+  box-sizing: border-box;
+  display: flex;
+  height: 362px;
+  max-height: 362px;
+  position: relative;
+  width: 241px;
+  perspective-origin: 120.5px 181px;
+  transform-origin: 120.5px 181px;
+  border: 0px solid rgb(0, 0, 0);
+  flex: 0 0 auto;
+  flex-flow: column nowrap;
+  font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  overflow: auto;
+}
+
+.user-result-link {
+  color: rgb(18, 86, 136);
+  display: flex;
+  height: 50px;
+  min-height: auto;
+  min-width: auto;
+  text-decoration: none;
+  width: auto;
+  align-items: center;
+  perspective-origin: 113px 33.5px;
+  transform-origin: 113px 33.5px;
+  background: white none repeat scroll 0% 0% / auto padding-box border-box;
+  border-top: 0px none rgb(18, 86, 136);
+  border-right: 0px none rgb(18, 86, 136);
+  border-bottom: 1px solid rgb(237, 238, 239);
+  border-left: 0px none rgb(18, 86, 136);
+  flex: 0 0 auto;
+  font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  outline: rgb(18, 86, 136) none 0px;
+  padding: 8px 14px;
+}
+
+.user-result-link:hover {
+  background: #FAFAFA;
+}
+
+.user-result-box {
+  box-sizing: border-box;
+  color: rgb(18, 86, 136);
+  height: 48px;
+  min-height: auto;
+  min-width: auto;
+  position: relative;
+  white-space: nowrap;
+  width: 198px;
+  align-self: center;
+  perspective-origin: 99px 24px;
+  transform-origin: 99px 24px;
+  border: 0px solid rgb(0, 0, 0);
+  flex: 0 0 auto;
+  flex-flow: column nowrap;
+  font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  outline: rgb(18, 86, 136) none 0px;
+  padding: 0px 0px 5px;
+}
+
+.user-result-pic {
+  color: rgb(18, 86, 136);
+  display: block;
+  float: left;
+  height: 30px;
+  white-space: nowrap;
+  width: 30px;
+  perspective-origin: 16px 16px;
+  transform-origin: 16px 16px;
+  border: 1px solid rgb(237, 238, 239);
+  border-radius: 30px 30px 30px 30px;
+  font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  margin: 7px 10px 0px 0px;
+  outline: rgb(18, 86, 136) none 0px;
+}
+
+.user-result-username-box {
+  box-sizing: border-box;
+  color: rgb(7, 8, 9);
+  display: flex;
+  height: 18px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 156px;
+  perspective-origin: 78px 9px;
+  transform-origin: 78px 9px;
+  border: 0px solid rgb(0, 0, 0);
+  flex: 0 0 auto;
+  font: normal normal normal normal 14px / 14px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  margin: 3px 0px 0px;
+  outline: rgb(7, 8, 9) none 0px;
+  overflow: hidden;
+}
+
+.user-result-username {
+  color: rgb(7, 8, 9);
+  display: block;
+  height: 22px;
+  max-width: 140px;
+  min-height: auto;
+  min-width: auto;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: auto;
+  perspective-origin: 26.5156px 11px;
+  transform-origin: 26.5156px 11px;
+  border: 0px none rgb(7, 8, 9);
+  font: normal normal normal normal 14px / 22px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  margin: 0px 0px -4px;
+  outline: rgb(7, 8, 9) none 0px;
+  overflow: hidden;
+}
+
+.user-result-name {
+  box-sizing: border-box;
+  color: rgb(201, 200, 205);
+  height: 22px;
+  position: relative;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 156px;
+  perspective-origin: 78px 11px;
+  transform-origin: 78px 11px;
+  border: 0px solid rgb(0, 0, 0);
+  flex: 0 0 auto;
+  flex-flow: column nowrap;
+  font: normal normal 300 normal 14px / 22px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  outline: rgb(201, 200, 205) none 0px;
+  overflow: hidden;
 }
 
 .nav-right {

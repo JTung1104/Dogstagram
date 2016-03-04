@@ -17,7 +17,7 @@ var UserShow = React.createClass({
     this.userListener.remove();
   },
   componentWillReceiveProps: function (newProps) {
-    ApiUtil.fetchUser(this.props.params.id, function () {
+    ApiUtil.fetchUser(newProps.params.id, function () {
       this.setState({ user: UserStore.findById(newProps.params.id) });
     }.bind(this));
   },

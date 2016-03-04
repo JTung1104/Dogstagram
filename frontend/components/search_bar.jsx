@@ -4,7 +4,7 @@ var SearchStore = require('../stores/search');
 
 var SearchBar = React.createClass({
   getInitialState: function () {
-    return {search: "", results: SearchStore.all()};
+    return {search: "", results: {}};
   },
   componentDidMount: function () {
     this.searchListener = SearchStore.addListener(this.handleChange);
@@ -21,8 +21,51 @@ var SearchBar = React.createClass({
           this.setState({results: SearchStore.all()});
           // console.log(this.state.results);
         }.bind(this));
+      } else {
+        this.setState({results: {}});
       }
     }
+  },
+  handleClick: function (e) {
+    this.setState({search: "", results: {}});
+  },
+  getResults: function () {
+    if (Object.keys(this.state.results).length > 0) {
+      return (
+        <div className="results-outer-box">
+          <div className="results-inner-box">
+            {this.getResultItems()}
+          </div>
+        </div>
+      );
+    }
+  },
+  getResultItems: function () {
+    var results = this.state.results;
+
+    var resultItems = Object.keys(results).map(function(result, i) {
+      var url = "http://res.cloudinary.com/dsolojfgkabc/image/upload/"
+      url += results[result].profile_image_url || "Empty_Profile_qvvkdi.jpg"
+
+      return (
+        <a key={i}
+           className="user-result-link"
+           href={"/#/users/" + results[result].id}
+           onClick={this.handleClick}>
+          <div className="user-result-box">
+            <img src={url} className="user-result-pic"/>
+            <div className="user-result-username-box">
+              <span className="user-result-username">{results[result].username}</span>
+            </div>
+            <div className="user-result-name">
+              name
+            </div>
+          </div>
+        </a>
+      );
+    }.bind(this));
+
+    return resultItems;
   },
   render: function () {
     return (
@@ -33,6 +76,7 @@ var SearchBar = React.createClass({
           className="search-field"
           value={this.state.search}
           onChange={this.handleChange}/>
+        {this.getResults()}
       </div>
     );
   }
