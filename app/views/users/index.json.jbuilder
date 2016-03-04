@@ -1,6 +1,9 @@
 json.array! @users do |user|
   json.id user.id
   json.username user.username
+  json.name user.name
+  json.profile_image_url user.profile_image_url
+  
   json.posts user.posts do |post|
     json.id post.id
     json.image_url post.image_url

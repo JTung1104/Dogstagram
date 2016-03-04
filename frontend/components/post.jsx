@@ -8,7 +8,8 @@ var Post = React.createClass({
     return (
       <article className="post">
         <PostHeader post={this.props.post}/>
-        <Picture photoOptions={"w_600,c_scale/"}
+        <Picture post={this.props.post}
+                 photoOptions={"w_600,c_scale/"}
                  imageUrl={this.props.post.image_url}/>
         <CommentBox post={this.props.post}/>
       </article>

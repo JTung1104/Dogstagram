@@ -19,7 +19,6 @@ var SearchBar = React.createClass({
       if (e.target.value.length > 0) {
         ApiUtil.fetchSearchResults(e.target.value, function () {
           this.setState({results: SearchStore.all()});
-          // console.log(this.state.results);
         }.bind(this));
       } else {
         this.setState({results: {}});
@@ -58,7 +57,7 @@ var SearchBar = React.createClass({
               <span className="user-result-username">{results[result].username}</span>
             </div>
             <div className="user-result-name">
-              name{results[result].name}
+              {results[result].name}
             </div>
           </div>
         </a>

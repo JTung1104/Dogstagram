@@ -1,3 +1,98 @@
 // Place all the styles related to the api::posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.picture-hover {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
+  border: 0px solid rgb(0, 0, 0);
+  flex: 0 0 auto;
+  font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.picture-hover:hover {
+  display: flex;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.picture-hover:hover > .picture-stats-box {
+  display: flex;
+}
+
+.picture-stats-box {
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.like-count {
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  border: 0px none rgb(255, 255, 255);
+  font: normal normal 600 normal 16px / 19px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  list-style: none outside none;
+  outline: rgb(255, 255, 255) none 0px;
+  margin: 6px;
+}
+
+.like-icon {
+  background-position: -517px -423px;
+  color: rgb(255, 255, 255);
+  display: block;
+  height: 19px;
+  left: 0px;
+  text-align: left;
+  text-indent: 110%;
+  top: 0px;
+  white-space: nowrap;
+  width: 19px;
+  perspective-origin: 9.5px 9.5px;
+  transform-origin: 9.5px 9.5px;
+  background: rgba(0, 0, 0, 0) url("https://instagramstatic-a.akamaihd.net/h1/sprites/core-sprites-fcd235.png") no-repeat scroll -517px -423px / auto padding-box border-box;
+  border: 0px none rgb(255, 255, 255);
+  font: normal normal 600 normal 16px / 19px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  list-style: none outside none;
+  outline: rgb(255, 255, 255) none 0px;
+  overflow: hidden;
+}
+
+.comment-icon {
+  background-position: -132px -509px;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  height: 19px;
+  text-align: left;
+  text-indent: 110%;
+  white-space: nowrap;
+  width: 19px;
+  perspective-origin: 9.5px 9.5px;
+  transform-origin: 9.5px 9.5px;
+  background: rgba(0, 0, 0, 0) url("https://instagramstatic-a.akamaihd.net/h1/sprites/core-sprites-fcd235.png") no-repeat scroll -132px -509px / auto padding-box border-box;
+  border: 0px none rgb(255, 255, 255);
+  font: normal normal 600 normal 16px / 19px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  list-style: none outside none;
+  outline: rgb(255, 255, 255) none 0px;
+  overflow: hidden;
+}
+
+.comment-count {
+  color: rgb(255, 255, 255);
+  text-align: left;
+  display: inline-block;
+  border: 0px none rgb(255, 255, 255);
+  font: normal normal 600 normal 16px / 19px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  list-style: none outside none;
+  outline: rgb(255, 255, 255) none 0px;
+  margin: 6px;
+}
