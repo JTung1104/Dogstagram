@@ -36,7 +36,7 @@ class Api::PostsController < ApplicationController
       @comment = Comment.new(comment_params)
       @comment.post_id = @post.id
       @comment.user_id = @post.user_id
-      @comment.save!
+      @comment.save! unless @comment.body == ""
     end
 
     render :show

@@ -8,26 +8,28 @@ var PostShow = React.createClass({
   getInitialState: function () {
     return { post: PostStore.findById(parseInt(this.props.params.id)) };
   },
-  componentWillMount: function () {
-    var that = this;
+  componentDidMount: function () {
     this.postListener = PostStore.addListener(this.handleChange);
-
-    ApiUtil.fetchSinglePost(parseInt(this.props.params.id), function () {
-      that.setState({ post: PostStore.findById(parseInt(that.props.params.id)) });
-    });
+    ApiUtil.fetchSinglePost(parseInt(this.props.params.id));
   },
   componentWillUnmount: function () {
     this.postListener.remove();
+  },
+  componentWillReceiveProps: function (newProps) {
+    var that = this;
+    ApiUtil.fetchSinglePost(parseInt(newProps.params.id), function () {
+      that.setState({ post: PostStore.findById(parseInt(newProps.params.id)) });
+    });
   },
   handleChange: function () {
     this.setState({ post: PostStore.findById(parseInt(this.props.params.id)) });
   },
   render: function () {
+    // debugger
     if (this.state.post) {
       return (
         <div>
           <NavBar/>
-
           <div className="index">
             <Post post={this.state.post}/>
           </div>

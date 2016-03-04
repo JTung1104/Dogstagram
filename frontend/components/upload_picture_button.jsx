@@ -26,7 +26,7 @@ var customStyle = {
     alignItems                 : 'center',
     flexDirection              : 'column',
     border                     : '1px solid #ccc',
-    background                 : '#fff',
+    background                 : '#fafafa',
     overflow                   : 'auto',
     WebkitOverflowScrolling    : 'touch',
     borderRadius               : '4px',
@@ -42,11 +42,15 @@ var UploadPictureButton = React.createClass({
   },
   handleUploadPicture: function (e) {
     e.preventDefault();
-    var that = this;
 
-    cloudinary.applyUploadWidget(
-      document.getElementById('upload-modal-button'),
-      CLOUDINARY,
+    settings = Object.assign({}, CLOUDINARY);
+    settings["theme"] = "white"
+    settings["thumbnails"] = ".upload-field";
+    settings["thumbnail_transformation"] = "w_200,h_250,c_limit";
+
+    var that = this;
+    cloudinary.openUploadWidget(
+      settings,
       function (error, result) {
         if (result.length > 1) {
           console.log("Too many photos");
@@ -85,7 +89,7 @@ var UploadPictureButton = React.createClass({
         <a onClick={this.openModal} href="#"
            className="upload-picture-button">
           <img
-            src="http://res.cloudinary.com/dsolojfgkabc/image/upload/instagram-photo-camera-logo-outline_xfplow.png"
+            src="http://res.cloudinary.com/dsolojfgkabc/image/upload/instagram-photo-camera-logo-outline_fubte5.png"
             className="icon"/>
         </a>
         <Modal
@@ -96,7 +100,9 @@ var UploadPictureButton = React.createClass({
           <button className="upload-modal-button"
                   onClick={this.handleUploadPicture}>Select Photo</button>
 
-        <input className="modal-comment-field"
+          <div className="upload-field"></div>
+
+          <input className="modal-comment-field"
                  type="text"
                  placeholder="Add a caption..."
                  valueLink={this.linkState('body')}/>

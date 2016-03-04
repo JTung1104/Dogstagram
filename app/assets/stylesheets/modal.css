@@ -19,8 +19,8 @@
   display: flex;
   width: 30%;
   height: 40%;
-  min-width: 400px;
-  min-height: 350px;
+  min-width: 500px;
+  min-height: 450px;
   background: #FFF;
   padding: 20px;
   border: 1px solid #CCC;
@@ -80,4 +80,11 @@
 
 .modal-comment-field:focus {
   outline: none;
+}
+
+.upload-field {
+  display: flex;
+  justify-content: center;
+  height: 250px;
+  width: 250px;
 }
