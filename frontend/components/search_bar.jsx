@@ -58,7 +58,7 @@ var SearchBar = React.createClass({
               <span className="user-result-username">{results[result].username}</span>
             </div>
             <div className="user-result-name">
-              name
+              name{results[result].name}
             </div>
           </div>
         </a>
