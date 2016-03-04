@@ -26,6 +26,7 @@ h1, h2, p, strong, em, a {
 }
 
 .login {
+  display: flex;
   background-color: #FAFAFA;
   position: absolute;
   top: 0px;
@@ -57,7 +58,10 @@ h1, h2, p, strong, em, a {
   height: 370px;
   width: 350px;
   border-radius: 1px;
-  border: 1px solid #edeeee;
+  border-top: 1px solid #edeeee;
+  border-right: 1px solid #edeeee;
+  border-left: 1px solid #edeeee;
+  border-bottom: none;
   background-color: #FFF;
   margin: auto;
 }
@@ -100,7 +104,7 @@ h1, h2, p, strong, em, a {
 .guest-login-submit {
   transition: background-color ease-in-out 0.5s;
   position: relative;
-  bottom: 53px;
+  bottom: 67px;
   left: 1px;
   width: 286px;
   color: white;
@@ -172,4 +176,28 @@ h1, h2, p, strong, em, a {
 }
 
 .error {
+  display: flex;
+  z-index: 1;
+  top: 26%;
+  right: 21%;
+  position: absolute;
+  color: #F12938;
+  font-size: 15px;
+}
+
+.sign-up-link {
+  display: flex;
+    position: relative;
+    justify-content: center;
+    left: 1px;
+    bottom: -1px;
+    background-color: #FFFFFF;
+    border-right: 1px solid #EDEEEE;
+    border-left: 1px solid #EDEEEE;
+    border-bottom: 1px solid #EDEEEE;
+    font-family: serif;
+    font-size: 13px;
+    height: 40px;
+    width: 350px;
+    align-items: inherit;
 }

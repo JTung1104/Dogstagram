@@ -1,10 +1,12 @@
 <div class="login">
 
-  <%= link_to "Sign Up", new_user_url %>
-
   <div class="login-form-box">
     <form class="login-form" action="<%= session_url %>" method="post">
       <h2 class="login-header">Dogstagram</h2>
+
+      <div class="error">
+        <%= flash[:errors].join("<br>").html_safe if flash[:errors] %>
+      </div>
 
       <input
         type="hidden"
@@ -13,14 +15,19 @@
 
       <input type="text" placeholder="Username" name="user[username]">
       <input type="password" placeholder="Password" name="user[password]">
-      <input class="login-submit" type="submit" name="name" value="Log In">
+      <input class="login-submit" type="submit" value="Log In">
 
       <div class="login-divider">
         <div class="divider-line"></div>
         <div class="or">OR</div>
         <div class="divider-line"></div>
       </div>
+
     </form>
+
+    <div class="sign-up-link">
+    <p>Don't have an account? <a href="/users/new">Click here</a> to sign up.</p>
+    </div>
 
     <form class="guest-login" action="<%= session_url %>" method="post">
       <input
@@ -30,7 +37,7 @@
 
       <input type="hidden" name="user[username]" value="herrokitty">
       <input type="hidden" name="user[password]" value="kittykitty">
-      <input class="guest-login-submit" type="submit" name="name" value="Log In As Guest">
+      <input class="guest-login-submit" type="submit" value="Log In As Guest">
     </form>
   </div>
 </div>
