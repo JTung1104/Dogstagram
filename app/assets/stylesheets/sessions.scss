@@ -85,6 +85,7 @@ h1, h2, p, strong, em, a {
 }
 
 .login-form > input.login-submit {
+  transition: background-color ease-in-out 0.5s;
   width: 286px;
   color: white;
   background-color: #4090DB;
@@ -97,6 +98,7 @@ h1, h2, p, strong, em, a {
 }
 
 .guest-login-submit {
+  transition: background-color ease-in-out 0.5s;
   position: relative;
   bottom: 53px;
   left: 1px;

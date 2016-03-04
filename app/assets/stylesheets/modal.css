@@ -18,7 +18,7 @@
   -webkit-transform: scale(0.5) rotateX(-30deg);
   display: flex;
   width: 30%;
-  height: 40%;
+  height: 50%;
   min-width: 500px;
   min-height: 450px;
   background: #FFF;
@@ -75,16 +75,49 @@
 }
 
 .modal-comment-field {
-  border: none;
+  border: 2px solid #EDEEEE;
+  font-size: 14px
 }
 
-.modal-comment-field:focus {
-  outline: none;
+.upload-modal-button {
+  transition: background-color ease-in-out 0.5s;
+  width: 250px;
+  color: white;
+  background-color: #4090DB;
+  border-color: #4090DB;
+  height: 34px;
+  border-radius: 3px;
+  font-size: 14px;
+  border: 1px;
+}
+
+.upload-modal-button:hover {
+  background-color: #2D6599;
+  border-color: #2D6599;
 }
 
 .upload-field {
+  background-color: #FFF;
+  opacity: 0.6;
+  background-image: url(http://res.cloudinary.com/dsolojfgkabc/image/upload/funny-dog-head_nb34ou.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #EDEEEE;
   display: flex;
   justify-content: center;
   height: 250px;
-  width: 250px;
+  width: 300px;
+}
+
+.upload-field.opacity {
+  background-image: none;
+  opacity: 1;
+}
+
+.cloudinary-thumbnails.margin {
+  margin: auto;
+}
+
+.cloudinary-thumbnail.margin {
+  margin: auto;
 }

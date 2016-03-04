@@ -26,7 +26,7 @@ var customStyle = {
     alignItems                 : 'center',
     flexDirection              : 'column',
     border                     : '1px solid #ccc',
-    background                 : '#fafafa',
+    background                 : '#FAFAFA',
     overflow                   : 'auto',
     WebkitOverflowScrolling    : 'touch',
     borderRadius               : '4px',
@@ -43,10 +43,16 @@ var UploadPictureButton = React.createClass({
   handleUploadPicture: function (e) {
     e.preventDefault();
 
+    $(document).on('cloudinarywidgetsuccess', function(e, data) {
+      $(".cloudinary-thumbnails").addClass("margin");
+      $(".cloudinary-thumbnail").addClass("margin");
+      $(".upload-field").addClass("opacity");
+    });
+
     settings = Object.assign({}, CLOUDINARY);
     settings["theme"] = "white"
     settings["thumbnails"] = ".upload-field";
-    settings["thumbnail_transformation"] = "w_200,h_250,c_limit";
+    settings["thumbnail_transformation"] = "w_300,h_250,c_fill";
 
     var that = this;
     cloudinary.openUploadWidget(
@@ -100,7 +106,7 @@ var UploadPictureButton = React.createClass({
           <button className="upload-modal-button"
                   onClick={this.handleUploadPicture}>Select Photo</button>
 
-          <div className="upload-field"></div>
+                <div className="upload-field"></div>
 
           <input className="modal-comment-field"
                  type="text"
