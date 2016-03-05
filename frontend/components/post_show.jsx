@@ -25,7 +25,6 @@ var PostShow = React.createClass({
     this.setState({ post: PostStore.findById(parseInt(this.props.params.id)) });
   },
   render: function () {
-    // debugger
     if (this.state.post) {
       return (
         <div>

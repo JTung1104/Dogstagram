@@ -1,13 +1,14 @@
-var React = require('react');
-var ProfileNavBar = require('./profile_nav_bar');
-var Picture = require('./picture');
-var ProfileHeader = require('./profile_header');
-var UserStore = require('../stores/user');
-var ApiUtil = require('../util/api_util');
+var React = require('react'),
+    ProfileNavBar = require('./profile_nav_bar'),
+    Picture = require('./picture'),
+    ProfileHeader = require('./profile_header'),
+    UserStore = require('../stores/user'),
+    CommentBox = require('./comment_box'),
+    ApiUtil = require('../util/api_util');
 
 var UserShow = React.createClass({
   getInitialState: function () {
-    return { user: UserStore.findById(this.props.params.id) };
+    return {user: UserStore.findById(this.props.params.id)};
   },
   componentDidMount: function () {
     this.userListener = UserStore.addListener(this.handleChange);
@@ -22,16 +23,34 @@ var UserShow = React.createClass({
     }.bind(this));
   },
   handleChange: function () {
-    this.setState({user: UserStore.findById(this.props.params.id)});
+    this.setState({ user: UserStore.findById(this.props.params.id) });
   },
   getPictures: function () {
     var pictures = this.state.user.posts.map(function(post, i) {
+  //     var getModal = function () {
+  //       if (this.state.modalIsOpen) {
+  //         return (
+  //           <Modal
+  //             isOpen={this.state.modalIsOpen}
+  //             onRequestClose={this.closeModal}
+  //             style={customStyle}>
+  //             <Picture
+  //               imageUrl={post.image_url}
+  //               photoOptions="w_600,h_600,c_fill/"/>
+  //             <div className="modal-comment-box">
+  //               <CommentBox post={post}/>
+  //             </div>
+  //           </Modal>
+  //         );
+  //       }
+  //     }.bind(this);
+
       return (
         <Picture key={i}
-                 post={post}
-                 photoOptions="w_292,h_292,c_fill/"
-                 userShow={true}
-                 imageUrl={post.image_url}/>
+          post={post}
+          photoOptions="w_292,h_292,c_fill/"
+          userShow={true}
+          imageUrl={post.image_url}/>
       );
     });
 
