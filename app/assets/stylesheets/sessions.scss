@@ -17,7 +17,7 @@ h1, h2, p, strong, em, a {
 }
 
 .signup {
-  background-color: #FAFAFA;
+  background-color: rgba(255,255,255,0.4);
   position: absolute;
   top: 0px;
   right: 0px;
@@ -27,7 +27,6 @@ h1, h2, p, strong, em, a {
 
 .login {
   display: flex;
-  background-color: #FAFAFA;
   position: absolute;
   top: 0px;
   right: 0px;
@@ -44,8 +43,10 @@ h1, h2, p, strong, em, a {
   height: 370px;
   width: 350px;
   border-radius: 1px;
+  // border: 1px solid #EDEEEE;
   border: none;
-  background-color: #FAFAFA;
+  // background-color: rgba(255,255,255,0.4);
+  background-color: rgba(0,0,0,0.4);
   margin: auto;
 }
 
@@ -64,11 +65,7 @@ h1, h2, p, strong, em, a {
   height: 370px;
   width: 350px;
   border-radius: 1px;
-  border-top: 1px solid #edeeee;
-  border-right: 1px solid #edeeee;
-  border-left: 1px solid #edeeee;
-  border-bottom: none;
-  background-color: #FFF;
+  background-color: none;
   margin: auto;
 }
 
@@ -100,7 +97,7 @@ h1, h2, p, strong, em, a {
 }
 
 .login-header {
-  color: #125688;
+  color: #CFD1D1;
   font: normal normal normal normal 46px / normal 'Lobster Two';
   position: relative;
   bottom: 22px;
@@ -180,7 +177,7 @@ h1, h2, p, strong, em, a {
 
 .or {
   box-sizing: border-box;
-  color: rgb(165, 167, 170);
+  color: #CFD1D1;
   display: flex;
   height: 15px;
   min-height: auto;
@@ -192,6 +189,8 @@ h1, h2, p, strong, em, a {
   transform-origin: 9.04688px 7.5px;
   border: 0px solid rgb(0, 0, 0);
   flex: 0 0 auto;
+  font-family: sans-serif;
+  font-size: 14px;
   flex-flow: column nowrap;
   margin: 0px 8px;
   outline: rgb(165, 167, 170) none 0px;
@@ -214,23 +213,72 @@ h1, h2, p, strong, em, a {
 
 .sign-up-link {
   display: flex;
-    position: relative;
-    justify-content: center;
-    left: 1px;
-    bottom: -1px;
-    background-color: #FFFFFF;
-    border-right: 1px solid #EDEEEE;
-    border-left: 1px solid #EDEEEE;
-    border-bottom: 1px solid #EDEEEE;
-    font-family: serif;
-    font-size: 13px;
-    height: 40px;
-    width: 350px;
-    align-items: inherit;
+  position: relative;
+  justify-content: center;
+  left: 0px;
+  bottom: -1px;
+  background: none;
+  font-family: sans-serif;
+  font-size: 13px;
+  height: 40px;
+  width: 350px;
+  align-items: inherit;
 }
 
 .sign-up-link.login {
   border-bottom: none;
   position: relative;
   top: 26px;
+}
+
+.sign-up-link > p {
+  color: #CFD1D1;
+}
+
+.sign-up-link > p > a {
+  color: #CFD1D1;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+
+.bg-1 {
+  background: url(http://res.cloudinary.com/dsolojfgkabc/image/upload/v1457134823/photo-1414277578841-112f6e9398ec_d6krbl.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bg-2 {
+  background: url(http://res.cloudinary.com/dsolojfgkabc/image/upload/photo-1433162653888-a571db5ccccf_etudpk.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bg-3 {
+  background: url(http://res.cloudinary.com/dsolojfgkabc/image/upload/photo-1445708285800-cef03714a0ef_b8d8oe.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bg-4 {
+  background: url(http://res.cloudinary.com/dsolojfgkabc/image/upload/photo-1415243931302-9eb5b22247f2_udfxlo.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

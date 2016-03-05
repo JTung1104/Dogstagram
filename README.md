@@ -1,6 +1,6 @@
 #Dogstagram
 
-[Heroku link][heroku] **NB:** This should be a link to your production site
+[Heroku link]: http://www.doggstagram.herokuapp.com/session/new
 
 [heroku]: http://www.herokuapp.com
 
@@ -111,15 +111,15 @@ user interface.
 - [x] create `Relationship` model and join table
 - build out API, Flux loop, and components for:
   - [x] fetching images for feed
-  - [ ] searching images by username
+  - [x] searching images by username
 
 ### Phase 8: Styling Cleanup and Seeding (1 day)
 
 **Objective:** Make the site feel more cohesive and awesome.
 
-- [ ] Get feedback on my UI from others
+- [x] Get feedback on my UI from others
 - [ ] Refactor HTML classes & CSS rules
-- [ ] Add modals, transitions, and other styling flourishes.
+- [x] Add modals, transitions, and other styling flourishes.
 
 ### Bonus Features (TBD)
 - [ ] Edit images with filters
