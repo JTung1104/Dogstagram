@@ -51,7 +51,6 @@ h1, h2, p, strong, em, a {
 }
 
 .login-form-box.sign-up {
-  border-bottom: 1px solid #EDEEEE;
   justify-content: space-between;
   height: 300px;
 }
@@ -203,7 +202,8 @@ h1, h2, p, strong, em, a {
   right: 21%;
   position: absolute;
   color: #F12938;
-  font-size: 15px;
+  font-size: 14px;
+  font-family: sans-serif;
 }
 
 .error.sign-up {

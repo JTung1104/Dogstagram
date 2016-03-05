@@ -49,7 +49,7 @@ var ProfileStats = React.createClass({
         </div>
 
         <div className="profile-stats-name">
-          <h2 className="profile-stats-name-header">Kitty</h2>
+          <h2 className="profile-stats-name-header">{this.props.user.name}</h2>
           <span className="name-span"></span>
           <span className="name-span"></span>
         </div>
