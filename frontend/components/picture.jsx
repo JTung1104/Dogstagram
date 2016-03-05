@@ -1,6 +1,7 @@
 var React = require('react'),
     Modal = require('react-modal'),
-    CommentBox = require('./comment_box');
+    CommentBox = require('./comment_box'),
+    PostStore = require('../stores/post');
 
 var customStyle = {
   overlay : {
@@ -15,14 +16,13 @@ var customStyle = {
     backgroundColor   : 'rgba(0,0,0,0.5)'
   },
   content : {
-
     position                   : 'static',
     display                    : 'flex',
     justifyContent             : 'space-around',
     alignItems                 : 'center',
     flexDirection              : 'row',
     border                     : 'none',
-    background                 : '#FAFAFA',
+    background                 : 'none',
     overflow                   : 'auto',
     WebkitOverflowScrolling    : 'touch',
     borderRadius               : '4px',
@@ -37,7 +37,7 @@ var Picture = React.createClass({
   getInitialState: function () {
   return {modalIsOpen: false};
   },
-  openModal: function(i) {
+  openModal: function() {
     this.setState({modalIsOpen: true});
   },
   closeModal: function() {
@@ -46,7 +46,7 @@ var Picture = React.createClass({
   getPictureHover: function () {
     if (this.props.userShow) {
       var url = "http://res.cloudinary.com/dsolojfgkabc/image/upload/",
-          photoOptions="w_600,h_600,c_fill/",
+          photoOptions="w_700,h_700,c_fill/",
           likes = this.props.post.likes.length,
           comments = this.props.post.comments.length;
 
@@ -63,12 +63,18 @@ var Picture = React.createClass({
               onRequestClose={this.closeModal}
               style={customStyle}>
 
-              <div className="picture">
-                <img src={url + photoOptions + this.props.imageUrl}/>
+              <div id="load">
+                <div>G</div>
+                <div>N</div>
+                <div>I</div>
+                <div>D</div>
+                <div>A</div>
+                <div>O</div>
+                <div>L</div>
               </div>
 
-              <div className="modal-comment-box">
-                <CommentBox post={this.props.post}/>
+              <div className="modal picture">
+                <img src={url + photoOptions + this.props.imageUrl}/>
               </div>
             </Modal>
           </div>

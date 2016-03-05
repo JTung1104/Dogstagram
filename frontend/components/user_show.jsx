@@ -27,24 +27,6 @@ var UserShow = React.createClass({
   },
   getPictures: function () {
     var pictures = this.state.user.posts.map(function(post, i) {
-  //     var getModal = function () {
-  //       if (this.state.modalIsOpen) {
-  //         return (
-  //           <Modal
-  //             isOpen={this.state.modalIsOpen}
-  //             onRequestClose={this.closeModal}
-  //             style={customStyle}>
-  //             <Picture
-  //               imageUrl={post.image_url}
-  //               photoOptions="w_600,h_600,c_fill/"/>
-  //             <div className="modal-comment-box">
-  //               <CommentBox post={post}/>
-  //             </div>
-  //           </Modal>
-  //         );
-  //       }
-  //     }.bind(this);
-
       return (
         <Picture key={i}
           post={post}

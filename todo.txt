@@ -25,22 +25,9 @@ Active Record Nested Attributes
 
 accepts_nested_attributes_for
 
-//.classList.add transition opacity timeout
-// taggings and hashtag search
-
-refactor by putting the modals on pictures only such that there is only one modal
-per picture and just pass in the comment
-
 USE PERCENTAGES FOR WIDTHS AND THINGS WILL SCALE WITH CONTAINER
 
 GOOGLE FADE TRANSITION EASE IN EASE OUT
-
-ON HOVER
-
-STYLE YOUR UPLOAD PICTURE MODAL
-
-SIGN IN PAGE NEEDS BACKGROUND IMAGES AND TRANSITIONS
-WINDOW.SETINTERVAL
 
 SHOULD BE ABLE TO ADD TAGS AT SOME POINT
 SIGN UP PAGE AND SIGN IN PAGE need to be styled
