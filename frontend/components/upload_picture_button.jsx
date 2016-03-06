@@ -47,6 +47,8 @@ var UploadPictureButton = React.createClass({
       $(".cloudinary-thumbnails").addClass("margin");
       $(".cloudinary-thumbnail").addClass("margin");
       $(".upload-field").addClass("opacity");
+      $("#select").addClass("hidden");
+      $("#upload").removeClass("hidden");
     });
 
     settings = Object.assign({}, CLOUDINARY);
@@ -103,7 +105,8 @@ var UploadPictureButton = React.createClass({
           onRequestClose={this.closeModal}
           style={customStyle}>
 
-          <button className="upload-modal-button"
+          <button id="select"
+                  className="upload-modal-button visible"
                   onClick={this.handleUploadPicture}>Select Photo</button>
 
                 <div className="upload-field"></div>
@@ -113,8 +116,9 @@ var UploadPictureButton = React.createClass({
                  placeholder="Add a caption..."
                  valueLink={this.linkState('body')}/>
 
-          <button onClick={this.handleSubmit}
-                  className="upload-modal-button">Upload</button>
+          <button id="upload"
+                  onClick={this.handleSubmit}
+                  className="upload-modal-button visible hidden">Upload</button>
         </Modal>
       </div>
     );

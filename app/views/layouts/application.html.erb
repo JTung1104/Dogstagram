@@ -18,11 +18,11 @@
 <%= yield %>
 
 <script>
-<% if signed_in? %>
-window.currentUserId = <%= current_user.id %>;
-<% else %>
-window.currentUserId = null;
-<% end %>
+  <% if signed_in? %>
+    window.currentUserId = <%= current_user.id %>;
+  <% else %>
+    window.currentUserId = null;
+  <% end %>
 </script>
 
 <script type="text/javascript">

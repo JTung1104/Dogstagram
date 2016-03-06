@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
+      @user.followed_users.push(User.first)
       sign_in(@user)
       redirect_to root_url
     else
