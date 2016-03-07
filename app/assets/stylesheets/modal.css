@@ -304,3 +304,37 @@ body {
 		opacity:0;
 	}
 }
+
+.modal-button {
+    cursor: pointer;
+    display: block;
+    height: 36px;
+    min-height: auto;
+    min-width: auto;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 39.5156px;
+    z-index: 2;
+    perspective-origin: 19.75px 18px;
+    transform-origin: 19.75px 18px;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(0, 0, 0);
+    font: normal normal normal normal 11px / normal proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.modal-button:before {
+    color: rgba(0, 0, 0, 0.5);
+    content: '×';
+    cursor: pointer;
+    display: block;
+    height: 36px;
+    width: 27.5156px;
+    align-self: flex-start;
+    perspective-origin: 13.75px 18px;
+    transform-origin: 13.75px 18px;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal 600 normal 36px / 36px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+}

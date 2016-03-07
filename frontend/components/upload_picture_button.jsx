@@ -109,7 +109,7 @@ var UploadPictureButton = React.createClass({
                   className="upload-modal-button visible"
                   onClick={this.handleUploadPicture}>Select Photo</button>
 
-                <div className="upload-field"></div>
+          <div className="upload-field"></div>
 
           <input className="modal-comment-field"
                  type="text"
@@ -119,6 +119,8 @@ var UploadPictureButton = React.createClass({
           <button id="upload"
                   onClick={this.handleSubmit}
                   className="upload-modal-button visible hidden">Upload</button>
+
+          <button className="modal-button" onClick={this.closeModal}/>
         </Modal>
       </div>
     );

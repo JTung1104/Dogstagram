@@ -76,6 +76,8 @@ var Picture = React.createClass({
               <div className="modal picture">
                 <img src={url + photoOptions + this.props.imageUrl}/>
               </div>
+
+              <button className="modal-button" onClick={this.closeModal}/>
             </Modal>
           </div>
         </div>
