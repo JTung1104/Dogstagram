@@ -5,7 +5,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-
+    @user.username = @user.username.downcase
+    
     if @user.save
       @user.followed_users.push(User.first)
       sign_in(@user)

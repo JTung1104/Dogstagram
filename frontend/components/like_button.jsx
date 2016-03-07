@@ -1,7 +1,6 @@
 var React = require('react');
 var ApiUtil = require('../util/api_util');
 
-// TODO change this to willreceiveprops
 var LikeButton = React.createClass({
   getInitialState: function () {
     return { liked: this.props.post.liked }
