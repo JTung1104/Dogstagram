@@ -6,9 +6,12 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.username = @user.username.downcase
-    
+
     if @user.save
-      @user.followed_users.push(User.first)
+      @user.followed_users.push(User.find_by_id(2))
+      @user.followed_users.push(User.find_by_id(3))
+      @user.followed_users.push(User.find_by_id(4))
+      @user.followed_users.push(User.find_by_id(7))
       sign_in(@user)
       redirect_to root_url
     else
