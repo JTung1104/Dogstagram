@@ -5,7 +5,7 @@ var ProfilePicture = React.createClass({
   render: function () {
     var url = "http://res.cloudinary.com/dsolojfgkabc/image/upload/"
     url += this.props.user.profile_image_url || "Empty_Profile_qvvkdi.jpg"
-    
+
     return (
       <div className="profile-picture-box">
         <div className="profile-picture-square">
