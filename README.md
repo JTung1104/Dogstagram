@@ -1,6 +1,6 @@
 #Dogstagram
 
-[Heroku link]: http://www.doggstagram.herokuapp.com/session/new
+[Heroku link]: www.dogstagram.club
 
 [heroku]: http://www.herokuapp.com
 
