@@ -19,10 +19,12 @@ var routes = (
 
 $(function (){
   var appElement = document.getElementById('root');
-  Modal.setAppElement(appElement);
 
-  ReactDOM.render(
-    <Router>{routes}</Router>,
-    appElement
-  );
+  if (appElement) {
+    Modal.setAppElement(appElement);
+    ReactDOM.render(
+      <Router>{routes}</Router>,
+        appElement
+    );
+  }
 });
