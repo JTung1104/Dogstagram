@@ -43,9 +43,7 @@ h1, h2, p, strong, em, a {
   height: 370px;
   width: 350px;
   border-radius: 1px;
-  // border: 1px solid #EDEEEE;
   border: none;
-  // background-color: rgba(255,255,255,0.4);
   background-color: rgba(0,0,0,0.4);
   margin: auto;
 }
@@ -237,6 +235,7 @@ h1, h2, p, strong, em, a {
 
 .sign-up-link > p > a {
   color: #FFEFEF;
+  text-shadow: 1px 0px 0px #FFEFEF;
 }
 
 .visible {
