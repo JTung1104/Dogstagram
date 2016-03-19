@@ -1,135 +1,85 @@
 #Dogstagram
+*Ruby, Ruby on Rails, Javascript, React, Flux*
 
-[Heroku link]: www.dogstagram.club
-
-[heroku]: http://www.herokuapp.com
-
-## Minimum Viable Product
+[Dogstagram](www.dogstagram.club)
 
 Dogstagram is a web application for dog selfies inspired by Instagram built
-using Ruby on Rails and React.js. Dogstagram allows users to:
+using Ruby on Rails and React.js.
 
-- [x] Create an account
-- [x] Log in / Log out
-- [x] Follow Users
-- [x] Create, Read, and Delete Posts
-- [x] Like Posts
-- [x] Create, Read, and Delete Comments
-- [ ] Tag Posts with multiple tags
 
-## Design Docs
-* [View Wireframes][views]
-* [React Components][components]
-* [Flux Stores][stores]
-* [API endpoints][api-endpoints]
-* [DB schema][schema]
+## Features
 
-[views]: ./docs/views.md
-[components]: ./docs/components.md
-[stores]: ./docs/stores.md
-[api-endpoints]: ./docs/api-endpoints.md
-[schema]: ./docs/schema.md
+Dogstagram allows users to:
 
-## Implementation Timeline
+- Create an account
+- Log in / Log out
+- Follow Users
+- Create, Read, and Delete Posts
+- Like Posts
+- Create, Read, and Delete Comments
 
-### Phase 1: Backend setup and User Authentication (0.5 days)
 
-**Objective:** Functioning rails project with Authentication
+## Implementation Details
 
-- [x] create new project
-- [x] create `User` model
-- [x] authentication
-- [x] user signup/signin pages
-- [x] landing page after signin
+###Custom made user authentication
+I overwrote the password= method using the BCrypt gem in the user model to store a hashed and salted password:
+```Ruby
+def password=(password)
+  @password = password
+  self.password_digest = BCrypt::Password.create(password)
+end
+```
 
-### Phase 2: Posts Model, API, and basic APIUtil (1.5 days)
+Incoming passwords can then be compared against the stored password hash to see if the password is correct
+```Ruby
+def is_password?(password)
+  BCrypt::Password.new(self.password_digest).is_password?(password)
+end
+```
 
-**Objective:** Posts can be created, read, and destroyed through
-the API.
+A users session is then stored as a session token to remember a user is signed in at a specific computer
+```Ruby
+def reset_token!
+  self.session_token = generate_session_token
+  self.save
+  self.session_token
+end
+```
 
-- [x] create `Post` model
-- [x] create `Comment` model
-- [x] seed the database with a small amount of test data
-- [x] CRUD API for posts (`PostsController`)
-- [x] CRUD API for comments (`CommentsController`)
-- [x] jBuilder views for posts
-- [x] jBuilder views for comments
-- [x] setup Webpack & Flux scaffold
-- [x] setup `APIUtil` to interact with the API
-- [x] test out API interaction in the console.
+I implement a check for duplicate session tokens for the security of all my users' accounts.
+While it is uncommon for the same token to be generated twice, it becomes more likely to happen as the user base grows.
+```Ruby
+def generate_session_token
+  token = SecureRandom.urlsafe_base64(16)
 
-### Phase 3: Flux Architecture and Router (1.5 days)
+  while User.exists?(session_token: token)
+    token = SecureRandom.urlsafe_base64(16)
+  end
 
-**Objective:** Posts can be created, read, and destroyed with the
-user interface.
+  token
+end
+```
 
-- [x] setup the flux loop with skeleton files
-- [x] setup React Router
-- implement each post component, building out the flux loop as needed.
-  - [x] `NavBar`
-  - [x] `Picture`
-  - [x] `UploadPictureForm`
-  - [x] `PostHeader`
-  - [x] `CommentBox`
-  - [x] `CommentTable`
-  - [x] `CommentItem`
-  - [x] `NumLikes`
-  - [x] `CommentForm`
-  - [x] `LikeButton`
+###Feed based on user follows
+The feed only displays posts from users that the current user is following, with most recent first
+```Ruby
+def index
+  following_ids = "SELECT followed_id FROM relationships
+                   WHERE  follower_id = :user_id"
 
-### Phase 4: Start Styling (0.5 days)
+  @posts = Post.includes(:user, :likes, comments: [:user])
+    .where("user_id IN (#{following_ids})
+            OR user_id = :user_id", user_id: current_user.id)
+end
+```
 
-**Objective:** Existing pages (including signup/signin) will look good.
-
-- [x] create a basic style guide
-- [x] position elements on the page
-- [x] add basic colors & styles
-
-### Phase 5: Tags (1.5 days)
-
-**Objective:** Posts can be tagged with multiple tags, and tags are searchable.
-
-- [ ] create `Tag` model and join table
-- build out API, Flux loop, and components for:
-  - [ ] fetching tags for post
-  - [ ] adding tags to post
-  - [ ] searching posts by tag
-
-### Phase 6: Likes (0.5 days)
-
-**Objective:** Posts can be liked
-
-- [x] create `Like` model and join table
-- build out API, Flux loop, and components for:
-  - [x] fetching likes for post
-  - [x] adding likes to post
-
-###Phase 7: Follows (1.5 days)
-
-**Objective:** User can be follow multiple users, and feed gets populated with followed users' content.
-
-- [x] create `Relationship` model and join table
-- build out API, Flux loop, and components for:
-  - [x] fetching images for feed
-  - [x] searching images by username
-
-### Phase 8: Styling Cleanup and Seeding (1 day)
-
-**Objective:** Make the site feel more cohesive and awesome.
-
-- [x] Get feedback on my UI from others
-- [ ] Refactor HTML classes & CSS rules
-- [x] Add modals, transitions, and other styling flourishes.
+##Included Gems and Libraries
+- BCrypt
+- Figaro
+- React
 
 ### Bonus Features (TBD)
-- [ ] Edit images with filters
-- [ ] Pagination / infinite scroll for Images feed
-- [ ] Add videos
-- [ ] Add notifications and user tagging
-
-[phase-one]: ./docs/phases/phase1.md
-[phase-two]: ./docs/phases/phase2.md
-[phase-three]: ./docs/phases/phase3.md
-[phase-four]: ./docs/phases/phase4.md
-[phase-five]: ./docs/phases/phase5.md
-[phase-six]: ./docs/phases/phase6.md
+- Edit images with filters
+- Pagination / infinite scroll for Images feed
+- Add videos
+- Add notifications and user tagging
