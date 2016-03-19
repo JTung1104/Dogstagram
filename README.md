@@ -1,7 +1,7 @@
 #Dogstagram
 *Ruby, Ruby on Rails, Javascript, React, Flux*
 
-[Dogstagram](www.dogstagram.club)
+[Dogstagram](http://www.dogstagram.club)
 
 Dogstagram is a web application for dog selfies inspired by Instagram built
 using Ruby on Rails and React.js.
