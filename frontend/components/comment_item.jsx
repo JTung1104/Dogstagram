@@ -63,7 +63,7 @@ var CommentItem = React.createClass({
     return (
       <div className="comment-item">
         <a href={"#/users/" + this.props.comment.user_id}
-           className="comment-username">
+           className="comment-username hvr-pulse-grow">
           {this.props.comment.user}
         </a>
 

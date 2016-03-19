@@ -5,7 +5,7 @@ var PostHeader = React.createClass({
     return (
       <header className="post-header">
         <div className="username">
-          <a href={"#/users/" + this.props.post.user_id}>
+          <a className="hvr-pulse-grow" href={"#/users/" + this.props.post.user_id}>
             {this.props.post.user}
           </a>
         </div>
