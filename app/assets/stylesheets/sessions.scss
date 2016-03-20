@@ -235,7 +235,9 @@ h1, h2, p, strong, em, a {
 
 .sign-up-link > p > a {
   color: #FFEFEF;
-  text-shadow: 1px 0px 0px #FFEFEF;
+  text-shadow: 1px 1px 1px black;
+  position: relative;
+  bottom: 1px;
 }
 
 .visible {
