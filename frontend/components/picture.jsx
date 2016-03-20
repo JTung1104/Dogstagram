@@ -46,7 +46,7 @@ var Picture = React.createClass({
   getPictureHover: function () {
     if (this.props.userShow) {
       var url = "http://res.cloudinary.com/dsolojfgkabc/image/upload/",
-          photoOptions="w_700,h_700,c_fill/",
+          photoOptions="w_700,h_700,c_fill,f_auto/",
           likes = this.props.post.likes.length,
           comments = this.props.post.comments.length;
 
