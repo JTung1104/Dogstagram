@@ -73,12 +73,26 @@ def index
 end
 ```
 
+##Photos
+
+###Login Page
+![Login](/images/login_page.png)
+
+###Photo Feed
+![Photo Feed](/images/photo_feed.png)
+
+###User Page
+![User Page](/images/user_page.png)
+
+###Search
+![Search](/images/search.png)
+
 ##Included Gems and Libraries
 - BCrypt
 - Figaro
 - React
 
-### Bonus Features (TBD)
+### Bonus Features (To do)
 - Edit images with filters
 - Pagination / infinite scroll for Images feed
 - Add videos
