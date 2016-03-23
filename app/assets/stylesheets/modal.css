@@ -74,6 +74,10 @@
   color: #125688;
 }
 
+.cancel-delete:hover, .confirm-delete:hover {
+  background: #EDEEEE;
+}
+
 .modal-comment-field {
   border: 2px solid #EDEEEE;
   font-size: 14px
