@@ -1,8 +1,8 @@
-var React = require('react');
-var CommentTable = require('./comment_table');
-var NumLikes = require('./num_likes');
-var CommentForm = require('./comment_form');
-var LikeButton = require('./like_button');
+var React = require('react'),
+    CommentTable = require('./comment_table'),
+    NumLikes = require('./num_likes'),
+    CommentForm = require('./comment_form'),
+    LikeButton = require('./like_button');
 
 var CommentBox = React.createClass({
   render: function () {
