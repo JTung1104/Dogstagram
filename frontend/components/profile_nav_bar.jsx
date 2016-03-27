@@ -1,8 +1,8 @@
-var React = require('react');
-var SearchBar = require('./search_bar');
-var UploadPictureButton = require('./upload_picture_button');
-var HeaderProfileLink = require('./header_profile_link');
-var LogoutLink = require('./logout_link');
+var React = require('react'),
+    SearchBar = require('./search_bar'),
+    UploadPictureButton = require('./upload_picture_button'),
+    HeaderProfileLink = require('./header_profile_link'),
+    LogoutLink = require('./logout_link');
 
 var ProfileNavBar = React.createClass({
   getLink: function () {
