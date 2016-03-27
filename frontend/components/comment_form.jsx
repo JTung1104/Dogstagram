@@ -1,6 +1,6 @@
 var React = require('react');
-var ApiUtil = require('../util/api_util');
-var LinkedStateMixin = require('react-addons-linked-state-mixin');
+    ApiUtil = require('../util/api_util'),
+    LinkedStateMixin = require('react-addons-linked-state-mixin');
 
 var CommentForm = React.createClass({
   mixins:[LinkedStateMixin],
