@@ -1,13 +1,13 @@
 var React = require('react');
-var SearchBar = require('./search_bar');
-var UploadPictureButton = require('./upload_picture_button');
-var HeaderProfileLink = require('./header_profile_link');
+    SearchBar = require('./search_bar'),
+    UploadPictureButton = require('./upload_picture_button'),
+    HeaderProfileLink = require('./header_profile_link');
 
 var NavBar = React.createClass({
   render: function () {
     return (
       <header className="nav-header">
-        <nav className="nav">
+        <nav className="profile-nav">
           <h1 className="logo-header">
             <a href="#" className="logo">Dogstagram</a>
           </h1>
