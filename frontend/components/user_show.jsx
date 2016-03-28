@@ -14,11 +14,10 @@ var UserShow = React.createClass({
   componentDidMount: function () {
     this.userListener = UserStore.addListener(this.handleChange);
     this.postListener = PostStore.addListener(this.handleChange);
-    ApiUtil.fetchUser(this.props.params.id);
   },
   componentWillUnmount: function () {
-    this.userListener.remove();
     this.postListener.remove();
+    this.userListener.remove();
   },
   componentWillReceiveProps: function (newProps) {
     ApiUtil.fetchUser(newProps.params.id, function () {

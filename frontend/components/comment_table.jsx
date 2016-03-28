@@ -12,9 +12,11 @@ var CommentTable = React.createClass({
   },
   componentDidUpdate: function() {
     var comments = this.props.post.comments;
-    if (this.state.shouldScrollBottom || comments[comments.length - 1].user_id === currentUserId) {
-      var node = ReactDOM.findDOMNode(this);
-      node.scrollTop = (node.scrollHeight + 1)
+    if (comments.length > 0) {
+      if (this.state.shouldScrollBottom || comments[comments.length - 1].user_id === currentUserId) {
+        var node = ReactDOM.findDOMNode(this);
+        node.scrollTop = (node.scrollHeight + 1)
+      }
     }
   },
   render: function () {
