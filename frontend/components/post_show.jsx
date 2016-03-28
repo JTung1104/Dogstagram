@@ -1,8 +1,8 @@
-var React = require('react');
-var PostStore = require('../stores/post');
-var NavBar = require('./nav_bar');
-var Post = require('./post');
-var ApiUtil = require('../util/api_util');
+var React = require('react'),
+    PostStore = require('../stores/post'),
+    NavBar = require('./nav_bar'),
+    Post = require('./post'),
+    ApiUtil = require('../util/api_util');
 
 var PostShow = React.createClass({
   getInitialState: function () {

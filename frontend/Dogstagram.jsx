@@ -1,13 +1,13 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Router = require('react-router').Router;
-var Route = require('react-router').Route;
-var IndexRoute = require('react-router').IndexRoute;
-var Modal = require('react-modal');
-var App = require('./components/app');
-var Index = require('./components/index');
-var UserShow = require('./components/user_show');
-var PostShow = require('./components/post_show');
+var React = require('react'),
+ ReactDOM = require('react-dom'),
+ Router = require('react-router').Router,
+ Route = require('react-router').Route,
+ IndexRoute = require('react-router').IndexRoute,
+ Modal = require('react-modal'),
+ App = require('./components/app'),
+ Index = require('./components/index'),
+ UserShow = require('./components/user_show'),
+ PostShow = require('./components/post_show');
 
 var routes = (
   <Route path="/" component={App}>

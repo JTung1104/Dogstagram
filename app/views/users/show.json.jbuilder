@@ -7,6 +7,7 @@ json.posts @user.posts do |post|
   json.image_url post.image_url
 
   liked = false
+  like_id = nil
 
   json.comments post.comments do |comment|
     json.id comment.id
@@ -21,9 +22,13 @@ json.posts @user.posts do |post|
     json.user_id like.user.id
     json.user like.user.username
 
-    liked = true if like.user == current_user
+    if like.user == current_user
+      liked = true
+      like_id = like.id
+    end
   end
 
+  json.like_id like_id
   json.liked liked
 end
 
