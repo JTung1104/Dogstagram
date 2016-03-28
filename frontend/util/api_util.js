@@ -1,5 +1,5 @@
-var ApiActions = require('../actions/api_actions');
-var SearchActions = require('../actions/search_actions');
+var ApiActions = require('../actions/api_actions'),
+    SearchActions = require('../actions/search_actions');
 
 var ApiUtil = {
   fetchPosts: function () {

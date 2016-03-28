@@ -12,6 +12,7 @@ json.array! @posts do |post|
   time = time_in_weeks.to_s + "w" if time_in_days >= 7
 
   liked = false
+  like_id = nil
 
   json.id post.id
   json.image_url post.image_url
@@ -25,10 +26,14 @@ json.array! @posts do |post|
     json.user_id like.user.id
     json.user like.user.username
 
-    liked = true if like.user == current_user
+    if like.user == current_user
+      liked = true
+      like_id = like.id
+    end
   end
 
   json.liked liked
+  json.like_id like_id
 
   json.comments post.comments do |comment|
     json.id comment.id

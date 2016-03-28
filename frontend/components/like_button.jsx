@@ -1,20 +1,9 @@
-var React = require('react');
-var ApiUtil = require('../util/api_util');
+var React = require('react'),
+    ApiUtil = require('../util/api_util');
 
 var LikeButton = React.createClass({
   getInitialState: function () {
     return { liked: this.props.post.liked }
-  },
-  componentWillMount: function () {
-    var that = this;
-
-    if (this.props.post.liked) {
-      this.props.post.likes.forEach(function(like) {
-        if (like.user_id === currentUserId) {
-          that.id = like.id;
-        }
-      });
-    }
   },
   handleLike: function (e) {
     e.preventDefault();

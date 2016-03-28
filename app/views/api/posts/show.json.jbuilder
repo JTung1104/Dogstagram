@@ -9,17 +9,23 @@ json.comments @post.comments do |comment|
   json.body comment.body
 end
 
+liked = false
+like_id = nil
+
 json.likes @post.likes do |like|
   json.id like.id
   json.post_id like.post.id
   json.user_id like.user.id
   json.user like.user.username
 
-  liked = false
-  liked = true if like.user == current_user
-
-  json.liked liked
+  if like.user == current_user
+    liked = true
+    like_id = like.id
+  end
 end
+
+json.liked liked
+json.like_id like_id
 
 time_in_seconds = (Time.now.to_i - Time.at(@post.created_at).to_i)
 time_in_minutes = time_in_seconds / 60

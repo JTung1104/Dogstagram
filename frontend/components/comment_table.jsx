@@ -1,6 +1,6 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var CommentItem = require('./comment_item');
+var React = require('react'),
+    ReactDOM = require('react-dom'),
+    CommentItem = require('./comment_item');
 
 var CommentTable = React.createClass({
   getInitialState: function () {
