@@ -22,7 +22,7 @@ var CommentTable = React.createClass({
   render: function () {
     var that = this;
     var CommentItems = this.props.post.comments.map(function(comment, idx) {
-      return ( <CommentItem key={idx} post={that.props.post} comment={comment}/> );
+      return ( <CommentItem key={idx} click={that.props.click} post={that.props.post} comment={comment}/> );
     });
 
     return (

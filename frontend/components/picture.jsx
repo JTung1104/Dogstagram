@@ -37,7 +37,7 @@ var customStyle = {
 
 var Picture = React.createClass({
   getInitialState: function () {
-  return {modalIsOpen: false};
+    return {modalIsOpen: false};
   },
   openModal: function() {
     this.setState({modalIsOpen: true});
@@ -71,7 +71,7 @@ var Picture = React.createClass({
 
               <div className="modal-post-show">
                 <PostHeader post={this.props.post}/>
-                <CommentBox post={this.props.post}/>
+                <CommentBox click={this.closeModal} post={this.props.post}/>
               </div>
 
               <button className="modal-button" onClick={this.closeModal}/>

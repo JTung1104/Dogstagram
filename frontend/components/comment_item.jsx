@@ -1,7 +1,7 @@
 var React = require('react'),
     ApiUtil = require('../util/api_util'),
     Modal = require('react-modal');
-    
+
 var customStyle = {
   overlay : {
     position          : 'fixed',
@@ -38,6 +38,11 @@ var CommentItem = React.createClass({
   getInitialState: function () {
     return { modalIsOpen: false };
   },
+  onClick: function (e) {
+    e.preventDefault();
+    if (typeof this.props.click === "function") { this.props.click(); }
+    window.location.href = "#/users/" + this.props.comment.user_id;
+  },
   openModal: function(e) {
     e.preventDefault();
     this.setState({modalIsOpen: true});
@@ -62,7 +67,7 @@ var CommentItem = React.createClass({
   render: function () {
     return (
       <div className="comment-item">
-        <a href={"#/users/" + this.props.comment.user_id}
+        <a onClick={this.onClick}
            className="comment-username hvr-pulse-grow">
           {this.props.comment.user}
         </a>

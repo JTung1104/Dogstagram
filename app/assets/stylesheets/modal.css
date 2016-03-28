@@ -191,7 +191,7 @@ body {
   margin: 0px 10px;
 }
 
-.modal-post-show div, .comment-form, span.num-likes {
+.modal-post-show div, modal-post-show .comment-form, modal-post-show span.num-likes {
   width: 295px;
   align-self: flex-end;
 }
@@ -201,7 +201,7 @@ body {
   -webkit-border-after: none;
 }
 
-.modal-post-show .like-button-div, .comment-form {
+.modal-post-show .like-button-div, .modal-post-show .comment-form {
     position: absolute;
     bottom: 0;
 }
