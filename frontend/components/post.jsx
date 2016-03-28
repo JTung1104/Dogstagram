@@ -1,7 +1,7 @@
-var React = require('react');
-var Picture = require('./picture');
-var PostHeader = require('./post_header');
-var CommentBox = require('./comment_box');
+var React = require('react'),
+    Picture = require('./picture'),
+    PostHeader = require('./post_header'),
+    CommentBox = require('./comment_box');
 
 var Post = React.createClass({
   render: function () {
