@@ -61,7 +61,7 @@ var LikeButton = React.createClass({
     }
   },
   render: function () {
-    return ( <div>{this.likeButton()}</div> );
+    return ( <div className="like-button-div">{this.likeButton()}</div> );
   }
 });
 
