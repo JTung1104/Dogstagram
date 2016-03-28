@@ -3,6 +3,7 @@ var React = require('react'),
     Picture = require('./picture'),
     ProfileHeader = require('./profile_header'),
     UserStore = require('../stores/user'),
+    PostStore = require('../stores/post'),
     CommentBox = require('./comment_box'),
     ApiUtil = require('../util/api_util');
 
@@ -12,10 +13,12 @@ var UserShow = React.createClass({
   },
   componentDidMount: function () {
     this.userListener = UserStore.addListener(this.handleChange);
+    this.postListener = PostStore.addListener(this.handleChange);
     ApiUtil.fetchUser(this.props.params.id);
   },
   componentWillUnmount: function () {
     this.userListener.remove();
+    this.postListener.remove();
   },
   componentWillReceiveProps: function (newProps) {
     ApiUtil.fetchUser(newProps.params.id, function () {

@@ -342,3 +342,9 @@ body {
     font: normal normal 600 normal 36px / 36px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     outline: rgb(255, 255, 255) none 0px;
 }
+
+.modal-post-show {
+  background-color: #FFFFFF;
+  height: 600px;
+  width: 335px;
+}
