@@ -1,6 +1,6 @@
-var AppDispatcher = require('../dispatcher/dispatcher');
-var PostConstants = require('../constants/post_constants');
-var UserConstants = require('../constants/user_constants');
+var AppDispatcher = require('../dispatcher/dispatcher'),
+    PostConstants = require('../constants/post_constants'),
+    UserConstants = require('../constants/user_constants');
 
 var ApiActions = {
   receiveAllPosts: function (posts) {
