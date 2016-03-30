@@ -1,6 +1,7 @@
 json.id @user.id
 json.username @user.username
 json.name @user.name
+json.profile_image_url @user.profile_image_url
 
 json.posts @user.posts do |post|
   time_in_seconds = (Time.now.to_i - Time.at(post.created_at).to_i)

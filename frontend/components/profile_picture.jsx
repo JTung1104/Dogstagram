@@ -1,4 +1,5 @@
 var React = require('react'),
+    ApiUtil = require('../util/api_util'),
     Modal = require('react-modal');
 
     var customStyle = {
@@ -61,45 +62,31 @@ var ProfilePicture = React.createClass({
           console.log("Too many photos");
         } else {
           that.url = result[0].url.slice(64);
+          that.updateProfileImageUrl();
         }
     });
   },
-  openModal: function(e) {
-    e.preventDefault();
+  openModal: function() {
     this.setState({modalIsOpen: true});
   },
   closeModal: function() {
     this.setState({modalIsOpen: false});
   },
+  updateProfileImageUrl: function () {
+    ApiUtil.updateProfileImageUrl(this.url, this.openModal);
+  },
   render: function () {
-    var url = "http://res.cloudinary.com/dsolojfgkabc/image/upload/"
-    url += this.props.user.profile_image_url || "Empty_Profile_qvvkdi.jpg"
+    var url = "http://res.cloudinary.com/dsolojfgkabc/image/upload/w_200,h_200,c_thumb,g_face/";
+    url += this.props.user.profile_image_url || "Empty_Profile_qvvkdi.jpg";
 
     return (
-      <div>
-        <div className="profile-picture-box">
-          <div className="profile-picture-square">
-            <button onClick={this.handleUploadPicture} className="change-profile-picture">
-              <img title="Change profile photo" src={url}/>
-            </button>
-          </div>
+      <div className="profile-picture-box">
+        <div className="profile-picture-square">
+          <button onClick={this.handleUploadPicture} className="change-profile-picture">
+            <img title="Change profile photo" src={url}/>
+          </button>
         </div>
-
-        <Modal className="modal-profile-picture">
-          isOpen={this.state.modalIsOpen}
-          onRequestClose={this.closeModal}
-          style={customStyle}>
-
-          <button className="confirm-delete" onClick={this.handleUploadPicture}>
-            Change Profile Picture
-          </button>
-
-          <button className="cancel-delete" onClick={this.closeModal}>
-            Cancel
-          </button>
-        </Modal>
       </div>
-
     );
   }
 });

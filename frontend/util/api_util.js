@@ -155,6 +155,16 @@ var ApiUtil = {
         callback && callback();
       }
     });
+  },
+  updateProfileImageUrl: function (url, callback) {
+    $.ajax({
+      method: "PATCH",
+      url: "/users/" + currentUserId,
+      data: {user: {profile_image_url: url}},
+      success: function () {
+        callback && callback();
+      }
+    });
   }
 };
 

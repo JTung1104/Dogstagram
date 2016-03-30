@@ -33,6 +33,13 @@ class UsersController < ApplicationController
     @user = User.includes(:followed_users, :followers, posts: [:likes, :comments]).find(params[:id])
   end
 
+  def update
+    @user = current_user
+    @user.profile_image_url = params[:user][:profile_image_url]
+    @user.save
+    render json: @user
+  end
+
   private
   def user_params
     params.require(:user).permit(:password, :username)
