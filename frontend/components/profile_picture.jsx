@@ -39,7 +39,7 @@ var ProfilePicture = React.createClass({
   },
   handleUploadPicture: function (e) {
     e.preventDefault();
-
+    if (this.props.user.id !== currentUserId) { return; }
     // $(document).on('cloudinarywidgetsuccess', function(e, data) {
     //   $(".cloudinary-thumbnails").addClass("margin");
     //   $(".cloudinary-thumbnail").addClass("margin");
@@ -79,7 +79,7 @@ var ProfilePicture = React.createClass({
       <div>
         <div className="profile-picture-box">
           <div className="profile-picture-square">
-            <button onClick={this.openModal} className="change-profile-picture">
+            <button onClick={this.handleUploadPicture} className="change-profile-picture">
               <img title="Change profile photo" src={url}/>
             </button>
           </div>
