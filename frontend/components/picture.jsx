@@ -59,7 +59,7 @@ var Picture = React.createClass({
             <span className="like-count">{likes}</span>
             <span className="comment-icon"></span>
             <span className="comment-count">{comments}</span>
-
+            
           <Modal
               isOpen={this.state.modalIsOpen}
               onRequestClose={this.closeModal}

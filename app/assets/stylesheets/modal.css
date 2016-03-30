@@ -141,6 +141,8 @@ body {
     min-height: auto;
     min-width: auto;
     position: absolute;
+    top: 0;
+    right: 0;
     width: 39.5156px;
     z-index: 2;
     perspective-origin: 19.75px 18px;

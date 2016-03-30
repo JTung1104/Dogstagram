@@ -1,53 +1,13 @@
 var React = require('react'),
-    ApiUtil = require('../util/api_util'),
-    Modal = require('react-modal');
-
-    var customStyle = {
-      overlay : {
-        position          : 'fixed',
-        display           : 'flex',
-        justifyContent    : 'center',
-        alignItems        : 'center',
-        top               : 0,
-        left              : 0,
-        right             : 0,
-        bottom            : 0,
-        backgroundColor   : 'rgba(0,0,0,0.5)'
-      },
-      content : {
-        position                   : 'static',
-        display                    : 'flex',
-        justifyContent             : 'space-around',
-        alignItems                 : 'center',
-        flexDirection              : 'column',
-        border                     : 'none',
-        backgroundColor            : 'rgba(128,128,128,0.4)',
-        overflow                   : 'auto',
-        WebkitOverflowScrolling    : 'touch',
-        borderRadius               : '4px',
-        outline                    : 'none',
-        padding                    : '2px',
-        minWidth                   : '100px',
-        minHeight                  : '100px',
-        height                     : '100px',
-        width                      : '500px'
-      }
-    };
+    ApiUtil = require('../util/api_util');
 
 var ProfilePicture = React.createClass({
   getInitialState: function () {
-    return { modalIsOpen: false };
+    return { disabled: this.props.user.id !== currentUserId };
   },
   handleUploadPicture: function (e) {
     e.preventDefault();
     if (this.props.user.id !== currentUserId) { return; }
-    // $(document).on('cloudinarywidgetsuccess', function(e, data) {
-    //   $(".cloudinary-thumbnails").addClass("margin");
-    //   $(".cloudinary-thumbnail").addClass("margin");
-    //   $(".upload-field").addClass("opacity");
-    //   $("#select").addClass("hidden");
-    //   $("#upload").removeClass("hidden");
-    // });
 
     settings = Object.assign({}, CLOUDINARY);
     settings["theme"] = "white"
@@ -58,6 +18,8 @@ var ProfilePicture = React.createClass({
     cloudinary.openUploadWidget(
       settings,
       function (error, result) {
+        if (typeof result === "undefined") {return;}
+
         if (result.length > 1) {
           console.log("Too many photos");
         } else {
@@ -66,14 +28,11 @@ var ProfilePicture = React.createClass({
         }
     });
   },
-  openModal: function() {
-    this.setState({modalIsOpen: true});
-  },
-  closeModal: function() {
-    this.setState({modalIsOpen: false});
+  handleUpdate: function () {
+    this.setState({disabled: false});
   },
   updateProfileImageUrl: function () {
-    ApiUtil.updateProfileImageUrl(this.url, this.openModal);
+    ApiUtil.updateProfileImageUrl(this.url, this.handleUpdate);
   },
   render: function () {
     var url = "http://res.cloudinary.com/dsolojfgkabc/image/upload/w_200,h_200,c_thumb,g_face/";
@@ -82,8 +41,11 @@ var ProfilePicture = React.createClass({
     return (
       <div className="profile-picture-box">
         <div className="profile-picture-square">
-          <button onClick={this.handleUploadPicture} className="change-profile-picture">
-            <img title="Change profile photo" src={url}/>
+          <button
+            disabled={this.state.disabled}
+            onClick={this.handleUploadPicture}
+            className="change-profile-picture">
+              <img title="Change profile photo" src={url}/>
           </button>
         </div>
       </div>
