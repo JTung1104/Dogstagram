@@ -34,6 +34,7 @@ Rails.application.configure do
   config.assets.digest = true
 
   config.serve_static_assets = true
+  config.static_cache_control = "public, max-age=31536000"
   config.assets.compress = true
   config.assets.compile = true
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
