@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'newrelic_rpm'
-gem 'redis-rails'
 gem 'figaro'
 
 gem 'pry-rails'
