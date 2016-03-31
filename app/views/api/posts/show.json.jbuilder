@@ -2,6 +2,7 @@ json.id @post.id
 json.image_url @post.image_url
 json.user @post.user.username
 json.user_id @post.user_id
+json.profile_image_url @post.user.profile_image_url
 
 json.comments @post.comments do |comment|
   json.id comment.id
