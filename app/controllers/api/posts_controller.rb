@@ -1,11 +1,16 @@
 class Api::PostsController < ApplicationController
   def index
-    following_ids = "SELECT followed_id FROM relationships
-                     WHERE  follower_id = :user_id"
+    if select_user_id
+      @posts = Post.includes(:user, :likes, comments: [:user])
+        .where("user_id = :user_id", user_id: select_user_id)
+    else
+      following_ids = "SELECT followed_id FROM relationships
+                       WHERE  follower_id = :user_id"
 
-    @posts = Post.includes(:user, :likes, comments: [:user])
-      .where("user_id IN (#{following_ids})
-              OR user_id = :user_id", user_id: current_user.id)
+      @posts = Post.includes(:user, :likes, comments: [:user])
+        .where("user_id IN (#{following_ids})
+                OR user_id = :user_id", user_id: current_user.id)
+    end
   end
 
   def show
@@ -49,5 +54,9 @@ class Api::PostsController < ApplicationController
 
   def comment_params
     params.require(:post).require(:comment).permit(:body)
+  end
+
+  def select_user_id
+    params[:userId]
   end
 end

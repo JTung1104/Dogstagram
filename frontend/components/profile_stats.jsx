@@ -3,6 +3,18 @@ var React = require('react'),
     UserStore = require('../stores/user');
 
 var ProfileStats = React.createClass({
+  getInitialState: function () {
+    return {shouldUpdate: false};
+  },
+  componentDidMount: function () {
+    this.userListener = UserStore.addListener(this.handleUpdate);
+  },
+  componentWillUnmount: function () {
+    this.userListener.remove();
+  },
+  handleUpdate: function () {
+    this.setState({shouldUpdate: true});
+  },
   render: function () {
     return (
       <div className="profile-stats-box">

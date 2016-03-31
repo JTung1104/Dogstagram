@@ -9,12 +9,13 @@ var React = require('react'),
 
 var UserShow = React.createClass({
   getInitialState: function () {
-    return {user: UserStore.findById(this.props.params.id)};
+    return {user: UserStore.findById(this.props.params.id), posts: PostStore.all()};
   },
   componentDidMount: function () {
     this.userListener = UserStore.addListener(this.handleChange);
     this.postListener = PostStore.addListener(this.handleChange);
     ApiUtil.fetchUser(this.props.params.id);
+    ApiUtil.fetchPosts(this.props.params.id);
   },
   componentWillUnmount: function () {
     this.postListener.remove();
@@ -26,13 +27,10 @@ var UserShow = React.createClass({
     }.bind(this));
   },
   handleChange: function () {
-    ApiUtil.fetchUser(this.props.params.id, function () {
-      this.setState({ user: UserStore.findById(this.props.params.id) });
-      this.userListener.remove();
-    }.bind(this));
+    this.setState({ user: UserStore.findById(this.props.params.id), posts: PostStore.all() });
   },
   getPictures: function () {
-    var pictures = this.state.user.posts.map(function(post, i) {
+    var pictures = this.state.posts.map(function(post, i) {
       return (
         <Picture key={i}
           post={post}

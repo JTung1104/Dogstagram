@@ -27,7 +27,6 @@ var FollowButton = React.createClass({
     this.setState({disabled: false});
   },
   getButton: function () {
-    // debugger
     if (this.props.user.id === currentUserId) { return }
 
     if (this.props.user.followed) {

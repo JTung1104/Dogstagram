@@ -2,12 +2,14 @@ var ApiActions = require('../actions/api_actions'),
     SearchActions = require('../actions/search_actions');
 
 var ApiUtil = {
-  fetchPosts: function () {
+  fetchPosts: function (userId, callback) {
     $.ajax({
       method: "GET",
       url: "/api/posts",
+      data: {userId: userId},
       success: function (data) {
         ApiActions.receiveAllPosts(data);
+        callback && callback();
       },
       dataType: "json"
     });
