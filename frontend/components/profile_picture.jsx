@@ -1,4 +1,5 @@
 var React = require('react'),
+    UserStore = require('../stores/user'),
     ApiUtil = require('../util/api_util');
 
 var ProfilePicture = React.createClass({
@@ -29,7 +30,10 @@ var ProfilePicture = React.createClass({
     });
   },
   handleUpdate: function () {
-    this.setState({disabled: false});
+    ApiUtil.fetchUser(currentUserId, function () {
+      this.setState({disabled: false});
+      this.props.user.profile_image_url = UserStore.findById(currentUserId).profile_image_url
+    }.bind(this));
   },
   updateProfileImageUrl: function () {
     ApiUtil.updateProfileImageUrl(this.url, this.handleUpdate);
