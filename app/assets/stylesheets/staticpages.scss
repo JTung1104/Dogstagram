@@ -350,6 +350,16 @@ h1, h2, p, strong, em, a {
   overflow: auto;
 }
 
+.results-inner-box .follow {
+  position: absolute;
+  bottom: 1px;
+  left: 36px;
+}
+
+.follow-box {
+  position: relative;
+}
+
 .user-result-link {
   color: rgb(18, 86, 136);
   display: flex;
@@ -452,8 +462,9 @@ h1, h2, p, strong, em, a {
 }
 
 .user-result-name {
+  display: flex;
   box-sizing: border-box;
-  color: rgb(201, 200, 205);
+  color: #c9c8cd;
   height: 22px;
   position: relative;
   text-align: left;
@@ -461,13 +472,8 @@ h1, h2, p, strong, em, a {
   white-space: nowrap;
   width: 156px;
   perspective-origin: 78px 11px;
-  transform-origin: 78px 11px;
-  border: 0px solid rgb(0, 0, 0);
-  flex: 0 0 auto;
   flex-flow: column nowrap;
-  font: normal normal 300 normal 14px / 22px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  outline: rgb(201, 200, 205) none 0px;
-  overflow: hidden;
+  outline: #c9c8cd none 0px;
 }
 
 .nav-right {

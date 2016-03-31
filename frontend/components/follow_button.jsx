@@ -32,21 +32,21 @@ var FollowButton = React.createClass({
 
     if (this.props.user.followed) {
       return (
-        <a className="follow-link" href="#" onClick={this.handleUnfollow}>
+        <div className="follow" onClick={this.handleUnfollow}>
           <button className="unfollow-button">Unfollow</button>
-        </a>
+        </div>
       );
     } else {
       return (
-        <a className="follow-link" href="#" onClick={this.handleFollow}>
+        <div className="follow" onClick={this.handleFollow}>
           <button className="follow-button">Follow</button>
-        </a>
+        </div>
       );
     }
   },
   render: function () {
     return (
-      <div>
+      <div className="follow-box">
         {this.getButton()}
       </div>
     );
