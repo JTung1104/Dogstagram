@@ -31,6 +31,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
+gem 'heroku_rails_deflate', :group => :production
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
