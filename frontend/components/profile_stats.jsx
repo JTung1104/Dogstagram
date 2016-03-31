@@ -1,42 +1,8 @@
-var React = require('react');
-var ApiUtil = require('../util/api_util');
-var UserStore = require('../stores/user');
+var React = require('react'),
+    FollowButton = require('./follow_button'),
+    UserStore = require('../stores/user');
 
 var ProfileStats = React.createClass({
-  getInitialState: function () {
-    return {disabled: false};
-  },
-  handleFollow: function (e) {
-    e.preventDefault();
-    this.setState({disabled: true});
-    var relationship = {followed_id: this.props.user.id};
-    ApiUtil.createFollow(relationship, this.enableButton);
-  },
-  handleUnfollow: function (e) {
-    e.preventDefault();
-    var relationship = {followed_id: this.props.user.id};
-    ApiUtil.destroyFollow(relationship, this.enableButton);
-  },
-  enableButton: function () {
-    this.setState({disabled: false});
-  },
-  getButton: function () {
-    if (this.props.user.id === currentUserId) { return }
-
-    if (this.props.user.followed) {
-      return (
-        <a className="follow-link" href="#" onClick={this.handleUnfollow}>
-          <button className="unfollow-button">Unfollow</button>
-        </a>
-      );
-    } else {
-      return (
-        <a className="follow-link" href="#" onClick={this.handleFollow}>
-          <button className="follow-button">Follow</button>
-        </a>
-      );
-    }
-  },
   render: function () {
     return (
       <div className="profile-stats-box">
@@ -45,7 +11,7 @@ var ProfileStats = React.createClass({
             {this.props.user.username}
           </h1>
 
-          {this.getButton()}
+          <FollowButton user={this.props.user}/>
         </div>
 
         <div className="profile-stats-name">
