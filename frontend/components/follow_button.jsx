@@ -39,7 +39,9 @@ var FollowButton = React.createClass({
   },
   render: function () {
     return (
-      this.getButton()
+      <div>
+        {this.getButton()}
+      </div>
     );
   }
 });
