@@ -1,16 +1,19 @@
 var Store = require('flux/utils').Store,
- AppDispatcher = require('../dispatcher/dispatcher'),
- UserConstants = require('../constants/user_constants'),
- UserStore = new Store(AppDispatcher);
+     AppDispatcher = require('../dispatcher/dispatcher'),
+     UserConstants = require('../constants/user_constants'),
+     UserStore = new Store(AppDispatcher);
 
-var _users = {};
+var _users = {},
+    _search = {};
 
 var resetUsers = function (users) {
-  _users = {};
+  _search = {};
 
   users.forEach(function(user) {
-    _users[user.id] = user;
+    _search[user.id] = user;
   });
+
+  addUsers(users);
 };
 
 var addUsers = function (users) {
@@ -21,12 +24,14 @@ var addUsers = function (users) {
 
 var addFollower = function (relationship) {
   var user = UserStore.findById(relationship.followed_id);
+
   user.followed = true;
   user.followers.push(UserStore.findById(currentUserId));
 };
 
 var removeFollower = function (relationship) {
   var user = UserStore.findById(relationship.followed_id);
+
   var index;
 
   for (var i = 0; i < user.followers.length; i++) {
@@ -51,7 +56,7 @@ UserStore.__onDispatch = function (payload) {
       UserStore.__emitChange();
       break;
     case UserConstants.USERS_RECEIVED:
-      resetUsers(payload.users);
+      addUsers(payload.users);
       UserStore.__emitChange();
       break;
     case UserConstants.FOLLOW_RECEIVED:
@@ -62,11 +67,20 @@ UserStore.__onDispatch = function (payload) {
       removeFollower(payload.relationship);
       UserStore.__emitChange();
       break;
+    case UserConstants.RESULTS_RECEIVED:
+      resetUsers(payload.results);
+      UserStore.__emitChange();
+      break;
   }
 };
 
 UserStore.all = function () {
   return Object.assign({}, _users);
 };
+
+UserStore.results = function () {
+  return Object.assign({}, _search);
+};
+
 
 module.exports = UserStore;

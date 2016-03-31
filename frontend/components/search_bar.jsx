@@ -19,8 +19,8 @@ var SearchBar = React.createClass({
       this.setState({search: e.target.value});
 
       if (e.target.value.length > 0) {
-        ApiUtil.fetchUsers(e.target.value, function () {
-          this.setState({results: UserStore.all()});
+        ApiUtil.fetchSearchResults(e.target.value, function () {
+          this.setState({results: UserStore.results()});
         }.bind(this));
       } else {
         this.setState({results: {}});
