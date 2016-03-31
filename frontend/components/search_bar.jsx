@@ -9,7 +9,6 @@ var SearchBar = React.createClass({
     return {search: "", results: {}};
   },
   componentDidMount: function () {
-    // this.searchListener = SearchStore.addListener(this.handleChange);
     this.userListener = UserStore.addListener(this.handleChange);
   },
   componentWillUnmount: function () {
