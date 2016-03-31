@@ -25,6 +25,10 @@ var UserShow = React.createClass({
     ApiUtil.fetchUser(newProps.params.id, function () {
       this.setState({ user: UserStore.findById(newProps.params.id) });
     }.bind(this));
+
+    ApiUtil.fetchPosts(newProps.params.id, function () {
+      this.setState({ posts: PostStore.all() });
+    }.bind(this));
   },
   handleChange: function () {
     this.setState({ user: UserStore.findById(this.props.params.id), posts: PostStore.all() });
