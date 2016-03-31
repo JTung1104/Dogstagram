@@ -93,13 +93,14 @@ var UploadPictureButton = React.createClass({
   },
   render: function () {
     return (
-      <div>
+      <div className="upload-picture-div">
         <a onClick={this.openModal} href="#"
            className="upload-picture-button">
           <img
             src="http://res.cloudinary.com/dsolojfgkabc/image/upload/instagram-photo-camera-logo-outline_fubte5.png"
             className="icon"/>
         </a>
+
         <Modal
           isOpen={this.state.modalIsOpen}
           onRequestClose={this.closeModal}

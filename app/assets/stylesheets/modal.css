@@ -218,3 +218,17 @@ body {
   bottom: 26px;
   width: 200px;
 }
+
+.modal-post-show .post-header-picture {
+  left: 10px;
+}
+
+.modal-post-show .username {
+  left: 16%;
+  top: -4px;
+}
+
+.modal-post-show .timestamp {
+  position: absolute;
+  top: 26px;
+}

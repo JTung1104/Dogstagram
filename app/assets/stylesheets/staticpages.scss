@@ -134,8 +134,6 @@ h1, h2, p, strong, em, a {
   padding: 0px 0px 20px;
   -webkit-border-after: 1px solid rgb(238, 238, 238);
   -webkit-transform-origin: 279px 61px;
-  // overflow-y: auto;
-  // overflow-x: hidden;
 }
 
 .comment-table:after {
@@ -167,6 +165,12 @@ h1, h2, p, strong, em, a {
   -webkit-border-before: 0px none rgb(18, 86, 136);
   -webkit-border-end: 0px none rgb(18, 86, 136);
   -webkit-border-start: 0px none rgb(18, 86, 136);
+}
+
+.comment-username:hover {
+  color: #83c1ef;
+  -webkit-text-fill-color: #83c1ef;
+  cursor: pointer;
 }
 
 .nav-header {
@@ -523,25 +527,20 @@ h1, h2, p, strong, em, a {
   bottom: 24px;
   left: 24px;
   width: 34.1094px;
-  -webkit-column-rule-color: rgb(18, 86, 136);
   perspective-origin: 17.0469px 7.5px;
-  -webkit-text-decorations-in-effect: none;
-  -webkit-text-emphasis-color: rgb(18, 86, 136);
-  -webkit-text-fill-color: rgb(18, 86, 136);
-  -webkit-text-stroke-color: rgb(18, 86, 136);
   transform-origin: 17.0469px 7.5px;
   border: 0px none rgb(18, 86, 136);
   font: normal normal bold normal 12px / normal Montserrat;
   margin: 5px 0px 0px 20px;
   outline: rgb(18, 86, 136) none 0px;
-  -webkit-border-after: 0px none rgb(18, 86, 136);
-  -webkit-border-before: 0px none rgb(18, 86, 136);
-  -webkit-border-end: 0px none rgb(18, 86, 136);
-  -webkit-border-start: 0px none rgb(18, 86, 136);
   -webkit-transform-origin: 17.0469px 7.5px;
   line-height: 18px;
   font-weight: 600;
   font-size: 15px;
+}
+
+.header-profile-link:hover {
+  color: #a6d2f3;
 }
 
 .num-likes {
@@ -723,25 +722,19 @@ h1, h2, p, strong, em, a {
   bottom: 24px;
   left: 24px;
   width: inherit;
-  -webkit-column-rule-color: rgb(18, 86, 136);
   perspective-origin: 17.0469px 7.5px;
-  -webkit-text-decorations-in-effect: none;
-  -webkit-text-emphasis-color: rgb(18, 86, 136);
-  -webkit-text-fill-color: rgb(18, 86, 136);
-  -webkit-text-stroke-color: rgb(18, 86, 136);
   transform-origin: 17.0469px 7.5px;
   border: 0px none rgb(18, 86, 136);
   font: normal normal bold normal 12px / normal Montserrat;
   margin: 5px 0px 0px 20px;
   outline: rgb(18, 86, 136) none 0px;
-  -webkit-border-after: 0px none rgb(18, 86, 136);
-  -webkit-border-before: 0px none rgb(18, 86, 136);
-  -webkit-border-end: 0px none rgb(18, 86, 136);
-  -webkit-border-start: 0px none rgb(18, 86, 136);
-  -webkit-transform-origin: 17.0469px 7.5px;
   line-height: 18px;
   font-weight: 600;
   font-size: 15px;
+}
+
+.logout:hover {
+  color: #83c1ef;
 }
 
 .index-background {
@@ -796,4 +789,9 @@ h1, h2, p, strong, em, a {
 
 #root {
   background-color: #FAFAFA;
+}
+
+.upload-picture-div {
+  position: relative;
+  right: 43px;
 }

@@ -21,7 +21,8 @@ json.posts @user.posts do |post|
   json.user @user.username
   json.user_id @user.id
   json.created_time_ago time
-
+  json.profile_image_url @user.profile_image_url
+  
   liked = false
   like_id = nil
 

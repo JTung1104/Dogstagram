@@ -44,7 +44,7 @@ var SearchBar = React.createClass({
     var results = this.state.results;
 
     var resultItems = Object.keys(results).map(function(result, i) {
-      var url = "http://res.cloudinary.com/dsolojfgkabc/image/upload/"
+      var url = "http://res.cloudinary.com/dsolojfgkabc/image/upload/w_32,h_32,c_thumb,g_face/"
       url += results[result].profile_image_url || "Empty_Profile_qvvkdi.jpg"
 
       return (

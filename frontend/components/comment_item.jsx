@@ -68,7 +68,7 @@ var CommentItem = React.createClass({
     return (
       <div className="comment-item">
         <a onClick={this.onClick}
-           className="comment-username hvr-pulse-grow">
+           className="comment-username">
           {this.props.comment.user}
         </a>
 
