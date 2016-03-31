@@ -6,6 +6,12 @@ var FollowButton = React.createClass({
   getInitialState: function () {
     return {disabled: false};
   },
+  componentDidMount: function () {
+    this.userListener = UserStore.addListener(this.enableButton);
+  },
+  componentWillUnmount: function () {
+    this.userListener.remove();
+  },
   handleFollow: function (e) {
     e.preventDefault();
     this.setState({disabled: true});
@@ -21,6 +27,7 @@ var FollowButton = React.createClass({
     this.setState({disabled: false});
   },
   getButton: function () {
+    // debugger
     if (this.props.user.id === currentUserId) { return }
 
     if (this.props.user.followed) {

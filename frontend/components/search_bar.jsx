@@ -1,25 +1,27 @@
-var React = require('react');
-var UserStore = require('../stores/user');
-var SearchStore = require('../stores/search');
-var ApiUtil = require('../util/api_util');
+var React = require('react'),
+    FollowButton = require('./follow_button'),
+    UserStore = require('../stores/user'),
+    SearchStore = require('../stores/search'),
+    ApiUtil = require('../util/api_util');
 
 var SearchBar = React.createClass({
   getInitialState: function () {
     return {search: "", results: {}};
   },
   componentDidMount: function () {
-    this.searchListener = SearchStore.addListener(this.handleChange);
+    // this.searchListener = SearchStore.addListener(this.handleChange);
+    this.userListener = UserStore.addListener(this.handleChange);
   },
   componentWillUnmount: function () {
-    this.searchListener.remove();
+    this.userListener.remove();
   },
   handleChange: function (e) {
     if (e) {
       this.setState({search: e.target.value});
 
       if (e.target.value.length > 0) {
-        ApiUtil.fetchSearchResults(e.target.value, function () {
-          this.setState({results: SearchStore.all()});
+        ApiUtil.fetchUsers(e.target.value, function () {
+          this.setState({results: UserStore.all()});
         }.bind(this));
       } else {
         this.setState({results: {}});
@@ -46,22 +48,23 @@ var SearchBar = React.createClass({
     var resultItems = Object.keys(results).map(function(result, i) {
       var url = "http://res.cloudinary.com/dsolojfgkabc/image/upload/w_32,h_32,c_thumb,g_face/"
       url += results[result].profile_image_url || "Empty_Profile_qvvkdi.jpg"
-      
+
       return (
-        <a key={i}
-           className="user-result-link"
-           href={"/#/users/" + results[result].id}
-           onClick={this.handleClick}>
-          <div className="user-result-box">
-            <img src={url} className="user-result-pic"/>
-            <div className="user-result-username-box">
-              <span className="user-result-username">{results[result].username}</span>
+        <div key={i}>
+          <a className="user-result-link"
+             href={"/#/users/" + results[result].id}
+             onClick={this.handleClick}>
+            <div className="user-result-box">
+              <img src={url} className="user-result-pic"/>
+              <div className="user-result-username-box">
+                <span className="user-result-username">{results[result].username}</span>
+              </div>
             </div>
             <div className="user-result-name">
-              {results[result].name}
             </div>
-          </div>
-        </a>
+          </a>
+          <FollowButton user={results[result]}/>
+        </div>
       );
     }.bind(this));
 

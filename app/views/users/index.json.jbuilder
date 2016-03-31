@@ -1,9 +1,8 @@
 json.array! @users do |user|
   json.id user.id
   json.username user.username
-  json.name user.name
   json.profile_image_url user.profile_image_url
-  
+
   json.posts user.posts do |post|
     json.id post.id
     json.image_url post.image_url
@@ -28,4 +27,19 @@ json.array! @users do |user|
 
     json.liked liked
   end
+
+  followed = false
+
+  json.followers user.followers do |follower|
+    json.id follower.id
+    json.user follower.username
+    followed = true if follower.id == current_user.id
+  end
+
+  json.followed_users user.followed_users do |followed_user|
+    json.id followed_user.id
+    json.user followed_user.username
+  end
+
+  json.followed followed
 end

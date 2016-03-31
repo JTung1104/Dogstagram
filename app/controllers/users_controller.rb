@@ -22,8 +22,8 @@ class UsersController < ApplicationController
 
   def index
     if query.length > 0
-      @users = User.where("username LIKE ?", "%#{query}%")
-      render :query
+      @users = User.includes(:followed_users, :followers, posts: [:likes, :comments])
+        .where("username LIKE ?", "%#{query}%")
     else
       @users = User.includes(:followed_users, :followers, posts: [:likes, :comments])
     end

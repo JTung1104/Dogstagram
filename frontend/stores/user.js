@@ -1,7 +1,7 @@
-var Store = require('flux/utils').Store;
-var AppDispatcher = require('../dispatcher/dispatcher');
-var UserConstants = require('../constants/user_constants');
-var UserStore = new Store(AppDispatcher);
+var Store = require('flux/utils').Store,
+ AppDispatcher = require('../dispatcher/dispatcher'),
+ UserConstants = require('../constants/user_constants'),
+ UserStore = new Store(AppDispatcher);
 
 var _users = {};
 
@@ -51,7 +51,7 @@ UserStore.__onDispatch = function (payload) {
       UserStore.__emitChange();
       break;
     case UserConstants.USERS_RECEIVED:
-      addUsers(payload.users);
+      resetUsers(payload.users);
       UserStore.__emitChange();
       break;
     case UserConstants.FOLLOW_RECEIVED:

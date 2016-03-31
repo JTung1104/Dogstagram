@@ -45,12 +45,14 @@ var ApiUtil = {
       dataType: "json"
     });
   },
-  fetchUsers: function () {
+  fetchUsers: function (query, callback) {
     $.ajax({
       method: "GET",
       url: "/users/",
+      data: {query: query},
       success: function (users) {
         ApiActions.receiveUsers(users);
+        callback && callback();
       },
       dataType: "json"
     });
