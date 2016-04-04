@@ -1,10 +1,10 @@
-var React = require('react');
-var Modal = require('react-modal');
-var LinkedStateMixin = require('react-addons-linked-state-mixin');
-var CommentForm = require('./comment_form');
-var ApiUtil = require('../util/api_util');
-var History = require('react-router').History;
-var PostStore = require('../stores/post');
+var React = require('react'),
+    Modal = require('react-modal'),
+    LinkedStateMixin = require('react-addons-linked-state-mixin'),
+    CommentForm = require('./comment_form'),
+    ApiUtil = require('../util/api_util'),
+    History = require('react-router').History,
+    PostStore = require('../stores/post');
 
 var customStyle = {
   overlay : {
