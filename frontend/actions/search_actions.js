@@ -1,6 +1,5 @@
 var AppDispatcher = require('../dispatcher/dispatcher'),
-    UserConstants = require('../constants/user_constants'),
-    SearchConstants = require('../constants/search_constants');
+    UserConstants = require('../constants/user_constants');
 
 var SearchActions = {
   receiveSearchResults: function (results) {

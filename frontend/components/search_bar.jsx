@@ -1,7 +1,6 @@
 var React = require('react'),
     FollowButton = require('./follow_button'),
     UserStore = require('../stores/user'),
-    SearchStore = require('../stores/search'),
     ApiUtil = require('../util/api_util');
 
 var SearchBar = React.createClass({
