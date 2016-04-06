@@ -10,6 +10,7 @@ class Api::PostsController < ApplicationController
       @posts = Post.includes(:user, :likes, comments: [:user])
         .where("user_id IN (#{following_ids})
                 OR user_id = :user_id", user_id: current_user.id)
+        .limit(10 * scroll)
     end
   end
 
@@ -58,5 +59,9 @@ class Api::PostsController < ApplicationController
 
   def select_user_id
     params[:userId]
+  end
+
+  def scroll
+    params[:scroll] ? params[:scroll].to_i : 1
   end
 end

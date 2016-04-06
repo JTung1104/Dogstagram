@@ -6,17 +6,25 @@ var React = require('react'),
 
 var Index = React.createClass({
   getInitialState: function () {
-    return { posts: PostStore.all() };
+    return { posts: PostStore.all(), scrollCount: 1 };
   },
-  componentWillMount: function () {
+  componentDidMount: function () {
     this.postListener = PostStore.addListener(this.handlePostChange);
+    this.infiniteScrollToken = window.addEventListener("scroll", this.addPosts);
     ApiUtil.fetchPosts();
   },
   componentWillUnmount: function () {
     this.postListener.remove();
+    window.removeEventListener('scroll', this.addPosts, false);
   },
   handlePostChange: function () {
     this.setState({ posts: PostStore.all() })
+  },
+  addPosts: function () {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+     this.state.scrollCount += 1;
+     ApiUtil.fetchMorePosts(this.state.scrollCount);
+    }
   },
   render: function () {
     var posts = this.state.posts.map(function(post, idx) {
