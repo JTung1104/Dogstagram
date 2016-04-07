@@ -6,7 +6,7 @@ var React = require('react'),
 
 var Index = React.createClass({
   getInitialState: function () {
-    return { posts: PostStore.all(), scrollCount: 1 };
+    return { posts: PostStore.all(), scrollCount: 1, time: Date.now() };
   },
   componentDidMount: function () {
     this.postListener = PostStore.addListener(this.handlePostChange);
@@ -21,9 +21,10 @@ var Index = React.createClass({
     this.setState({ posts: PostStore.all() })
   },
   addPosts: function () {
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-     this.state.scrollCount += 1;
-     ApiUtil.fetchMorePosts(this.state.scrollCount);
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight && this.state.time + 1000 < Date.now()) {
+      this.state.time = Date.now();
+      this.state.scrollCount += 1;
+      ApiUtil.fetchMorePosts(this.state.scrollCount);
     }
   },
   render: function () {
