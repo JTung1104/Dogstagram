@@ -1,7 +1,7 @@
 var React = require('react'),
     Modal = require('react-modal'),
     LinkedStateMixin = require('react-addons-linked-state-mixin'),
-    CommentForm = require('./comment_form'),
+    CommentForm = require('./post/comment_form'),
     ApiUtil = require('../util/api_util'),
     History = require('react-router').History,
     PostStore = require('../stores/post');

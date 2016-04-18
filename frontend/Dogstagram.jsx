@@ -6,8 +6,8 @@ var React = require('react'),
  Modal = require('react-modal'),
  App = require('./components/app'),
  Index = require('./components/index'),
- UserShow = require('./components/user_show'),
- PostShow = require('./components/post_show');
+ UserShow = require('./components/profile/user_show'),
+ PostShow = require('./components/post/post_show');
 
 var routes = (
   <Route path="/" component={App}>

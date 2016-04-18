@@ -2,7 +2,7 @@ var React = require('react'),
     Modal = require('react-modal'),
     CommentBox = require('./comment_box'),
     PostHeader = require('./post_header'),
-    PostStore = require('../stores/post');
+    PostStore = require('../../stores/post');
 
 var customStyle = {
   overlay : {
@@ -59,7 +59,7 @@ var Picture = React.createClass({
             <span className="like-count">{likes}</span>
             <span className="comment-icon"></span>
             <span className="comment-count">{comments}</span>
-            
+
           <Modal
               isOpen={this.state.modalIsOpen}
               onRequestClose={this.closeModal}

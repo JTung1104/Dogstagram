@@ -1,7 +1,7 @@
 var React = require('react');
     SearchBar = require('./search_bar'),
     UploadPictureButton = require('./upload_picture_button'),
-    HeaderProfileLink = require('./header_profile_link');
+    HeaderProfileLink = require('./profile/header_profile_link');
 
 var NavBar = React.createClass({
   render: function () {

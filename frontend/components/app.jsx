@@ -1,6 +1,6 @@
 var React = require('react'),
     UploadPictureButton = require('./upload_picture_button'),
-    Picture = require('./picture');
+    Picture = require('./post/picture');
 
 var App = React.createClass({
   render: function () {

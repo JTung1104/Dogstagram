@@ -1,5 +1,5 @@
 var React = require('react'),
-    FollowButton = require('./follow_button'),
+    FollowButton = require('../profile/follow_button'),
     UserStore = require('../stores/user'),
     ApiUtil = require('../util/api_util');
 

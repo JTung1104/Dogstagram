@@ -1,8 +1,6 @@
 var React = require('react');
 
 var NumLikes = React.createClass({
-
-
   numLikes: function () {
     if (this.props.post.likes.length === 1) {
       return ("1 like");

@@ -1,5 +1,5 @@
 var React = require('react'),
-    ApiUtil = require('../util/api_util'),
+    ApiUtil = require('../../util/api_util'),
     Modal = require('react-modal');
 
 var customStyle = {

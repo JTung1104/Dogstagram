@@ -1,7 +1,7 @@
 var React = require('react'),
     PostStore = require('../stores/post'),
     ApiUtil = require('../util/api_util'),
-    Post = require('./post'),
+    Post = require('./post/post'),
     NavBar = require('./nav_bar');
 
 var Index = React.createClass({

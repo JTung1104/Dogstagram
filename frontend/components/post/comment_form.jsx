@@ -1,5 +1,5 @@
 var React = require('react');
-    ApiUtil = require('../util/api_util'),
+    ApiUtil = require('../../util/api_util'),
     LinkedStateMixin = require('react-addons-linked-state-mixin');
 
 var CommentForm = React.createClass({
@@ -15,7 +15,7 @@ var CommentForm = React.createClass({
       body: this.state.body,
       post_id: this.props.post.id
     }
-    
+
     ApiUtil.createComment(comment, function () {
       that.setState({body: ""});
     });
