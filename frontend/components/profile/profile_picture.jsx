@@ -1,6 +1,6 @@
 var React = require('react'),
-    UserStore = require('../stores/user'),
-    ApiUtil = require('../util/api_util');
+    UserStore = require('../../stores/user'),
+    ApiUtil = require('../../util/api_util');
 
 var ProfilePicture = React.createClass({
   getInitialState: function () {

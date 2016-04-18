@@ -1,6 +1,6 @@
 var React = require('react'),
     FollowButton = require('./follow_button'),
-    UserStore = require('../stores/user');
+    UserStore = require('../../stores/user');
 
 var ProfileStats = React.createClass({
   getInitialState: function () {
