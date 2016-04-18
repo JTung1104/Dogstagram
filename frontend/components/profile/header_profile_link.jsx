@@ -1,6 +1,6 @@
 var React = require('react'),
-    ApiUtil = require('../util/api_util'),
-    UserStore = require('../stores/user');
+    ApiUtil = require('../../util/api_util'),
+    UserStore = require('../../stores/user');
 
 var HeaderProfileLink = React.createClass({
   getInitialState: function () {
