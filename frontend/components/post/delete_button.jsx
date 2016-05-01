@@ -1,6 +1,6 @@
 var React = require('react'),
-    ApiUtil = require('../../util/api_util'),
-    Modal = require('react-modal');
+    Modal = require('react-modal'),
+    APIUtil = require('../../util/api_util');
 
 var customStyle = {
   overlay : {
@@ -34,7 +34,7 @@ var customStyle = {
   }
 };
 
-var CommentItem = React.createClass({
+var DeleteButton = React.createClass({
   getInitialState: function () {
     return { modalIsOpen: false };
   },
@@ -50,51 +50,35 @@ var CommentItem = React.createClass({
   closeModal: function() {
     this.setState({modalIsOpen: false});
   },
-  getDeleteCommentButton: function () {
-    if (this.props.comment.user_id === currentUserId || this.props.post.user_id === currentUserId) {
-      return (
-        <button
-          title="Delete Comment"
-          className="delete-comment"
-          onClick={this.openModal}/>
-      );
-    }
-  },
   handleDelete: function (e) {
     e.preventDefault();
-    ApiUtil.destroyComment(this.props.comment);
+    ApiUtil.deletePost(this.props.post.id);
     this.closeModal();
   },
   render: function () {
     return (
-      <div className="comment-item">
-        <a onClick={this.onClick}
-           className="comment-username">
-          {this.props.comment.user}
-        </a>
+      <div>
+        <button
+          title="Delete Post"
+          className="delete-comment"
+          onClick={this.openModal}/>
 
-        <p className="comment-body">
-          {this.props.comment.body}
-        </p>
+          <Modal
+            isOpen={this.state.modalIsOpen}
+            onRequestClose={this.closeModal}
+            style={customStyle}>
 
-        {this.getDeleteCommentButton()}
+            <button className="confirm-delete" onClick={this.handleDelete}>
+              Delete Post
+            </button>
 
-        <Modal
-          isOpen={this.state.modalIsOpen}
-          onRequestClose={this.closeModal}
-          style={customStyle}>
-
-          <button className="confirm-delete" onClick={this.handleDelete}>
-            Delete Comment
-          </button>
-
-          <button className="cancel-delete" onClick={this.closeModal}>
-            Cancel
-          </button>
-        </Modal>
+            <button className="cancel-delete" onClick={this.closeModal}>
+              Cancel
+            </button>
+          </Modal>
       </div>
     );
   }
 });
 
-module.exports = CommentItem;
+module.exports = DeleteButton;
