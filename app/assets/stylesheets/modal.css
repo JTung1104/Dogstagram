@@ -184,7 +184,6 @@ body {
 
 .modal-post-show .comment-table {
   max-height: 397px;
-  overflow-y: scroll;
   overflow-x: hidden;
 }
 
