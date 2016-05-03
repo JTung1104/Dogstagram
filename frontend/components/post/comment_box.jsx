@@ -8,7 +8,11 @@ var React = require('react'),
 var CommentBox = React.createClass({
   getDeleteButton: function () {
     if (this.props.post.user_id === currentUserId) {
-      return (<DeleteButton post={this.props.post}/>);
+      return (
+        <DeleteButton
+          handleDelete={this.props.handleDelete}
+          post={this.props.post}/>
+      );
     }
   },
   render: function () {

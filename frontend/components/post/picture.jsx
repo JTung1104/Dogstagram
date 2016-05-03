@@ -71,7 +71,10 @@ var Picture = React.createClass({
 
               <div className="modal-post-show">
                 <PostHeader post={this.props.post}/>
-                <CommentBox click={this.closeModal} post={this.props.post}/>
+                <CommentBox
+                  handleDelete={this.props.handleDelete}
+                  click={this.closeModal}
+                  post={this.props.post}/>
               </div>
 
               <button className="modal-button" onClick={this.closeModal}/>

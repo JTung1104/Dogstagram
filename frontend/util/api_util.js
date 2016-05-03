@@ -49,12 +49,12 @@ var ApiUtil = {
       dataType: "json"
     });
   },
-  deletePost: function (id) {
+  deletePost: function (id, callback) {
     $.ajax({
       method: "DELETE",
       url: "/api/posts/" + id,
-      success: function (post) {
-        ApiActions.receiveSinglePost([post]);
+      success: function () {
+        callback && callback();
       },
       dataType: "json"
     });

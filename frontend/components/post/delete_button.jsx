@@ -38,11 +38,6 @@ var DeleteButton = React.createClass({
   getInitialState: function () {
     return { modalIsOpen: false };
   },
-  onClick: function (e) {
-    e.preventDefault();
-    if (typeof this.props.click === "function") { this.props.click(); }
-    window.location.href = "#/users/" + this.props.comment.user_id;
-  },
   openModal: function(e) {
     e.preventDefault();
     this.setState({modalIsOpen: true});
@@ -52,15 +47,16 @@ var DeleteButton = React.createClass({
   },
   handleDelete: function (e) {
     e.preventDefault();
-    ApiUtil.deletePost(this.props.post.id);
-    this.closeModal();
+    ApiUtil.deletePost(this.props.post.id, function () {
+      this.props.handleDelete();
+    }.bind(this));
   },
   render: function () {
     return (
       <div>
         <button
           title="Delete Post"
-          className="delete-comment"
+          className="delete-post"
           onClick={this.openModal}/>
 
           <Modal

@@ -39,10 +39,11 @@ var UserShow = React.createClass({
         <Picture key={i}
           post={post}
           photoOptions="w_292,h_292,c_fill,f_auto/"
+          handleDelete={this.handleChange}
           userShow={true}
           imageUrl={post.image_url}/>
       );
-    });
+    }.bind(this));
 
     return pictures;
   },

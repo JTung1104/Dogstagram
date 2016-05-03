@@ -36,7 +36,7 @@ var customStyle = {
 
 var CommentItem = React.createClass({
   getInitialState: function () {
-    return { modalIsOpen: false };
+    return {modalIsOpen: false};
   },
   onClick: function (e) {
     e.preventDefault();
