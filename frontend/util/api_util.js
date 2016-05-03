@@ -14,17 +14,6 @@ var ApiUtil = {
       dataType: "json"
     });
   },
-  fetchSinglePost: function (id, callback) {
-    $.ajax({
-      method: "GET",
-      url: "/api/posts/" + id,
-      success: function (data) {
-        ApiActions.receiveSinglePost([data]);
-        callback && callback();
-      },
-      dataType: "json"
-    });
-  },
   fetchMorePosts: function (scroll, callback) {
     $.ajax({
       method: "GET",
