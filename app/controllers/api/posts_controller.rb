@@ -13,7 +13,7 @@ class Api::PostsController < ApplicationController
         .limit(10 * scroll)
     end
   end
-  
+
   def update
     @post = Post.find(params[:id])
 
@@ -26,7 +26,7 @@ class Api::PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-    render :show if @post.destroy!
+    render :index if @post.destroy!
   end
 
   def create
