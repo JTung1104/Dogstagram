@@ -53,25 +53,25 @@ var DeleteButton = React.createClass({
   },
   render: function () {
     return (
-      <div>
+      <div className="delete-post-div">
         <button
           title="Delete Post"
           className="delete-post"
           onClick={this.openModal}/>
 
-          <Modal
-            isOpen={this.state.modalIsOpen}
-            onRequestClose={this.closeModal}
-            style={customStyle}>
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onRequestClose={this.closeModal}
+          style={customStyle}>
 
-            <button className="confirm-delete" onClick={this.handleDelete}>
-              Delete Post
-            </button>
+          <button className="confirm-delete" onClick={this.handleDelete}>
+            Delete Post
+          </button>
 
-            <button className="cancel-delete" onClick={this.closeModal}>
-              Cancel
-            </button>
-          </Modal>
+          <button className="cancel-delete" onClick={this.closeModal}>
+            Cancel
+          </button>
+        </Modal>
       </div>
     );
   }

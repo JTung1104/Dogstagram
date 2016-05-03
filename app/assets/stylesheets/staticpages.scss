@@ -800,3 +800,20 @@ h1, h2, p, strong, em, a {
   position: relative;
   right: 43px;
 }
+
+.delete-post {
+  background-color: transparent;
+  background-image: url("https://instagramstatic-a.akamaihd.net/h1/sprites/core/6f2033.png");
+  background-repeat: no-repeat;
+  background-position: -494px -373px;
+  border: none;
+  height: 44px;
+  width: 44px;
+  position: absolute;
+  bottom: 10px;
+  right: 0px;
+}
+
+.delete-post-div {
+  position: relative;
+}
