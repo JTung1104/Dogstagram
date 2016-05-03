@@ -78,8 +78,8 @@ var UploadPictureButton = React.createClass({
     };
 
     var that = this;
-    ApiUtil.createPost(post, function (post) {
-      that.history.pushState({}, "/posts/" + post.id, {});
+    ApiUtil.createPost(post, function () {
+      that.history.pushState({}, "#", {});
     });
 
     this.closeModal();

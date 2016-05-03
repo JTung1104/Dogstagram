@@ -43,8 +43,7 @@ var ApiUtil = {
       url: "/api/posts/",
       data: {post: data},
       success: function (post) {
-        ApiActions.receiveSinglePost([post]);
-        callback && callback(post);
+        ApiUtil.fetchPosts(null, callback);
       },
       dataType: "json"
     });

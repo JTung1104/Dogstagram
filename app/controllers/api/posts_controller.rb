@@ -2,7 +2,7 @@ class Api::PostsController < ApplicationController
   def index
     if select_user_id
       @posts = Post.includes(:user, :likes, comments: [:user])
-        .where("user_id = :user_id", user_id: select_user_id)
+        .where(user_id: select_user_id)
     else
       following_ids = "SELECT followed_id FROM relationships
                        WHERE  follower_id = :user_id"
@@ -13,11 +13,7 @@ class Api::PostsController < ApplicationController
         .limit(10 * scroll)
     end
   end
-
-  def show
-    @post = Post.includes(:user, :likes, comments: [:user]).find(params[:id])
-  end
-
+  
   def update
     @post = Post.find(params[:id])
 
@@ -45,7 +41,7 @@ class Api::PostsController < ApplicationController
       @comment.save! unless @comment.body == ""
     end
 
-    render :show
+    render :index
   end
 
   private
