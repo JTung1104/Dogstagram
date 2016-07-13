@@ -33,7 +33,6 @@ Rails.application.configure do
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
 
-  config.serve_static_assets = true
   config.static_cache_control = "public, max-age=31536000"
   config.assets.compress = true
   config.assets.compile = true

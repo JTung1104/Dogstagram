@@ -37,7 +37,7 @@ var Index = React.createClass({
         <NavBar/>
         <div className="index">{posts}</div>
       </div>
-  );
+    );
   }
 });
 
