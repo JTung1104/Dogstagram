@@ -11,7 +11,7 @@ var Post = React.createClass({
         <Picture post={this.props.post}
                  photoOptions={"w_600,c_scale,f_auto/"}
                  imageUrl={this.props.post.image_url}/>
-        <CommentBox post={this.props.post}/>
+               <CommentBox post={this.props.post} handleDelete={this.props.handleDelete}/>
       </article>
     );
   }

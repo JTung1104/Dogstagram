@@ -29,7 +29,7 @@ var Index = React.createClass({
   },
   render: function () {
     var posts = this.state.posts.map(function(post, idx) {
-      return ( <Post key={idx} post={post}/> );
+      return ( <Post key={idx} post={post} handleDelete={this.handlePostChange}/> );
     }.bind(this));
 
     return (
