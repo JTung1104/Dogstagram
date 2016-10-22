@@ -35,7 +35,6 @@ var customStyle = {
 };
 
 var UploadPictureButton = React.createClass({
-  mixins: [History],
   getInitialState: function () {
     return { body: "", modalIsOpen: false };
   },
@@ -89,6 +88,9 @@ var UploadPictureButton = React.createClass({
   },
   closeModal: function() {
     this.setState({modalIsOpen: false});
+  },
+  linkState: function(key) {
+    return (event => this.setState({[key]: event.currentTarget.value}));
   },
   render: function () {
     return (
