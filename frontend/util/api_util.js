@@ -32,7 +32,7 @@ var ApiUtil = {
       url: "/api/posts/",
       data: {post: data},
       success: function (post) {
-        ApiUtil.fetchPosts(null, callback);
+        window.location.hash.includes("users") ? ApiUtil.fetchPosts(currentUserId) : ApiUtil.fetchPosts();
       },
       dataType: "json"
     });

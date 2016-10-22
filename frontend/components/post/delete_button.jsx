@@ -48,8 +48,7 @@ var DeleteButton = React.createClass({
   handleDelete: function (e) {
     e.preventDefault();
     ApiUtil.deletePost(this.props.post.id, function () {
-      this.closeModal();
-      ApiUtil.fetchPosts();
+      window.location.hash.includes("users") ? ApiUtil.fetchPosts(currentUserId) : ApiUtil.fetchPosts();
     }.bind(this));
   },
   render: function () {
