@@ -1,6 +1,5 @@
 var React = require('react'),
     Modal = require('react-modal'),
-    LinkedStateMixin = require('react-addons-linked-state-mixin'),
     CommentForm = require('./post/comment_form'),
     ApiUtil = require('../util/api_util'),
     History = require('react-router').History,
@@ -36,7 +35,7 @@ var customStyle = {
 };
 
 var UploadPictureButton = React.createClass({
-  mixins: [LinkedStateMixin, History],
+  mixins: [History],
   getInitialState: function () {
     return { body: "", modalIsOpen: false };
   },
@@ -115,7 +114,8 @@ var UploadPictureButton = React.createClass({
           <input className="modal-comment-field"
                  type="text"
                  placeholder="Add a caption..."
-                 valueLink={this.linkState('body')}/>
+                 onChange={this.linkState('body')}
+                 value={this.state.body}/>
 
           <button id="upload"
                   onClick={this.handleSubmit}

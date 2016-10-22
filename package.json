@@ -27,7 +27,6 @@
     "history": "^4.3.0",
     "jbuilder": "0.0.4",
     "react": "^15.3.2",
-    "react-addons-linked-state-mixin": "^0.14.7",
     "react-dom": "^15.3.2",
     "react-modal": "^1.5.2",
     "react-router": "^2.8.1",
