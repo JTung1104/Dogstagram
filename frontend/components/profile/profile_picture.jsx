@@ -10,7 +10,7 @@ var ProfilePicture = React.createClass({
     e.preventDefault();
     if (this.props.user.id !== currentUserId) { return; }
 
-    settings = Object.assign({}, CLOUDINARY);
+    var settings = Object.assign({}, CLOUDINARY);
     settings["theme"] = "white"
     settings["thumbnails"] = ".upload-field";
     settings["thumbnail_transformation"] = "w_300,h_250,c_fill";

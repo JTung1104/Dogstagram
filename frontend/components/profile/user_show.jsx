@@ -15,7 +15,7 @@ var UserShow = React.createClass({
     this.userListener = UserStore.addListener(this.handleChange);
     this.postListener = PostStore.addListener(this.handleChange);
     ApiUtil.fetchUser(this.props.params.id);
-    ApiUtil.fetchPosts(this.props.params.id);
+    ApiUtil.fetchPosts(this.props.params.id, this.handleChange);
   },
   componentWillUnmount: function () {
     this.postListener.remove();
