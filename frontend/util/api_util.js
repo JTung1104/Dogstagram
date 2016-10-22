@@ -42,6 +42,7 @@ var ApiUtil = {
       method: "DELETE",
       url: "/api/posts/" + id,
       success: function () {
+        ApiActions.deletePost(id);
         callback && callback();
       },
       dataType: "json"

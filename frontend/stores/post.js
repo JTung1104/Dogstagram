@@ -17,6 +17,15 @@ var attachComment = function (comment) {
   if (post) { post.comments.push(comment); }
 };
 
+var deletePost = function (id) {
+  var index;
+  _posts.forEach(function (post, i) {
+    if (post.id === id) {index = i;}
+  });
+
+  if (index) {_posts.splice(index, 1);}
+};
+
 var deleteComment = function (comment) {
   var post = _posts.find(function (post) {
     return post.id === comment.post_id;
@@ -63,6 +72,10 @@ PostStore.__onDispatch = function (payload) {
       break;
     case PostConstants.POST_RECEIVED:
       resetPosts(payload.post);
+      PostStore.__emitChange();
+      break;
+    case PostConstants.POST_DELETED:
+      deletePost(payload.id);
       PostStore.__emitChange();
       break;
     case PostConstants.COMMENT_RECEIVED:

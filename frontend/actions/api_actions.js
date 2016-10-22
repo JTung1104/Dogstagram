@@ -15,6 +15,12 @@ var ApiActions = {
       post: post
     });
   },
+  deletePost: function (id) {
+    AppDispatcher.dispatch({
+      actionType: PostConstants.POST_DELETED,
+      id: id
+    });
+  },
   receiveUsers: function (users) {
     AppDispatcher.dispatch({
       actionType: UserConstants.USERS_RECEIVED,

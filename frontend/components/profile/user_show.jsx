@@ -11,11 +11,11 @@ var UserShow = React.createClass({
   getInitialState: function () {
     return {user: UserStore.findById(this.props.params.id), posts: PostStore.all()};
   },
-  componentDidMount: function () {
+  componentWillMount: function () {
     this.userListener = UserStore.addListener(this.handleChange);
     this.postListener = PostStore.addListener(this.handleChange);
     ApiUtil.fetchUser(this.props.params.id);
-    ApiUtil.fetchPosts(this.props.params.id, this.handleChange);
+    ApiUtil.fetchPosts(this.props.params.id);
   },
   componentWillUnmount: function () {
     this.postListener.remove();
