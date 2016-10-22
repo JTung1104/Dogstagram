@@ -1,4 +1,4 @@
-var React = require('react');
+var React = require('react'),
     ApiUtil = require('../../util/api_util'),
     LinkedStateMixin = require('react-addons-linked-state-mixin');
 
