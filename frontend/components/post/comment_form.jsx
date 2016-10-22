@@ -1,9 +1,7 @@
 var React = require('react'),
-    ApiUtil = require('../../util/api_util'),
-    LinkedStateMixin = require('react-addons-linked-state-mixin');
+    ApiUtil = require('../../util/api_util');
 
 var CommentForm = React.createClass({
-  mixins:[LinkedStateMixin],
   getInitialState: function () {
     return { body: "" }
   },
@@ -20,6 +18,9 @@ var CommentForm = React.createClass({
       that.setState({body: ""});
     });
   },
+  linkState: function (key) {
+    return (event => this.setState({[key]:event.currentTarget.value}));
+  },
   render: function () {
     return (
       <div className="comment-form-div">
@@ -27,7 +28,8 @@ var CommentForm = React.createClass({
           <input className="comment-field"
                  type="text"
                  placeholder="Add a comment..."
-                 valueLink={this.linkState('body')}/>
+                 onChange={this.linkState('body')}
+                 value={this.state.body}/>
         </form>
       </div>
     );
