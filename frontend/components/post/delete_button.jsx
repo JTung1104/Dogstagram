@@ -1,6 +1,6 @@
 var React = require('react'),
     Modal = require('react-modal'),
-    APIUtil = require('../../util/api_util');
+    ApiUtil = require('../../util/api_util');
 
 var customStyle = {
   overlay : {
@@ -48,7 +48,8 @@ var DeleteButton = React.createClass({
   handleDelete: function (e) {
     e.preventDefault();
     ApiUtil.deletePost(this.props.post.id, function () {
-      this.props.handleDelete();
+      this.closeModal();
+      ApiUtil.fetchPosts();
     }.bind(this));
   },
   render: function () {

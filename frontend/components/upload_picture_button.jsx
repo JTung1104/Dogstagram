@@ -2,7 +2,6 @@ var React = require('react'),
     Modal = require('react-modal'),
     CommentForm = require('./post/comment_form'),
     ApiUtil = require('../util/api_util'),
-    History = require('react-router').History,
     PostStore = require('../stores/post');
 
 var customStyle = {
@@ -49,7 +48,7 @@ var UploadPictureButton = React.createClass({
       $("#upload").removeClass("hidden");
     });
 
-    settings = Object.assign({}, CLOUDINARY);
+    var settings = Object.assign({}, window.CLOUDINARY);
     settings["theme"] = "white"
     settings["thumbnails"] = ".upload-field";
     settings["thumbnail_transformation"] = "w_300,h_250,c_fill";
@@ -77,7 +76,7 @@ var UploadPictureButton = React.createClass({
 
     var that = this;
     ApiUtil.createPost(post, function () {
-      that.history.pushState({}, "#", {});
+      ApiUtil.fetchPosts();
     });
 
     this.closeModal();
