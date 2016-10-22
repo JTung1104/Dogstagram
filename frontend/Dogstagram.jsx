@@ -8,6 +8,8 @@ var React = require('react'),
     Index = require('./components/index'),
     UserShow = require('./components/profile/user_show');
 
+import { hashHistory } from 'react-router';
+
 var routes = (
   <Route path="/" component={App}>
     <IndexRoute component={Index}/>
@@ -21,7 +23,7 @@ $(function (){
   if (appElement) {
     Modal.setAppElement(appElement);
     ReactDOM.render(
-      <Router>{routes}</Router>,
+      <Router history={hashHistory}>{routes}</Router>,
       appElement
     );
   }
