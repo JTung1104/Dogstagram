@@ -5,6 +5,9 @@ var LikeButton = React.createClass({
   getInitialState: function () {
     return { liked: this.props.post.liked }
   },
+  componentWillReceiveProps: function (newProps) {
+    this.setState({liked: newProps.post.liked});
+  },
   handleLike: function (e) {
     e.preventDefault();
     var that = this;
