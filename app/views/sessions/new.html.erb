@@ -1,7 +1,4 @@
 <div class="login visible bg-1">
-  <div class="login bg visible bg-2"></div>
-  <div class="login bg visible bg-3"></div>
-  <div class="login bg visible bg-4"></div>
 
   <div class="login-form-box">
     <form class="login-form" action="<%= session_url %>" method="post">
@@ -43,28 +40,3 @@
     </form>
   </div>
 </div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    var backgrounds = document.getElementsByClassName("bg");
-    var i = backgrounds.length;
-
-    window.setInterval(function() {
-      i -= 1;
-
-      if (i === -1) {
-        i += backgrounds.length;
-
-        for (var j = 0; j < backgrounds.length; j++) {
-          backgrounds[j].classList.toggle("hidden");
-          backgrounds[j].classList.toggle("visible");
-        }
-
-        i++;
-      } else {
-        backgrounds[i].classList.toggle("hidden");
-        backgrounds[i].classList.toggle("visible");
-      }
-    }, 5000);
-  });
-</script>
