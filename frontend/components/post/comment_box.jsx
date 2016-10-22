@@ -11,6 +11,7 @@ var CommentBox = React.createClass({
       return (
         <DeleteButton
           handleDelete={this.props.handleDelete}
+          closeModal={this.props.click}
           post={this.props.post}/>
       );
     }
