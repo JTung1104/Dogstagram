@@ -75,7 +75,12 @@ var UploadPictureButton = React.createClass({
     };
     var that = this;
     ApiUtil.createPost(post, function () {
-      window.location.hash.includes("users") ? ApiUtil.fetchPosts(currentUserId) : ApiUtil.fetchPosts();
+      if (window.location.hash.includes("users")) {
+        ApiUtil.fetchPosts(currentUserId);
+        ApiUtil.fetchUser(currentUserId);
+      } else {
+        ApiUtil.fetchPosts();
+      }
     });
     this.setState({body: ""});
     this.closeModal();
