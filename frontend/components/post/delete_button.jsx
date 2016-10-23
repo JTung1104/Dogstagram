@@ -52,6 +52,7 @@ var DeleteButton = React.createClass({
       if (window.location.hash.includes("users")) {
         this.props.closeModal();
         ApiUtil.fetchPosts(currentUserId);
+        ApiUtil.fetchUser(currentUserId);
       } else {
         ApiUtil.fetchPosts();
       }

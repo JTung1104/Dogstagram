@@ -12,7 +12,6 @@ var ProfileStats = React.createClass({
     this.setState({ postCount: this.props.user.posts.length });
   },
   render: function () {
-    console.log("PROPS:", this.props);
     return (
       <div className="profile-stats-box">
         <div className="profile-header-name">
