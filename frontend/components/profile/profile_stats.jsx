@@ -2,11 +2,17 @@ var React = require('react'),
     FollowButton = require('./follow_button'),
     UserStore = require('../../stores/user');
 
+window.UserStore = UserStore;
+
 var ProfileStats = React.createClass({
   getInitialState: function () {
-    return {shouldUpdate: false};
+    return {shouldUpdate: false, postCount: this.props.user.posts.length};
+  },
+  componentWillReceiveProps: function (newProps) {
+    this.setState({ postCount: this.props.user.posts.length });
   },
   render: function () {
+    console.log("PROPS:", this.props);
     return (
       <div className="profile-stats-box">
         <div className="profile-header-name">
@@ -30,7 +36,7 @@ var ProfileStats = React.createClass({
               </span>
 
               <span className="profile-span-2">
-                {this.props.user.posts.length}
+                {this.state.postCount}
               </span>
 
               <span className="profile-span-1">

@@ -4,7 +4,6 @@ var React = require('react'),
 
 var ProfileHeader = React.createClass({
   render: function () {
-    console.log(this.props.user);
     return (
       <header className="profile-header">
         <ProfilePicture user={this.props.user}/>

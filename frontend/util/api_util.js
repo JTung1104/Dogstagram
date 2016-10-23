@@ -33,6 +33,7 @@ var ApiUtil = {
       data: {post: data},
       success: function (post) {
         window.location.hash.includes("users") ? ApiUtil.fetchPosts(currentUserId) : ApiUtil.fetchPosts();
+        callback && callback();
       },
       dataType: "json"
     });

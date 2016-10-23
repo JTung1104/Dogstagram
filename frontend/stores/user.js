@@ -3,6 +3,8 @@ var Store = require('flux/utils').Store,
      UserConstants = require('../constants/user_constants'),
      UserStore = new Store(AppDispatcher);
 
+import merge from 'lodash/merge';
+
 var _users = {},
     _search = {};
 
@@ -75,11 +77,11 @@ UserStore.__onDispatch = function (payload) {
 };
 
 UserStore.all = function () {
-  return Object.assign({}, _users);
+  return merge({}, _users);
 };
 
 UserStore.results = function () {
-  return Object.assign({}, _search);
+  return merge({}, _search);
 };
 
 
