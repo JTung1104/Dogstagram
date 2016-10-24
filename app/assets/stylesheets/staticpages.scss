@@ -818,6 +818,10 @@ h1, h2, p, strong, em, a {
   right: 0px;
 }
 
+.delete-post:hover {
+  cursor: pointer;
+}
+
 .delete-post-div {
   position: relative;
 }
