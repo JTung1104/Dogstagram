@@ -185,6 +185,7 @@ body {
 .modal-post-show .comment-table {
   max-height: 397px;
   overflow-x: hidden;
+  justify-content: flex-start;
 }
 
 .modal-post-show > header {
