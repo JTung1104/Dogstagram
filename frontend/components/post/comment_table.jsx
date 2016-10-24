@@ -20,13 +20,14 @@ var CommentTable = React.createClass({
     }
   },
   render: function () {
+    var classes = window.location.hash.includes("users") ? "comment-table user-show" : "comment-table";
     var that = this;
     var CommentItems = this.props.post.comments.map(function(comment, idx) {
       return ( <CommentItem key={idx} click={that.props.click} post={that.props.post} comment={comment}/> );
     });
 
     return (
-      <div className="comment-table">
+      <div className={classes}>
         {CommentItems}
       </div>
     );
