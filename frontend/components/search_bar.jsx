@@ -61,7 +61,7 @@ var SearchBar = React.createClass({
             <div className="user-result-name">
             </div>
           </a>
-          <FollowButton user={results[result]}/>
+          <FollowButton query={this.state.search} click={this.handleChange} user={results[result]}/>
         </div>
       );
     }.bind(this));

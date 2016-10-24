@@ -4,32 +4,27 @@ var React = require('react'),
 
 var FollowButton = React.createClass({
   getInitialState: function () {
-    return {disabled: false};
+    return {user: this.props.user};
   },
-  componentDidMount: function () {
-    this.userListener = UserStore.addListener(this.enableButton);
-  },
-  componentWillUnmount: function () {
-    this.userListener.remove();
+  componentWillReceiveProps: function (newProps) {
+    this.setState({user: newProps.user});
   },
   handleFollow: function (e) {
     e.preventDefault();
-    this.setState({disabled: true});
-    var relationship = {followed_id: this.props.user.id};
-    ApiUtil.createFollow(relationship, this.enableButton);
+    var relationship = {followed_id: this.state.user.id};
+    ApiUtil.createFollow(relationship);
+    this.props.click({target: {value: this.props.query}})
   },
   handleUnfollow: function (e) {
     e.preventDefault();
-    var relationship = {followed_id: this.props.user.id};
-    ApiUtil.destroyFollow(relationship, this.enableButton);
-  },
-  enableButton: function () {
-    this.setState({disabled: false});
+    var relationship = {followed_id: this.state.user.id};
+    ApiUtil.destroyFollow(relationship);
+    this.props.click({target: {value: this.props.query}});
   },
   getButton: function () {
-    if (this.props.user.id === currentUserId) { return }
+    if (this.state.user.id === currentUserId) { return }
 
-    if (this.props.user.followed) {
+    if (this.state.user.followed) {
       return (
         <div className="follow" onClick={this.handleUnfollow}>
           <button className="unfollow-button">Unfollow</button>
