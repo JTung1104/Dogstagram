@@ -13,13 +13,13 @@ var FollowButton = React.createClass({
     e.preventDefault();
     var relationship = {followed_id: this.state.user.id};
     ApiUtil.createFollow(relationship);
-    this.props.click({target: {value: this.props.query}})
+    if (this.props.click) {this.props.click({target: {value: this.props.query}})}
   },
   handleUnfollow: function (e) {
     e.preventDefault();
     var relationship = {followed_id: this.state.user.id};
     ApiUtil.destroyFollow(relationship);
-    this.props.click({target: {value: this.props.query}});
+    if (this.props.click) {this.props.click({target: {value: this.props.query}})}
   },
   getButton: function () {
     if (this.state.user.id === currentUserId) { return }
