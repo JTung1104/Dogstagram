@@ -186,8 +186,7 @@ body {
     max-height: 397px;
     overflow-x: hidden;
     overflow-y: scroll;
-    justify-content: flex-start;
-    flex-direction: row;
+    display: block;
 }
 
 .modal-post-show > header {
