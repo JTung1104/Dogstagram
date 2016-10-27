@@ -183,9 +183,11 @@ body {
 }
 
 .modal-post-show .comment-table {
-  max-height: 397px;
-  overflow-x: hidden;
-  justify-content: flex-start;
+    max-height: 397px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    justify-content: flex-start;
+    flex-direction: row;
 }
 
 .modal-post-show > header {
