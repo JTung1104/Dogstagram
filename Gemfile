@@ -32,6 +32,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'unicorn'
 gem 'heroku_rails_deflate', :group => :production
 
+gem 'rails_helper'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
