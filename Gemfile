@@ -32,9 +32,6 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'unicorn'
 gem 'heroku_rails_deflate', :group => :production
 
-gem 'rails_helper'
-
-gem 'rspec-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -45,6 +42,7 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'guard-rspec', require: false
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'
