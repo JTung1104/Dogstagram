@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
 import { hashHistory, IndexRoute, Route, Router } from 'react-router';
 import Modal from 'react-modal';
 import Index from './components/index';

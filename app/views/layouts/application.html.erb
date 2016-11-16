@@ -3,12 +3,9 @@
 <head>
   <title>Dogstagram</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
-
   <link href='https://fonts.googleapis.com/css?family=Lobster+Two:400italic|Montserrat' rel='stylesheet' type='text/css'>
-  <link rel="shortcut icon"
-    href="http://res.cloudinary.com/dsolojfgkabc/image/upload/c_scale,q_100,w_48/v1457077157/funny-dog-head_nb34ou.ico">
+  <link rel="shortcut icon" href="http://res.cloudinary.com/dsolojfgkabc/image/upload/c_scale,q_100,w_48/v1457077157/funny-dog-head_nb34ou.ico">
 </head>
 <body>
 
@@ -23,7 +20,6 @@
     window.currentUserId = null;
   <% end %>
 </script>
-
 <script type="text/javascript">
 window.CLOUDINARY = {
   upload_preset: "<%=ENV['upload_preset']%>",
@@ -31,8 +27,7 @@ window.CLOUDINARY = {
   theme: 'white'
 };
 </script>
-
 <script async src="//widget.cloudinary.com/global/all.js" type="text/javascript"></script>
-
+<%= javascript_include_tag 'application' %>
 </body>
 </html>
