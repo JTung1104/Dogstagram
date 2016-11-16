@@ -1,8 +1,9 @@
 var React = require('react'),
     Modal = require('react-modal'),
-    CommentBox = require('./comment_box'),
     PostHeader = require('./post_header'),
     PostStore = require('../../stores/post');
+
+import CommentBox from './comment_box';
 
 var customStyle = {
   overlay : {

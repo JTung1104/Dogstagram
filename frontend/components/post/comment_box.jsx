@@ -1,32 +1,18 @@
-var React = require('react'),
-    CommentTable = require('./comment_table'),
-    NumLikes = require('./num_likes'),
-    CommentForm = require('./comment_form'),
-    DeleteButton = require('./delete_button'),
-    LikeButton = require('./like_button');
+import React from 'react';
+import CommentTable from './comment_table';
+import NumLikes from './num_likes';
+import CommentForm from './comment_form';
+import DeleteButton from './delete_button';
+import LikeButton from './like_button';
 
-var CommentBox = React.createClass({
-  getDeleteButton: function () {
-    if (this.props.post.user_id === currentUserId) {
-      return (
-        <DeleteButton
-          handleDelete={this.props.handleDelete}
-          closeModal={this.props.click}
-          post={this.props.post}/>
-      );
-    }
-  },
-  render: function () {
-    return (
-      <div className="comment-box">
-        <NumLikes post={this.props.post}/>
-        <CommentTable click={this.props.click} post={this.props.post}/>
-        <LikeButton post={this.props.post}/>
-        <CommentForm post={this.props.post}/>
-        {this.getDeleteButton()}
-      </div>
-    );
-  }
-});
+const CommentBox = ({ post, click, handleDelete }) => (
+    <div className="comment-box">
+      <NumLikes post={post}/>
+      <CommentTable click={click} post={post}/>
+      <LikeButton post={post}/>
+      <CommentForm post={post}/>
+      <DeleteButton handleDelete={handleDelete} closeModal={click} post={post}/>
+    </div>
+);
 
-module.exports = CommentBox;
+export default CommentBox;
