@@ -4,30 +4,6 @@
 2. Taggings are the ones to be nested, they belong to a post.
   Create a tagging, just a connection, similar to follow model
 
-
-
-CodePen.io for sign-in page css
-
-BENCHBNB for search bar
-
-Position everything first
-Index page
-See feed when logging in
-make Index component
-  contain a bunch of posts
-  fetch request for all the posts
-
-Create Tags, Relationships
-
-Moment.js
-
-Active Record Nested Attributes
-
-accepts_nested_attributes_for
-
-USE PERCENTAGES FOR WIDTHS AND THINGS WILL SCALE WITH CONTAINER
-
-GOOGLE FADE TRANSITION EASE IN EASE OUT
-
 SHOULD BE ABLE TO ADD TAGS AT SOME POINT
-SIGN UP PAGE AND SIGN IN PAGE need to be styled
+
+3. Fix bug where uploading picture on a different user's showpage should lead you back to your profile page

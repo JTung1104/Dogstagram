@@ -1,17 +1,12 @@
-var React = require('react'),
-    ReactDOM = require('react-dom'),
-    Router = require('react-router').Router,
-    Route = require('react-router').Route,
-    IndexRoute = require('react-router').IndexRoute,
-    Modal = require('react-modal'),
-    App = require('./components/app'),
-    Index = require('./components/index'),
-    UserShow = require('./components/profile/user_show');
-
-import { hashHistory } from 'react-router';
+import React from 'react';
+import ReactDom from 'react-dom';
+import { hashHistory, IndexRoute, Route, Router } from 'react-router';
+import Modal from 'react-modal';
+import Index from './components/index';
+import UserShow from './components/profile/user_show';
 
 var routes = (
-  <Route path="/" component={App}>
+  <Route path="/">
     <IndexRoute component={Index}/>
     <Route path="users/:id" component={UserShow}/>
   </Route>
