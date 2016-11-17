@@ -3,7 +3,6 @@ import Picture from './picture';
 import PostHeader from './post_header';
 import CommentBox from './comment_box';
 
-//TODO: ASK MAX
 const Post = ({ post, handleDelete }) => (
   <article className="post">
     <PostHeader post={post}/>

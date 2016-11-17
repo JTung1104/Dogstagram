@@ -4,7 +4,7 @@ import PictureHover from './picture_hover';
 
 const Picture = ({ photoOptions, imageUrl, userShow, handleDelete, post }) => (
     <div className="picture">
-        <PictureHover props={props} imageUrl={imageUrl} userShow={userShow} post={post}/>
+        <PictureHover imageUrl={imageUrl} userShow={userShow} post={post}/>
         <img src={"http://res.cloudinary.com/dsolojfgkabc/image/upload/" + photoOptions + imageUrl}/>
     </div>
 );

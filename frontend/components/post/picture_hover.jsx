@@ -34,7 +34,6 @@ var customStyle = {
   }
 };
 
-//TODO: ASK MAX ABOUT PROPS OBJECT DESTRUCTURING
 class PictureHover extends React.Component {
 	constructor(props) {
 		super(props);
