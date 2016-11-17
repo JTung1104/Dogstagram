@@ -1,37 +1,37 @@
-var React = require('react'),
-    ReactDOM = require('react-dom'),
-    CommentItem = require('./comment_item');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import CommentItem from './comment_item';
 
-var CommentTable = React.createClass({
-  getInitialState: function () {
-    return {shouldScrollBottom: false};
-  },
-  componentWillUpdate: function() {
-    var node = ReactDOM.findDOMNode(this);
-    this.state.shouldScrollBottom = node.scrollTop + node.offsetHeight === (node.scrollHeight + 1);
-  },
-  componentDidUpdate: function() {
-    var comments = this.props.post.comments;
-    if (comments.length > 0) {
-      if (this.state.shouldScrollBottom || comments[comments.length - 1].user_id === currentUserId) {
-        var node = ReactDOM.findDOMNode(this);
-        node.scrollTop = (node.scrollHeight + 1)
-      }
+const CommentTable extends React.Component {
+    constructor({ post, click }) {
+        super({ post, click });
+        this.setState({ shouldScrollBottom: false });
     }
-  },
-  render: function () {
-    var classes = window.location.hash.includes("users") ? "comment-table user-show" : "comment-table";
-    var that = this;
-    var CommentItems = this.props.post.comments.map(function(comment, idx) {
-      return ( <CommentItem key={idx} click={that.props.click} post={that.props.post} comment={comment}/> );
-    });
+    
+    componentWillUpdate() {
+        var node = ReactDOM.findDOMNode(this);
+        this.state.shouldScrollBottom = node.scrollTop + node.offsetHeight === (node.scrollHeight + 1);
+    }
+    
+    componentDidUpdate() {
+        if (post.comments.length > 0) {
+            if (this.state.shouldScrollBottom || post.comments[post.comments.length - 1].user_id === currentUserId) {
+                var node = ReactDOM.findDOMNode(this);
+                node.scrollTop = (node.scrollHeight + 1)
+            }
+        }
+    }
 
-    return (
-      <div className={classes}>
-        {CommentItems}
-      </div>
-    );
-  }
-});
+    render() {
+        var classes = window.location.hash.includes("users") ? "comment-table user-show" : "comment-table";
+        var CommentItems = post.comments.map((comment, idx) => <CommentItem key={idx} click={click} post={post} comment={comment}/>);
 
-module.exports = CommentTable;
+        return (
+          <div className={classes}>
+            {CommentItems}
+          </div>
+        );
+    }
+}
+
+export default CommentTable;
