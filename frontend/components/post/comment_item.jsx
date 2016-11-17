@@ -1,6 +1,6 @@
-var React = require('react'),
-    ApiUtil = require('../../util/api_util'),
-    Modal = require('react-modal');
+import React from 'react';
+import Modal from 'react-modal';
+import ApiUtil from '../../util/api_util';
 
 var customStyle = {
   overlay : {
@@ -34,67 +34,75 @@ var customStyle = {
   }
 };
 
-var CommentItem = React.createClass({
-  getInitialState: function () {
-    return {modalIsOpen: false};
-  },
-  onClick: function (e) {
-    e.preventDefault();
-    if (typeof this.props.click === "function") { this.props.click(); }
-    window.location.href = "#/users/" + this.props.comment.user_id;
-  },
-  openModal: function(e) {
-    e.preventDefault();
-    this.setState({modalIsOpen: true});
-  },
-  closeModal: function() {
-    this.setState({modalIsOpen: false});
-  },
-  getDeleteCommentButton: function () {
-    if (this.props.comment.user_id === currentUserId || this.props.post.user_id === currentUserId) {
-      return (
-        <button
-          title="Delete Comment"
-          className="delete-comment"
-          onClick={this.openModal}/>
-      );
+class CommentItem extends React.Component {
+    constructor(props) {
+        super(props);
+        this.setState({ modalIsOpen: false });
     }
-  },
-  handleDelete: function (e) {
-    e.preventDefault();
-    ApiUtil.destroyComment(this.props.comment);
-    this.closeModal();
-  },
-  render: function () {
-    return (
-      <div className="comment-item">
-        <a onClick={this.onClick}
-           className="comment-username">
-          {this.props.comment.user}
-        </a>
 
-        <p className="comment-body">
-          {this.props.comment.body}
-        </p>
+    onClick(event) {
+        event.preventDefault();
+        if (typeof this.props.click === "function") { this.props.click(); }
+        window.location.href = "#/users/" + this.props.comment.user_id;
+    }
+    
+    openModal(event) {
+        event.preventDefault();
+        this.setState({ modalIsOpen: true });
+    }
 
-        {this.getDeleteCommentButton()}
+    closeModal() {
+       this.setState({ modalIsOpen: false });
+    }
+  
+    getDeleteCommentButton() {
+        if (this.props.comment.user_id === currentUserId || this.props.post.user_id === currentUserId) {
+            return (
+                <button
+                    title="Delete Comment"
+                    className="delete-comment"
+                    onClick={this.openModal}/>
+            );
+        }
+    }
 
-        <Modal
-          isOpen={this.state.modalIsOpen}
-          onRequestClose={this.closeModal}
-          style={customStyle}>
+    handleDelete(event) {
+        event.preventDefault();
+        ApiUtil.destroyComment(this.props.comment);
+        this.closeModal();
+    }
 
-          <button className="confirm-delete" onClick={this.handleDelete}>
-            Delete Comment
-          </button>
+  render() {
+        return (
+            <div className="comment-item">
+                <a 
+                    onClick={this.onClick}
+                    className="comment-username">
+                    {this.props.comment.user}
+                </a>
 
-          <button className="cancel-delete" onClick={this.closeModal}>
-            Cancel
-          </button>
-        </Modal>
-      </div>
+                <p className="comment-body">
+                    {this.props.comment.body}
+                </p>
+
+                {this.getDeleteCommentButton()}
+
+                <Modal
+                    isOpen={this.state.modalIsOpen}
+                    onRequestClose={this.closeModal}
+                    style={customStyle}>
+
+                    <button className="confirm-delete" onClick={this.handleDelete}>
+                        Delete Comment
+                    </button>
+
+                    <button className="cancel-delete" onClick={this.closeModal}>
+                        Cancel
+                    </button>
+                </Modal>
+            </div>
     );
   }
-});
+}
 
-module.exports = CommentItem;
+export default CommentItem;
