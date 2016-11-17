@@ -1,6 +1,6 @@
-var React = require('react'),
-    ApiUtil = require('../../util/api_util'),
-    UserStore = require('../../stores/user');
+import React from 'react';
+import ApiUtil from '../../util/api_util';
+import UserStore from '../../stores/user';
 
 var HeaderProfileLink = React.createClass({
   getInitialState: function () {
@@ -20,4 +20,4 @@ var HeaderProfileLink = React.createClass({
   }
 });
 
-module.exports = HeaderProfileLink;
+export default HeaderProfileLink;
