@@ -1,11 +1,11 @@
-var React = require('react'),
-    ProfileNavBar = require('./profile_nav_bar'),
-    Picture = require('../post/picture'),
-    ProfileHeader = require('./profile_header'),
-    UserStore = require('../../stores/user'),
-    PostStore = require('../../stores/post'),
-    CommentBox = require('../post/comment_box'),
-    ApiUtil = require('../../util/api_util');
+import React from 'react';
+import ProfileNavBar from './profile_nav_bar';
+import Picture from '../post/picture';
+import ProfileHeader from './profile_header';
+import UserStore from '../../stores/user';
+import PostStore from '../../stores/post';
+import CommentBox from '../post/comment_box';
+import ApiUtil from '../../util/api_util';
 
 var UserShow = React.createClass({
   getInitialState: function () {
@@ -64,4 +64,4 @@ var UserShow = React.createClass({
   }
 });
 
-module.exports = UserShow;
+export default UserShow;

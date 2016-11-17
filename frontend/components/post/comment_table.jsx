@@ -5,7 +5,7 @@ import CommentItem from './comment_item';
 class CommentTable extends React.Component {
     constructor(props) {
         super(props);
-        this.setState({ shouldScrollBottom: false });
+        this.state = { shouldScrollBottom: false };
     }
     
     componentWillUpdate() {

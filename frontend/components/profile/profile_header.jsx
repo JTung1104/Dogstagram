@@ -1,6 +1,6 @@
-var React = require('react'),
-    ProfilePicture = require('./profile_picture'),
-    ProfileStats = require('./profile_stats');
+import React from 'react';
+import ProfilePicture from './profile_picture'
+import ProfileStats from './profile_stats';
 
 var ProfileHeader = React.createClass({
   render: function () {
@@ -13,4 +13,4 @@ var ProfileHeader = React.createClass({
   }
 });
 
-module.exports = ProfileHeader;
+export default ProfileHeader;

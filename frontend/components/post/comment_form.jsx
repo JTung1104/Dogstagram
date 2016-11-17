@@ -4,9 +4,10 @@ import ApiUtil from '../../util/api_util';
 class CommentForm extends React.Component {
     constructor(props) {
         super(props);
-        this.setState({ body: "" });
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.state = { body: "" };
     }
-  
+    
     handleSubmit(event) {
         event.preventDefault();
         var comment = { body: this.state.body, post_id: this.props.post.id };

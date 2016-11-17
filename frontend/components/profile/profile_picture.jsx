@@ -1,6 +1,6 @@
-var React = require('react'),
-    UserStore = require('../../stores/user'),
-    ApiUtil = require('../../util/api_util');
+import React from 'react';
+import UserStore from '../../stores/user';
+import ApiUtil from '../../util/api_util';
 
 var ProfilePicture = React.createClass({
   getInitialState: function () {
@@ -57,4 +57,4 @@ var ProfilePicture = React.createClass({
   }
 });
 
-module.exports = ProfilePicture;
+export default ProfilePicture;

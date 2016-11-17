@@ -37,7 +37,11 @@ var customStyle = {
 class CommentItem extends React.Component {
     constructor(props) {
         super(props);
-        this.setState({ modalIsOpen: false });
+        this.state = { modalIsOpen: false };
+        this.openModal = this.openModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
+        this.onClick = this.onClick.bind(this);
     }
 
     onClick(event) {

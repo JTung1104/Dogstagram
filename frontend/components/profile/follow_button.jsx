@@ -1,6 +1,6 @@
-var React = require('react'),
-    ApiUtil = require('../../util/api_util'),
-    UserStore = require('../../stores/user');
+import React from 'react';
+import ApiUtil from '../../util/api_util';
+import UserStore from '../../stores/user';
 
 var FollowButton = React.createClass({
   getInitialState: function () {
@@ -47,4 +47,4 @@ var FollowButton = React.createClass({
   }
 });
 
-module.exports = FollowButton;
+export default FollowButton;

@@ -1,8 +1,6 @@
-var React = require('react'),
-    FollowButton = require('./follow_button'),
-    UserStore = require('../../stores/user');
-
-window.UserStore = UserStore;
+import React from 'react';
+import FollowButton from './follow_button';
+import UserStore from '../../stores/user';
 
 var ProfileStats = React.createClass({
   getInitialState: function () {
@@ -79,4 +77,4 @@ var ProfileStats = React.createClass({
   }
 });
 
-module.exports = ProfileStats;
+export default ProfileStats;

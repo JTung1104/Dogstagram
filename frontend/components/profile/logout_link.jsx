@@ -1,5 +1,5 @@
-var React = require('react'),
-    ApiUtil = require('../../util/api_util');
+import React from 'react';
+import ApiUtil from '../../util/api_util';
 
 var LogoutLink = React.createClass({
   redirectToNewSession: function () {
@@ -18,4 +18,4 @@ var LogoutLink = React.createClass({
   }
 });
 
-module.exports = LogoutLink;
+export default LogoutLink;

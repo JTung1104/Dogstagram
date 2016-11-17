@@ -1,8 +1,8 @@
-var React = require('react'),
-    SearchBar = require('../search_bar'),
-    UploadPictureButton = require('../upload_picture_button'),
-    HeaderProfileLink = require('./header_profile_link'),
-    LogoutLink = require('./logout_link');
+import React from 'react';
+import SearchBar from '../search_bar';
+import UploadPictureButton from '../upload_picture_button';
+import HeaderProfileLink from './header_profile_link';
+import LogoutLink from './logout_link';
 
 var ProfileNavBar = React.createClass({
   getLink: function () {
@@ -32,4 +32,4 @@ var ProfileNavBar = React.createClass({
   }
 });
 
-module.exports = ProfileNavBar;
+export default ProfileNavBar;

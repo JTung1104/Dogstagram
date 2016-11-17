@@ -38,6 +38,8 @@ class PictureHover extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { modalIsOpen: false };
+		this.openModal = this.openModal.bind(this);
+		this.closeModal = this.closeModal.bind(this);
 	}
 	
 	openModal() {
