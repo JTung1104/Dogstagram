@@ -1,20 +1,17 @@
-var React = require('react'),
-    Picture = require('./picture'),
-    PostHeader = require('./post_header'),
-    CommentBox = require('./comment_box');
+import React from 'react';
+import Picture from './picture';
+import PostHeader from './post_header';
+import CommentBox from './comment_box';
 
-var Post = React.createClass({
-  render: function () {
-    return (
-      <article className="post">
-        <PostHeader post={this.props.post}/>
-        <Picture post={this.props.post}
-                 photoOptions={"w_600,c_scale,f_auto/"}
-                 imageUrl={this.props.post.image_url}/>
-               <CommentBox post={this.props.post} handleDelete={this.props.handleDelete}/>
-      </article>
-    );
-  }
-});
+//TODO: ASK MAX
+const Post = ({ post, handleDelete }) => (
+  <article className="post">
+    <PostHeader post={post}/>
+    <Picture post={post}
+             photoOptions={"w_600,c_scale,f_auto/"}
+             imageUrl={post.image_url}/>
+     <CommentBox post={post} handleDelete={handleDelete}/>
+  </article>
+);
 
-module.exports = Post;
+export default Post;
