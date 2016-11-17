@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import CommentItem from './comment_item';
 
-const CommentTable extends React.Component {
+class CommentTable extends React.Component {
     constructor({ post, click }) {
         super({ post, click });
         this.setState({ shouldScrollBottom: false });

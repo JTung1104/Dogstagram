@@ -1,6 +1,6 @@
-var React = require('react'),
-    Modal = require('react-modal'),
-    ApiUtil = require('../../util/api_util');
+import React from 'react';
+import Modal from 'react-modal';
+import ApiUtil from '../../util/api_util';
 
 var customStyle = {
   overlay : {
@@ -88,4 +88,4 @@ var DeleteButton = React.createClass({
   }
 });
 
-module.exports = DeleteButton;
+export default DeleteButton;
