@@ -1,5 +1,5 @@
-var ApiActions = require('../actions/api_actions'),
-    SearchActions = require('../actions/search_actions');
+import ApiActions from '../actions/api_actions';
+import SearchActions from '../actions/search_actions';
 
 var ApiUtil = {
   fetchPosts: function (userId, callback) {
@@ -174,4 +174,4 @@ var ApiUtil = {
   }
 };
 
-module.exports = ApiUtil;
+export default ApiUtil;

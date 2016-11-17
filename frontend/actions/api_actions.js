@@ -1,6 +1,6 @@
-var AppDispatcher = require('../dispatcher/dispatcher'),
-    PostConstants = require('../constants/post_constants'),
-    UserConstants = require('../constants/user_constants');
+import AppDispatcher from '../dispatcher/dispatcher';
+import UserConstants from '../constants/user_constants';
+import PostConstants from '../constants/post_constants';
 
 var ApiActions = {
   receiveAllPosts: function (posts) {
@@ -71,4 +71,4 @@ var ApiActions = {
   }
 };
 
-module.exports = ApiActions;
+export default ApiActions;

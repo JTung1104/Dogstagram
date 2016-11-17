@@ -1,5 +1,5 @@
-var AppDispatcher = require('../dispatcher/dispatcher'),
-    UserConstants = require('../constants/user_constants');
+import AppDispatcher from '../dispatcher/dispatcher';
+import UserConstants from '../constants/user_constants';
 
 var SearchActions = {
   receiveSearchResults: function (results) {
@@ -9,4 +9,5 @@ var SearchActions = {
     });
   }
 };
-module.exports = SearchActions;
+
+export default SearchActions;

@@ -1,8 +1,8 @@
-var React = require('react'),
-    Modal = require('react-modal'),
-    CommentForm = require('./post/comment_form'),
-    ApiUtil = require('../util/api_util'),
-    PostStore = require('../stores/post');
+import React from 'react';
+import Modal from 'react-modal';
+import CommentForm from './post/comment_form';
+import ApiUtil from '../util/api_util';
+import PostStore from '../stores/post';
 
 var customStyle = {
   overlay : {
@@ -133,4 +133,4 @@ var UploadPictureButton = React.createClass({
   }
 });
 
-module.exports = UploadPictureButton;
+export default UploadPictureButton;

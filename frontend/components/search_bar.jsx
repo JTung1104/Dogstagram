@@ -1,7 +1,7 @@
-var React = require('react'),
-    FollowButton = require('./profile/follow_button'),
-    UserStore = require('../stores/user'),
-    ApiUtil = require('../util/api_util');
+import React from 'react';
+import FollowButton from './profile/follow_button';
+import UserStore from '../stores/user';
+import ApiUtil from '../util/api_util';
 
 var SearchBar = React.createClass({
   getInitialState: function () {
@@ -83,4 +83,4 @@ var SearchBar = React.createClass({
   }
 });
 
-module.exports = SearchBar;
+export default SearchBar;

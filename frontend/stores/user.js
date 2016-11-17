@@ -1,9 +1,9 @@
-var Store = require('flux/utils').Store,
-     AppDispatcher = require('../dispatcher/dispatcher'),
-     UserConstants = require('../constants/user_constants'),
-     UserStore = new Store(AppDispatcher);
-
+import { Store } from 'flux/utils';
+import AppDispatcher from '../dispatcher/dispatcher';
+import UserConstants from '../constants/user_constants';
 import merge from 'lodash/merge';
+
+var UserStore = new Store(AppDispatcher);
 
 var _users = {},
     _search = {};
@@ -84,5 +84,4 @@ UserStore.results = function () {
   return merge({}, _search);
 };
 
-
-module.exports = UserStore;
+export default UserStore;

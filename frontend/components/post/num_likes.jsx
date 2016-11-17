@@ -1,4 +1,4 @@
-var React = require('react');
+import React from 'react';
 
 var NumLikes = React.createClass({
   numLikes: function () {
@@ -15,4 +15,4 @@ var NumLikes = React.createClass({
   }
 });
 
-module.exports = NumLikes;
+export default NumLikes;

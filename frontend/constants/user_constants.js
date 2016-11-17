@@ -6,4 +6,4 @@ var UserConstants = {
   RESULTS_RECEIVED: "RESULTS_RECEIVED"
 };
 
-module.exports = UserConstants;
+export default UserConstants;

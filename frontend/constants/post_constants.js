@@ -8,4 +8,4 @@ var PostConstants = {
   POST_DELETED: "POST_DELETED"
 };
 
-module.exports = PostConstants;
+export default PostConstants;

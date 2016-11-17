@@ -1,8 +1,8 @@
-var React = require('react'),
-    PostStore = require('../stores/post'),
-    ApiUtil = require('../util/api_util'),
-    Post = require('./post/post'),
-    NavBar = require('./nav_bar');
+import React from 'react';
+import PostStore from '../stores/post';
+import ApiUtil from '../util/api_util';
+import Post from './post/post';
+import NavBar from './nav_bar';
 
 var Index = React.createClass({
   getInitialState: function () {
@@ -41,4 +41,4 @@ var Index = React.createClass({
   }
 });
 
-module.exports = Index;
+export default Index;

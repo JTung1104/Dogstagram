@@ -1,8 +1,8 @@
-var Store = require('flux/utils').Store,
-    AppDispatcher = require('../dispatcher/dispatcher'),
-    PostConstants = require('../constants/post_constants'),
-    PostStore = new Store(AppDispatcher);
+import { Store } from 'flux/utils';
+import AppDispatcher from '../dispatcher/dispatcher';
+import PostConstants from '../constants/post_constants';
 
+var PostStore = new Store(AppDispatcher);
 var _posts = [];
 
 var resetPosts = function (posts) {
@@ -109,4 +109,4 @@ PostStore.findById = function (id) {
   return post;
 };
 
-module.exports = PostStore;
+export default PostStore;

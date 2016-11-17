@@ -1,7 +1,7 @@
-var React = require('react'),
-    SearchBar = require('./search_bar'),
-    UploadPictureButton = require('./upload_picture_button'),
-    HeaderProfileLink = require('./profile/header_profile_link');
+import React from 'react';
+import SearchBar from './search_bar';
+import UploadPictureButton from './upload_picture_button';
+import HeaderProfileLink from './profile/header_profile_link';
 
 var NavBar = React.createClass({
   render: function () {
@@ -22,4 +22,4 @@ var NavBar = React.createClass({
   }
 });
 
-module.exports = NavBar;
+export default NavBar;

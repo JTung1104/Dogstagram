@@ -1,4 +1,4 @@
-var React = require('react');
+import React from 'react';
 
 var PostHeader = React.createClass({
   render: function () {
@@ -23,4 +23,4 @@ var PostHeader = React.createClass({
   }
 });
 
-module.exports = PostHeader;
+export default PostHeader;

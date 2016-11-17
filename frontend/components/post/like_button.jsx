@@ -1,5 +1,5 @@
-var React = require('react'),
-    ApiUtil = require('../../util/api_util');
+import React from 'react';
+import ApiUtil from '../../util/api_util';
 
 var LikeButton = React.createClass({
   getInitialState: function () {
@@ -68,4 +68,4 @@ var LikeButton = React.createClass({
   }
 });
 
-module.exports = LikeButton;
+export default LikeButton;
