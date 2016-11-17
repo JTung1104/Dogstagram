@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import CommentItem from './comment_item';
 
 class CommentTable extends React.Component {
-    constructor({ post, click }) {
-        super({ post, click });
+    constructor(props) {
+        super(props);
         this.setState({ shouldScrollBottom: false });
     }
     
@@ -14,6 +14,7 @@ class CommentTable extends React.Component {
     }
     
     componentDidUpdate() {
+        var post = this.props.post;
         if (post.comments.length > 0) {
             if (this.state.shouldScrollBottom || post.comments[post.comments.length - 1].user_id === currentUserId) {
                 var node = ReactDOM.findDOMNode(this);
@@ -23,6 +24,8 @@ class CommentTable extends React.Component {
     }
 
     render() {
+        var post = this.props.post;
+        var click = this.props.click;
         var classes = window.location.hash.includes("users") ? "comment-table user-show" : "comment-table";
         var CommentItems = post.comments.map((comment, idx) => <CommentItem key={idx} click={click} post={post} comment={comment}/>);
 
