@@ -17,28 +17,12 @@ h1, h2, p, strong, em, a {
 }
 
 .index {
-  align-items: stretch;
-  font-size: 16px;
   width: 600px;
-  box-sizing: border-box;
-  display: flex;
   position: relative;
   top: 77px;
-  vertical-align: baseline;
-  border-image-width: 1;
-  border-image-repeat: stretch;
-  flex-direction: column;
-  flex-grow: 1;
-  flex-shrink: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 0px;
-  margin-bottom: 0px;
   padding-top: 60px;
-  -webkit-box-align: stretch;
-  -webkit-box-direction: normal;
-  -webkit-box-flex: 1;
-  -webkit-box-orient: vertical;
 }
 
 .post {

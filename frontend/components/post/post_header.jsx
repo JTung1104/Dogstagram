@@ -1,4 +1,7 @@
 import React from 'react';
+import styles from './post_header.css';
+import makeCn from '../../util/makeCn';
+const cn = makeCn({_:styles});
 
 var PostHeader = React.createClass({
   render: function () {
@@ -6,7 +9,7 @@ var PostHeader = React.createClass({
     url += this.props.post.profile_image_url || "Empty_Profile_qvvkdi.jpg";
 
     return (
-      <header className="post-header">
+      <header className={cn("post-header _header")}>
         <a href={"#/users/" + this.props.post.user_id}>
           <img className="post-header-picture" src={url}/>
         </a>

@@ -12,7 +12,7 @@ module.exports = {
     extensions: ["", ".js", ".jsx"]
   },
   plugins:[
-    new ExtractTextPlugin("styles.css"),
+    new ExtractTextPlugin("../stylesheets/styles.css"),
     new webpack.DefinePlugin({
       'process.env':{
         'NODE_ENV': JSON.stringify('production')
