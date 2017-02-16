@@ -20,39 +20,32 @@ h1, h2, p, strong, em, a {
   min-height: 26.15em;
 }
 
+.comment-table {
+  text-align: left;
+  width: 558px;
+  border-bottom: 1px solid rgb(238, 238, 238);
+  padding: 0px 0px 20px;
+  -webkit-border-after: 1px solid rgb(238, 238, 238);
+}
+
 .comment-table:after {
   clear: both;
   content: '';
   display: block;
   text-align: left;
   width: 558px;
-  transform-origin: 279px 0px;
   font: normal normal normal normal 15px / normal Helvetica;
-  -webkit-transform-origin: 279px 0px;
 }
 
 .comment-username {
   color: #125688;
   text-align: left;
-  text-decoration: none;
-  -webkit-column-rule-color: rgb(18, 86, 136);
-  -webkit-text-decorations-in-effect: none;
-  -webkit-text-emphasis-color: rgb(18, 86, 136);
-  -webkit-text-fill-color: rgb(18, 86, 136);
-  -webkit-text-stroke-color: rgb(18, 86, 136);
-  border: 0px none rgb(18, 86, 136);
-  font: normal normal normal normal 14px / normal Montserrat;
-  outline: rgb(18, 86, 136) none 0px;
+  font-family: Montserrat;
   padding: 0px 10px 0px 0px;
-  -webkit-border-after: 0px none rgb(18, 86, 136);
-  -webkit-border-before: 0px none rgb(18, 86, 136);
-  -webkit-border-end: 0px none rgb(18, 86, 136);
-  -webkit-border-start: 0px none rgb(18, 86, 136);
 }
 
 .comment-username:hover {
   color: #83c1ef;
-  -webkit-text-fill-color: #83c1ef;
   cursor: pointer;
 }
 
@@ -60,21 +53,16 @@ h1, h2, p, strong, em, a {
   cursor: default;
   display: block;
   height: 88px;
-  transform-origin: 641px 44.5px;
   background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
   border-bottom: 1px solid rgb(238, 238, 238);
   font: normal normal normal normal 16px / normal Times;
-  -webkit-border-after: 1px solid rgb(238, 238, 238);
-  -webkit-transform-origin: 641px 44.5px;
 }
 
 .nav {
   height: 88px;
   width: 600px;
-  transform-origin: 300px 44px;
   font: normal normal normal normal 16px / normal Times;
   margin: 0px auto;
-  -webkit-transform-origin: 300px 44px;
 }
 
 .profile-nav {
@@ -82,10 +70,8 @@ h1, h2, p, strong, em, a {
   justify-content: space-between;
   height: 77px;
   width: 936px;
-  transform-origin: 300px 44px;
   font: normal normal normal normal 16px / normal Times;
   margin: 0px auto;
-  -webkit-transform-origin: 300px 44px;
 }
 
 .nav:after {
@@ -93,8 +79,6 @@ h1, h2, p, strong, em, a {
   content: "";
   display: block;
   width: 600px;
-  transform-origin: 300px 0px;
-  -webkit-transform-origin: 300px 0px;
 }
 
 .logo-header {
@@ -102,38 +86,15 @@ h1, h2, p, strong, em, a {
   float: left;
   height: 23px;
   width: 81.9375px;
-  -webkit-column-rule-color: rgb(45, 101, 153);
-  -webkit-text-emphasis-color: rgb(45, 101, 153);
-  -webkit-text-fill-color: rgb(45, 101, 153);
-  -webkit-text-stroke-color: rgb(45, 101, 153);
-  transform-origin: 40.9688px 41.5px;
   border: 0px none rgb(45, 101, 153);
   font: normal normal normal normal 18px / normal 'Lobster Two';
   margin: 0px;
-  outline: rgb(45, 101, 153) none 0px;
   padding: 30px 0px;
-  -webkit-border-after: 0px none rgb(45, 101, 153);
-  -webkit-border-before: 0px none rgb(45, 101, 153);
-  -webkit-border-end: 0px none rgb(45, 101, 153);
-  -webkit-border-start: 0px none rgb(45, 101, 153);
-  -webkit-transform-origin: 40.9688px 41.5px;
 }
 
 .logo {
   color: rgb(45, 101, 153);
-  text-decoration: none;
-  -webkit-column-rule-color: rgb(45, 101, 153);
-  -webkit-text-decorations-in-effect: none;
-  -webkit-text-emphasis-color: rgb(45, 101, 153);
-  -webkit-text-fill-color: rgb(45, 101, 153);
-  -webkit-text-stroke-color: rgb(45, 101, 153);
-  border: 0px none rgb(45, 101, 153);
   font: normal normal normal normal 26px / normal 'Lobster Two';
-  outline: rgb(45, 101, 153) none 0px;
-  -webkit-border-after: 0px none rgb(45, 101, 153);
-  -webkit-border-before: 0px none rgb(45, 101, 153);
-  -webkit-border-end: 0px none rgb(45, 101, 153);
-  -webkit-border-start: 0px none rgb(45, 101, 153);
 }
 
 .search {
@@ -141,11 +102,9 @@ h1, h2, p, strong, em, a {
   height: 28px;
   width: 192px;
   position: relative;
-  transform-origin: 96px 44px;
   font: normal normal normal normal 16px / normal Times;
   margin: 0px 0px 0px 120px;
   padding: 30px 0px;
-  -webkit-transform-origin: 96px 44px;
 }
 
 .search-field {
@@ -153,18 +112,11 @@ h1, h2, p, strong, em, a {
   height: 16px;
   text-align: center;
   width: 180px;
-  -webkit-appearance: none;
-  transform-origin: 96px 14px;
   background: rgb(250, 250, 250) none repeat scroll 0% 0% / auto padding-box border-box;
   border: 1px solid rgb(238, 238, 238);
   border-radius: 15px 15px 15px 15px;
   font: normal normal normal normal 14px / normal Helvetica;
   padding: 5px;
-  -webkit-border-after: 1px solid rgb(238, 238, 238);
-  -webkit-border-before: 1px solid rgb(238, 238, 238);
-  -webkit-border-end: 1px solid rgb(238, 238, 238);
-  -webkit-border-start: 1px solid rgb(238, 238, 238);
-  -webkit-transform-origin: 96px 14px;
 }
 
 .search-field:focus {
@@ -184,7 +136,6 @@ h1, h2, p, strong, em, a {
   top: 77%;
   width: 243px;
   z-index: 2;
-  transform-origin: 121.5px 182px;
   background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
   border: 1px solid rgb(237, 238, 238);
   border-radius: 3px 3px 3px 3px;
@@ -200,7 +151,6 @@ h1, h2, p, strong, em, a {
   position: absolute;
   top: -10px;
   z-index: 3;
-  transform-origin: 10px 5px;
   border-top: 0px solid rgba(0, 0, 0, 0);
   border-right: 10px solid rgba(0, 0, 0, 0);
   border-bottom: 10px solid #edeeee;
@@ -215,7 +165,6 @@ h1, h2, p, strong, em, a {
   max-height: 362px;
   position: relative;
   width: 241px;
-  transform-origin: 120.5px 181px;
   border: 0px solid rgb(0, 0, 0);
   flex: 0 0 auto;
   flex-flow: column nowrap;
@@ -242,7 +191,6 @@ h1, h2, p, strong, em, a {
   text-decoration: none;
   width: auto;
   align-items: center;
-  transform-origin: 113px 33.5px;
   background: white none repeat scroll 0% 0% / auto padding-box border-box;
   border-top: 0px none rgb(18, 86, 136);
   border-right: 0px none rgb(18, 86, 136);
@@ -268,7 +216,6 @@ h1, h2, p, strong, em, a {
   white-space: nowrap;
   width: 198px;
   align-self: center;
-  transform-origin: 99px 24px;
   border: 0px solid rgb(0, 0, 0);
   flex: 0 0 auto;
   flex-flow: column nowrap;
@@ -284,7 +231,6 @@ h1, h2, p, strong, em, a {
   height: 30px;
   white-space: nowrap;
   width: 30px;
-  transform-origin: 16px 16px;
   border: 1px solid rgb(237, 238, 239);
   border-radius: 30px 30px 30px 30px;
   font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -301,7 +247,6 @@ h1, h2, p, strong, em, a {
   text-align: left;
   white-space: nowrap;
   width: 156px;
-  transform-origin: 78px 9px;
   border: 0px solid rgb(0, 0, 0);
   flex: 0 0 auto;
   font: normal normal normal normal 14px / 14px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -321,7 +266,6 @@ h1, h2, p, strong, em, a {
   text-overflow: ellipsis;
   white-space: nowrap;
   width: auto;
-  transform-origin: 26.5156px 11px;
   border: 0px none rgb(7, 8, 9);
   font: normal normal normal normal 14px / 22px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
   margin: 0px 0px -4px;
@@ -349,20 +293,10 @@ h1, h2, p, strong, em, a {
   float: right;
   height: 24px;
   width: 120px;
-  -webkit-column-rule-color: rgb(18, 86, 136);
-  -webkit-text-emphasis-color: rgb(18, 86, 136);
-  -webkit-text-fill-color: rgb(18, 86, 136);
-  -webkit-text-stroke-color: rgb(18, 86, 136);
-  transform-origin: 39.0469px 42px;
   border: 0px none rgb(18, 86, 136);
   font: normal normal bold normal 12px / normal Montserrat;
   outline: rgb(18, 86, 136) none 0px;
   padding: 30px 0px;
-  -webkit-border-after: 0px none rgb(18, 86, 136);
-  -webkit-border-before: 0px none rgb(18, 86, 136);
-  -webkit-border-end: 0px none rgb(18, 86, 136);
-  -webkit-border-start: 0px none rgb(18, 86, 136);
-  -webkit-transform-origin: 39.0469px 42px;
 }
 
 
@@ -373,19 +307,9 @@ h1, h2, p, strong, em, a {
   cursor: default;
   display: block;
   width: 78.1094px;
-  -webkit-column-rule-color: rgb(18, 86, 136);
-  -webkit-text-emphasis-color: rgb(18, 86, 136);
-  -webkit-text-fill-color: rgb(18, 86, 136);
-  -webkit-text-stroke-color: rgb(18, 86, 136);
-  transform-origin: 39.0469px 0px;
   border: 0px none rgb(18, 86, 136);
   font: normal normal bold normal 12px / normal Montserrat;
   outline: rgb(18, 86, 136) none 0px;
-  -webkit-border-after: 0px none rgb(18, 86, 136);
-  -webkit-border-before: 0px none rgb(18, 86, 136);
-  -webkit-border-end: 0px none rgb(18, 86, 136);
-  -webkit-border-start: 0px none rgb(18, 86, 136);
-  -webkit-transform-origin: 39.0469px 0px;
 }
 
 .header-profile-link {
@@ -398,12 +322,10 @@ h1, h2, p, strong, em, a {
   bottom: 24px;
   left: 24px;
   width: 34.1094px;
-  transform-origin: 17.0469px 7.5px;
   border: 0px none rgb(18, 86, 136);
   font: normal normal bold normal 12px / normal Montserrat;
   margin: 5px 0px 0px 20px;
   outline: rgb(18, 86, 136) none 0px;
-  -webkit-transform-origin: 17.0469px 7.5px;
   line-height: 18px;
   font-weight: 600;
   font-size: 15px;
@@ -419,29 +341,17 @@ h1, h2, p, strong, em, a {
   height: 17px;
   text-align: left;
   width: 558px;
-  -webkit-column-rule-color: rgb(75, 79, 84);
-  -webkit-text-emphasis-color: rgb(75, 79, 84);
-  -webkit-text-fill-color: rgb(75, 79, 84);
-  -webkit-text-stroke-color: rgb(75, 79, 84);
-  transform-origin: 279px 8.5px;
   border: 0px none rgb(75, 79, 84);
   font: normal normal bold normal 15px / normal Helvetica;
   margin: 0px 0px 10px;
   outline: rgb(75, 79, 84) none 0px;
-  -webkit-border-after: 0px none rgb(75, 79, 84);
-  -webkit-border-before: 0px none rgb(75, 79, 84);
-  -webkit-border-end: 0px none rgb(75, 79, 84);
-  -webkit-border-start: 0px none rgb(75, 79, 84);
-  -webkit-transform-origin: 279px 8.5px;
 }
 
 .comment-form-div {
   height: 70px;
   text-align: left;
   width: 558px;
-  transform-origin: 279px 35px;
   font: normal normal normal normal 15px / normal Helvetica;
-  -webkit-transform-origin: 279px 35px;
 }
 
 .comment-form-div:after {
@@ -450,19 +360,15 @@ h1, h2, p, strong, em, a {
   display: block;
   text-align: left;
   width: 558px;
-  transform-origin: 279px 0px;
   font: normal normal normal normal 15px / normal Helvetica;
-  -webkit-transform-origin: 279px 0px;
 }
 
 .comment-form {
   height: 17px;
   text-align: left;
   width: 400px;
-  transform-origin: 200px 8.5px;
   font: normal normal normal normal 15px / normal Helvetica;
   margin: 0px;
-  -webkit-transform-origin: 200px 8.5px;
 }
 
 .comment-field {
@@ -473,17 +379,10 @@ h1, h2, p, strong, em, a {
   height: 17px;
   text-align: left;
   width: 400px;
-  -webkit-appearance: none;
-  transform-origin: 200px 8.5px;
   background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
   border: 0px none rgb(0, 0, 0);
   font: normal normal normal normal 15px / normal Helvetica;
   padding: 0px;
-  -webkit-border-after: 0px none rgb(0, 0, 0);
-  -webkit-border-before: 0px none rgb(0, 0, 0);
-  -webkit-border-end: 0px none rgb(0, 0, 0);
-  -webkit-border-start: 0px none rgb(0, 0, 0);
-  -webkit-transform-origin: 200px 8.5px;
 }
 
 .comment-field:focus {
@@ -498,22 +397,12 @@ h1, h2, p, strong, em, a {
   height: 32px;
   text-align: left;
   width: 32px;
-  -webkit-column-rule-color: rgb(189, 189, 189);
-  -webkit-text-emphasis-color: rgb(189, 189, 189);
-  -webkit-text-fill-color: rgb(189, 189, 189);
-  -webkit-text-stroke-color: rgb(189, 189, 189);
-  transform-origin: 15px 35px;
   background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
   border: 0px none rgb(189, 189, 189);
   font: normal normal normal normal 15px / normal Helvetica;
   margin: 0px 10px 0px 0px;
   outline: rgb(189, 189, 189) none 0px;
   padding: 20px 0px;
-  -webkit-border-after: 0px none rgb(189, 189, 189);
-  -webkit-border-before: 0px none rgb(189, 189, 189);
-  -webkit-border-end: 0px none rgb(189, 189, 189);
-  -webkit-border-start: 0px none rgb(189, 189, 189);
-  -webkit-transform-origin: 15px 35px;
 }
 
 .delete-comment {
@@ -527,12 +416,6 @@ h1, h2, p, strong, em, a {
   overflow-wrap: break-word;
   width: 15px;
   word-wrap: break-word;
-  -webkit-column-rule-color: rgb(165, 167, 170);
-  -webkit-locale: "en";
-  -webkit-text-emphasis-color: rgb(165, 167, 170);
-  -webkit-text-fill-color: rgb(165, 167, 170);
-  -webkit-text-stroke-color: rgb(165, 167, 170);
-  transform-origin: 7.5px 7.5px;
   background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
   border: 0px none rgb(165, 167, 170);
   font: normal normal normal normal 15px / 18px;
@@ -540,11 +423,6 @@ h1, h2, p, strong, em, a {
   outline: rgb(165, 167, 170) none 0px;
   overflow: hidden;
   padding: 0px;
-  -webkit-border-after: 0px none rgb(165, 167, 170);
-  -webkit-border-before: 0px none rgb(165, 167, 170);
-  -webkit-border-end: 0px none rgb(165, 167, 170);
-  -webkit-border-start: 0px none rgb(165, 167, 170);
-  -webkit-transform-origin: 7.5px 7.5px;
 }
 
 .delete-comment:before {
@@ -556,22 +434,10 @@ h1, h2, p, strong, em, a {
   overflow-wrap: break-word;
   width: 15px;
   word-wrap: break-word;
-  -webkit-column-rule-color: rgb(165, 167, 170);
   align-self: flex-start;
-  -webkit-locale: "en";
-  -webkit-text-emphasis-color: rgb(165, 167, 170);
-  -webkit-text-fill-color: rgb(165, 167, 170);
-  -webkit-text-stroke-color: rgb(165, 167, 170);
-  transform-origin: 7.5px 9px;
   border: 0px none rgb(165, 167, 170);
   font: normal normal normal normal 15px / 18px;
   list-style: none outside none;
-  outline: rgb(165, 167, 170) none 0px;
-  -webkit-border-after: 0px none rgb(165, 167, 170);
-  -webkit-border-before: 0px none rgb(165, 167, 170);
-  -webkit-border-end: 0px none rgb(165, 167, 170);
-  -webkit-border-start: 0px none rgb(165, 167, 170);
-  -webkit-transform-origin: 7.5px 9px;
 }
 
 .logout {
@@ -584,7 +450,6 @@ h1, h2, p, strong, em, a {
   bottom: 24px;
   left: 24px;
   width: inherit;
-  transform-origin: 17.0469px 7.5px;
   border: 0px none rgb(18, 86, 136);
   font: normal normal bold normal 12px / normal Montserrat;
   margin: 5px 0px 0px 20px;

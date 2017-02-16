@@ -22,25 +22,15 @@
   height: 20px;
   width: 20px;
 }.comment_item__item___XS2zh {
-  text-align: left;
   margin: 10px 0px;
 }
 
-.comment_item__body___2Pk9a {
-  display: inline;
-  height: auto;
-  text-align: left;
-  width: auto;
-  margin: 0px;
+.comment_item__username___2MW5N {
+  color: #125688;
+  font-family: Montserrat;
+  padding: 0px 10px 0px 0px;
 }
-
-.comment_item__table___3QP06 {
-  text-align: left;
-  width: 558px;
-  border-bottom: 1px solid rgb(238, 238, 238);
-  padding: 0px 0px 20px;
-  -webkit-border-after: 1px solid rgb(238, 238, 238);
-}.comment_box__box___3f43b {
+.comment_box__box___3f43b {
 	font-family: Montserrat;
   padding: 20px 20px 0px;
 }.picture__picture___2Wl23 {

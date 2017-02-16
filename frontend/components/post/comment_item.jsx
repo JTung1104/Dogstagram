@@ -81,14 +81,14 @@ class CommentItem extends React.Component {
 
     render() {
         return (
-            <div className="comment-item helvetica">
+            <div className={cn("_item tl helvetica")}>
                 <a 
                     onClick={this.onClick}
-                    className="comment-username">
+                    className={cn("_username tl")}>
                     {this.props.comment.user}
                 </a>
 
-                <p className="comment-body helvetica">
+                <p className={cn("tl m0 di helvetica")}>
                     {this.props.comment.body}
                 </p>
 
