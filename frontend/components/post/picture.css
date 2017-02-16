@@ -1,0 +1,8 @@
+.picture {
+  border-top: 1px solid #eeefef;
+  border-bottom: 1px solid #eeefef;
+}
+
+.picture > img {
+  margin-bottom: -4px;
+}

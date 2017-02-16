@@ -18,7 +18,7 @@ var PostHeader = React.createClass({
             {this.props.post.user}
           </a>
         </div>
-        <div className="timestamp relative">
+        <div className={cn("_timestamp relative")}>
           {this.props.post.created_time_ago}
         </div>
       </header>

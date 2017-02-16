@@ -1,0 +1,20 @@
+.item {
+  text-align: left;
+  margin: 10px 0px;
+}
+
+.body {
+  display: inline;
+  height: auto;
+  text-align: left;
+  width: auto;
+  margin: 0px;
+}
+
+.table {
+  text-align: left;
+  width: 558px;
+  border-bottom: 1px solid rgb(238, 238, 238);
+  padding: 0px 0px 20px;
+  -webkit-border-after: 1px solid rgb(238, 238, 238);
+}
