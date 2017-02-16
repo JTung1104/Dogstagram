@@ -1,7 +1,5 @@
 .ReactModal__Overlay {
-  -webkit-perspective: 600;
   position: fixed;
-  perspective: 600;
   opacity: 0;
   display: flex;
   justify-content: center;
