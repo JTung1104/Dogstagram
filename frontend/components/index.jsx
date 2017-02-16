@@ -5,7 +5,7 @@ import Post from './post/post';
 import NavBar from './nav_bar';
 import makeCn from '../util/makeCn';
 import styles from './index.css';
-const cn = makeCn({_:styles});
+const cn = makeCn({ _:styles });
 
 var Index = React.createClass({
   getInitialState: function () {
@@ -36,9 +36,9 @@ var Index = React.createClass({
     }.bind(this));
 
     return (
-      <div className="index-background">
+      <div>
         <NavBar/>
-        <div className={cn("index mx-auto relative")}>{posts}</div>
+        <div className={cn("_index mx-auto relative")}>{posts}</div>
       </div>
     );
   }

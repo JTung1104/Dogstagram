@@ -9,16 +9,16 @@ var PostHeader = React.createClass({
     url += this.props.post.profile_image_url || "Empty_Profile_qvvkdi.jpg";
 
     return (
-      <header className={cn("post-header _header")}>
+      <header className={cn("_header fw6 line-height-2")}>
         <a href={"#/users/" + this.props.post.user_id}>
           <img className="post-header-picture" src={url}/>
         </a>
-        <div className="username">
+        <div className={cn("_username f6 dib relative")}>
           <a className="hvr-pulse-grow" href={"#/users/" + this.props.post.user_id}>
             {this.props.post.user}
           </a>
         </div>
-        <div className="timestamp">
+        <div className="timestamp relative">
           {this.props.post.created_time_ago}
         </div>
       </header>

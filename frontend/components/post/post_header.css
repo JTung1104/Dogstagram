@@ -1,2 +1,24 @@
-.header{
+.header { 
+	padding: 14px 20px; 
+	color: #125688;
+}
+
+.header a, a:visited {
+	color: #125688;
+}
+
+.username {
+  font-family: Montserrat;
+  color: #125688;
+  left: 5%;
+  top: 22px;
+}
+
+.timestamp {
+  font-family: Helvetica;
+  color: #a5a7aa;
+  left: 93%;
+  top: -1px;
+  height: 20px;
+  width: 20px;
 }

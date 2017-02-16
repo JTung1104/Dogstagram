@@ -1,6 +1,32 @@
-.post_header__header___2Z7ol{
+.post_header__header___2Z7ol { 
+	padding: 14px 20px; 
+	color: #125688;
 }
-index {
+
+.post_header__header___2Z7ol a, a:visited {
+	color: #125688;
+}
+
+.post_header__username___2U0BG {
+  font-family: Montserrat;
+  color: #125688;
+  left: 5%;
+  top: 22px;
+}
+
+.post_header__timestamp___1pII9 {
+  font-family: Helvetica;
+  color: #a5a7aa;
+  left: 93%;
+  top: -1px;
+  height: 20px;
+  width: 20px;
+}.post__post___3RdlJ {
+  border: 1px solid #edeeee;
+  margin-bottom: 60px;
+  margin-left: -1px;
+  margin-right: -1px;
+}.index__index___1sqSh {
 	width: 600px;
   top: 77px;
   padding-top: 60px;
