@@ -1,6 +1,9 @@
 import React from 'react';
 import Modal from 'react-modal';
 import ApiUtil from '../../util/api_util';
+import makeCn from '../../util/makeCn';
+import styles from './comment_item.css';
+const cn = makeCn({ _:styles });
 
 var customStyle = {
   overlay : {
@@ -76,16 +79,16 @@ class CommentItem extends React.Component {
         this.closeModal();
     }
 
-  render() {
+    render() {
         return (
-            <div className="comment-item">
+            <div className={cn("_item tl helvetica")}>
                 <a 
                     onClick={this.onClick}
-                    className="comment-username">
+                    className={cn("_username tl")}>
                     {this.props.comment.user}
                 </a>
 
-                <p className="comment-body">
+                <p className={cn("tl m0 di helvetica")}>
                     {this.props.comment.body}
                 </p>
 
@@ -105,8 +108,8 @@ class CommentItem extends React.Component {
                     </button>
                 </Modal>
             </div>
-    );
-  }
+        );
+    }
 }
 
 export default CommentItem;

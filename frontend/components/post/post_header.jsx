@@ -1,4 +1,7 @@
 import React from 'react';
+import styles from './post_header.css';
+import makeCn from '../../util/makeCn';
+const cn = makeCn({_:styles});
 
 var PostHeader = React.createClass({
   render: function () {
@@ -6,16 +9,16 @@ var PostHeader = React.createClass({
     url += this.props.post.profile_image_url || "Empty_Profile_qvvkdi.jpg";
 
     return (
-      <header className="post-header">
+      <header className={cn("_header fw6 h3 line-height-2")}>
         <a href={"#/users/" + this.props.post.user_id}>
           <img className="post-header-picture" src={url}/>
         </a>
-        <div className="username">
+        <div className={cn("_username f6 dib relative")}>
           <a className="hvr-pulse-grow" href={"#/users/" + this.props.post.user_id}>
             {this.props.post.user}
           </a>
         </div>
-        <div className="timestamp">
+        <div className={cn("_timestamp relative")}>
           {this.props.post.created_time_ago}
         </div>
       </header>

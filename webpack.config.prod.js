@@ -1,4 +1,5 @@
 var path = require("path");
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   context: __dirname,
@@ -11,6 +12,7 @@ module.exports = {
     extensions: ["", ".js", ".jsx"]
   },
   plugins:[
+    new ExtractTextPlugin("../stylesheets/styles.css"),
     new webpack.DefinePlugin({
       'process.env':{
         'NODE_ENV': JSON.stringify('production')
@@ -32,6 +34,11 @@ module.exports = {
         query: {
           presets: ['react', 'es2015']
         }
+      },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'),
+        include: __dirname + '/frontend/components'
       },
       {
         test: /\.node$/,

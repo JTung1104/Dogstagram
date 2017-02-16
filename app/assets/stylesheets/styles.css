@@ -1,0 +1,52 @@
+.post_header__header___2Z7ol { 
+	color: #125688;
+}
+
+.post_header__header___2Z7ol a, a:visited {
+	color: #125688;
+}
+
+.post_header__username___2U0BG {
+  font-family: Montserrat;
+  color: #125688;
+  left: 5%;
+  top: 22px;
+}
+
+.post_header__timestamp___1pII9 {
+  font-family: Helvetica;
+  color: #a5a7aa;
+  left: 93%;
+  top: -1px;
+  height: 20px;
+  width: 20px;
+}.comment_item__item___XS2zh {
+  margin: 10px 0px;
+}
+
+.comment_item__username___2MW5N {
+  color: #125688;
+  font-family: Montserrat;
+  padding: 0px 10px 0px 0px;
+}
+.comment_box__box___3f43b {
+	font-family: Montserrat;
+  padding: 20px 20px 0px;
+}.picture__picture___2Wl23 {
+  border-top: 1px solid #eeefef;
+  border-bottom: 1px solid #eeefef;
+}
+
+.picture__picture___2Wl23 > img {
+  margin-bottom: -4px;
+}.post__post___3RdlJ {
+  border: 1px solid #edeeee;
+  margin-bottom: 60px;
+  margin-left: -1px;
+  margin-right: -1px;
+}.index__index___1sqSh {
+	width: 600px;
+  top: 77px;
+  padding-top: 60px;
+}
+/*# sourceMappingURL=styles.css.map*/

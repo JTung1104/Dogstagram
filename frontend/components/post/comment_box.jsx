@@ -4,9 +4,12 @@ import NumLikes from './num_likes';
 import CommentForm from './comment_form';
 import DeleteButton from './delete_button';
 import LikeButton from './like_button';
+import makeCn from '../../util/makeCn';
+import styles from './comment_box.css';
+const cn = makeCn({ _:styles });
 
 const CommentBox = ({ post, click, handleDelete }) => (
-    <div className="comment-box">
+    <div className={cn("_box tl")}>
       <NumLikes post={post}/>
       <CommentTable click={click} post={post}/>
       <LikeButton post={post}/>
