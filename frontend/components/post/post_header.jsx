@@ -9,7 +9,7 @@ var PostHeader = React.createClass({
     url += this.props.post.profile_image_url || "Empty_Profile_qvvkdi.jpg";
 
     return (
-      <header className={cn("_header fw6 line-height-2")}>
+      <header className={cn("_header fw6 h3 line-height-2")}>
         <a href={"#/users/" + this.props.post.user_id}>
           <img className="post-header-picture" src={url}/>
         </a>
