@@ -38,7 +38,7 @@ var Index = React.createClass({
     return (
       <div className="index-background">
         <NavBar/>
-        <div className={cn("index ")}>{posts}</div>
+        <div className={cn("index mx-auto relative")}>{posts}</div>
       </div>
     );
   }
