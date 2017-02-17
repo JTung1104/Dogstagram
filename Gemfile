@@ -38,6 +38,8 @@ gem 'heroku_rails_deflate', :group => :production
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec-rails'
+  gem 'rb-fsevent'
 end
 
 group :development do
@@ -48,8 +50,6 @@ group :development do
   gem 'quiet_assets'
   gem 'web-console', '~> 2.0'
   gem 'bullet'
-  gem 'rb-fsevent'
-  gem 'rspec-rails'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
