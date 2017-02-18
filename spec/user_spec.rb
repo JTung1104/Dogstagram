@@ -34,7 +34,7 @@ RSpec.describe User, :type => :model do
 		expect(subject).to_not be_valid
 	end 
 	
-	it "is valid without a updated_at" do
+	it "is valid without an updated_at" do
 		subject.username = "jtung1104"
 		subject.password_digest = "digest"
 		subject.session_token = "tokentokentoken"
