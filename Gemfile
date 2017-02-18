@@ -40,6 +40,7 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
   gem 'rb-fsevent'
+  gem 'shoulda'
 end
 
 group :development do
