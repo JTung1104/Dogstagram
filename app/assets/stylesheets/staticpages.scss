@@ -16,46 +16,8 @@ h1, h2, p, strong, em, a {
   background: transparent;
 }
 
-.user-show {
-  min-height: 26.15em;
-}
-
-.comment-table {
-  text-align: left;
-  width: 558px;
-  border-bottom: 1px solid rgb(238, 238, 238);
-  padding: 0px 0px 20px;
-  -webkit-border-after: 1px solid rgb(238, 238, 238);
-}
-
-.comment-table:after {
-  clear: both;
-  content: '';
-  display: block;
-  text-align: left;
-  width: 558px;
-  font: normal normal normal normal 15px / normal Helvetica;
-}
-
-.comment-username {
-  color: #125688;
-  text-align: left;
-  font-family: Montserrat;
-  padding: 0px 10px 0px 0px;
-}
-
-.comment-username:hover {
-  color: #83c1ef;
-  cursor: pointer;
-}
-
 .nav-header {
-  cursor: default;
-  display: block;
-  height: 88px;
-  background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;
   border-bottom: 1px solid rgb(238, 238, 238);
-  font: normal normal normal normal 16px / normal Times;
 }
 
 .nav {
@@ -74,19 +36,11 @@ h1, h2, p, strong, em, a {
   margin: 0px auto;
 }
 
-.nav:after {
-  clear: both;
-  content: "";
-  display: block;
-  width: 600px;
-}
-
 .logo-header {
   color: rgb(45, 101, 153);
   float: left;
   height: 23px;
   width: 81.9375px;
-  border: 0px none rgb(45, 101, 153);
   font: normal normal normal normal 18px / normal 'Lobster Two';
   margin: 0px;
   padding: 30px 0px;
@@ -186,16 +140,11 @@ h1, h2, p, strong, em, a {
   color: rgb(18, 86, 136);
   display: flex;
   height: 50px;
-  min-height: auto;
-  min-width: auto;
   text-decoration: none;
   width: auto;
   align-items: center;
   background: white none repeat scroll 0% 0% / auto padding-box border-box;
-  border-top: 0px none rgb(18, 86, 136);
-  border-right: 0px none rgb(18, 86, 136);
   border-bottom: 1px solid rgb(237, 238, 239);
-  border-left: 0px none rgb(18, 86, 136);
   flex: 0 0 auto;
   font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
   outline: rgb(18, 86, 136) none 0px;

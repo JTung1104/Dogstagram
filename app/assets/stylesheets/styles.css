@@ -25,11 +25,16 @@
 }
 
 .comment_item__username___2MW5N {
-  color: #125688;
-  font-family: Montserrat;
   padding: 0px 10px 0px 0px;
+}.comment_table__table___3vbvG {
+	width:558px;
+	border-bottom: 1px solid rgb(238, 238, 238);
+  padding: 0px 0px 20px; 
 }
-.comment_box__box___3f43b {
+
+.comment_table__user-show___2P0IP {
+  min-height: 26.15em;
+}.comment_box__box___3f43b {
 	font-family: Montserrat;
   padding: 20px 20px 0px;
 }.picture__picture___2Wl23 {

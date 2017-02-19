@@ -33,17 +33,11 @@
 
 .profile-header {
     box-sizing: border-box;
-    cursor: default;
     display: flex;
     height: 178px;
-    min-height: auto;
-    min-width: auto;
     position: relative;
     top: 77px;
     width: 936px;
-    perspective-origin: 467.5px 89px;
-    transform-origin: 467.5px 89px;
-    border: 0px solid rgb(0, 0, 0);
     flex: 0 0 auto;
     font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     margin: 0px 0px 45px;
@@ -52,16 +46,10 @@
 
 .profile-picture-box {
     box-sizing: border-box;
-    cursor: default;
     display: flex;
     height: 138px;
-    min-height: auto;
-    min-width: auto;
     position: relative;
     width: 291.672px;
-    perspective-origin: 145.828px 69px;
-    transform-origin: 145.828px 69px;
-    border: 0px solid rgb(0, 0, 0);
     flex: 1 0 0px;
     flex-flow: column nowrap;
     font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -70,14 +58,9 @@
 
 .profile-picture-square {
     box-sizing: border-box;
-    cursor: default;
     height: 152px;
-    min-height: auto;
-    min-width: auto;
     position: relative;
     width: 152px;
-    perspective-origin: 76px 76px;
-    transform-origin: 76px 76px;
     background: rgb(251, 251, 251) none repeat scroll 0% 0% / auto padding-box border-box;
     border: 1px solid rgb(204, 207, 208);
     border-radius: 50% 50% 50% 50%;
@@ -92,8 +75,6 @@
     cursor: pointer;
     height: 150px;
     width: 150px;
-    perspective-origin: 75px 75px;
-    transform-origin: 75px 75px;
     border: 0px none rgb(0, 0, 0);
     font: normal normal normal normal 11px / normal proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     padding: 0px;
@@ -108,24 +89,16 @@
     text-align: center;
     top: 0px;
     width: 150px;
-    perspective-origin: 75px 75px;
-    transform-origin: 75px 75px;
     font: normal normal normal normal 11px / normal proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
 .profile-stats-box {
     box-sizing: border-box;
     color: rgb(75, 79, 84);
-    cursor: default;
     display: flex;
     height: 138px;
-    min-height: auto;
-    min-width: auto;
     position: relative;
     width: 613.328px;
-    perspective-origin: 306.656px 69px;
-    transform-origin: 306.656px 69px;
-    border: 0px solid rgb(0, 0, 0);
     flex: 2 0 30px;
     flex-flow: column nowrap;
     font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -135,17 +108,11 @@
 .profile-header-name {
     box-sizing: border-box;
     color: rgb(75, 79, 84);
-    cursor: default;
     display: flex;
     height: 40px;
-    min-height: auto;
-    min-width: auto;
     position: relative;
     width: 613.328px;
     align-items: center;
-    perspective-origin: 306.656px 20px;
-    transform-origin: 306.656px 20px;
-    border: 0px solid rgb(0, 0, 0);
     flex: 0 0 auto;
     font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     outline: rgb(75, 79, 84) none 0px;
@@ -153,16 +120,11 @@
 
 .profile-header-header {
     color: rgb(75, 79, 84);
-    cursor: default;
     height: 40px;
-    min-height: auto;
-    min-width: auto;
     text-overflow: ellipsis;
     white-space: nowrap;
     width: auto;
     align-self: center;
-    perspective-origin: 62.2344px 20px;
-    transform-origin: 62.2344px 20px;
     border: 0px none rgb(75, 79, 84);
     font: normal normal 300 normal 34px / 40px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     margin: 0px;
@@ -174,13 +136,9 @@
     color: rgb(18, 86, 136);
     display: inline-block;
     height: 31px;
-    min-height: auto;
-    min-width: auto;
     text-decoration: none;
     width: 112.156px;
     align-self: center;
-    perspective-origin: 56.0781px 15.5px;
-    transform-origin: 56.0781px 15.5px;
     border: 0px none rgb(18, 86, 136);
     flex: 0 0 auto;
     font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -196,8 +154,6 @@
   text-transform: uppercase;
   white-space: nowrap;
   width: 90.4062px;
-  perspective-origin: 40.2031px 15.5px;
-  transform-origin: 40.2031px 15.5px;
   background: rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
   border: 1px solid rgb(64, 144, 219);
   border-radius: 3px 3px 3px 3px;
@@ -215,8 +171,6 @@
   text-transform: uppercase;
   white-space: nowrap;
   width: 114.156px;
-  perspective-origin: 52.0781px 15.5px;
-  transform-origin: 52.0781px 15.5px;
   background: rgb(102, 189, 43) none repeat scroll 0% 0% / auto padding-box border-box;
   border: 1px solid rgb(102, 189, 43);
   border-radius: 3px 3px 3px 3px;
@@ -229,15 +183,9 @@
 .profile-stats-name {
     box-sizing: border-box;
     color: rgb(75, 79, 84);
-    cursor: default;
     height: 24px;
-    min-height: auto;
-    min-width: auto;
     position: relative;
     width: 613.328px;
-    perspective-origin: 306.656px 12px;
-    transform-origin: 306.656px 12px;
-    border: 0px solid rgb(0, 0, 0);
     flex: 0 0 auto;
     flex-flow: column nowrap;
     font: normal normal normal normal 17px / 24px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -247,7 +195,6 @@
 
 .profile-stats-name-header {
     color: rgb(75, 79, 84);
-    cursor: default;
     display: inline;
     height: auto;
     width: auto;
@@ -259,7 +206,6 @@
 
 .name-span {
     color: rgb(75, 79, 84);
-    cursor: default;
     border: 0px none rgb(75, 79, 84);
     font: normal normal normal normal 17px / 24px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     outline: rgb(75, 79, 84) none 0px;
@@ -267,14 +213,9 @@
 
 .profile-stats-ul {
     color: rgb(75, 79, 84);
-    cursor: default;
     display: flex;
     height: 17px;
-    min-height: auto;
-    min-width: auto;
     width: 613.328px;
-    perspective-origin: 306.656px 8.5px;
-    transform-origin: 306.656px 8.5px;
     border: 0px none rgb(75, 79, 84);
     font: normal normal normal normal 16px / 16px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     list-style: none outside none;
@@ -285,13 +226,8 @@
 
 .post-count-li {
     color: rgb(75, 79, 84);
-    cursor: default;
     height: 17px;
-    min-height: auto;
-    min-width: auto;
     width: 71.3594px;
-    perspective-origin: 35.6719px 8.5px;
-    transform-origin: 35.6719px 8.5px;
     border: 0px none rgb(75, 79, 84);
     font: normal normal normal normal 17px / 17px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     list-style: none outside none;
@@ -301,7 +237,6 @@
 
 .profile-span-1 {
     color: rgb(75, 79, 84);
-    cursor: default;
     text-align: left;
     border: 0px none rgb(75, 79, 84);
     font: normal normal normal normal 17px / 17px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -311,7 +246,6 @@
 
 .profile-span-2 {
     color: rgb(52, 55, 59);
-    cursor: default;
     text-align: left;
     border: 0px none rgb(52, 55, 59);
     font: normal normal 600 normal 17px / 17px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -321,13 +255,8 @@
 
 .follower-count-li {
     color: rgb(75, 79, 84);
-    cursor: default;
     height: 17px;
-    min-height: auto;
-    min-width: auto;
     width: 101.594px;
-    perspective-origin: 50.7969px 8.5px;
-    transform-origin: 50.7969px 8.5px;
     border: 0px none rgb(75, 79, 84);
     font: normal normal normal normal 17px / 17px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     list-style: none outside none;
@@ -337,7 +266,6 @@
 
 .profile-span-3 {
     color: rgb(75, 79, 84);
-    cursor: default;
     text-align: left;
     border: 0px none rgb(75, 79, 84);
     font: normal normal normal normal 17px / 17px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -347,13 +275,8 @@
 
 .follower-count-li {
     color: rgb(75, 79, 84);
-    cursor: default;
     height: 17px;
-    min-height: auto;
-    min-width: auto;
     width: 98.5312px;
-    perspective-origin: 49.2656px 8.5px;
-    transform-origin: 49.2656px 8.5px;
     border: 0px none rgb(75, 79, 84);
     font: normal normal normal normal 17px / 17px proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     list-style: none outside none;

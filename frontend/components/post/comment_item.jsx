@@ -84,7 +84,7 @@ class CommentItem extends React.Component {
             <div className={cn("_item tl helvetica")}>
                 <a 
                     onClick={this.onClick}
-                    className={cn("_username tl")}>
+                    className={cn("_username pointer brand-blue montserrat tl")}>
                     {this.props.comment.user}
                 </a>
 

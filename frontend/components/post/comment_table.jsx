@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CommentItem from './comment_item';
+import makeCn from '../../util/makeCn';
+import styles from './comment_table.css';
+const cn = makeCn({ _:styles });
 
 class CommentTable extends React.Component {
     constructor(props) {
@@ -26,11 +29,11 @@ class CommentTable extends React.Component {
     render() {
         var post = this.props.post;
         var click = this.props.click;
-        var classes = window.location.hash.includes("users") ? "comment-table user-show" : "comment-table";
+        var classes = window.location.hash.includes("users") ? "_table _user-show tl" : "_table tl";
         var CommentItems = post.comments.map((comment, idx) => <CommentItem key={idx} click={click} post={post} comment={comment}/>);
 
         return (
-          <div className={classes}>
+          <div className={cn(classes)}>
             {CommentItems}
           </div>
         );

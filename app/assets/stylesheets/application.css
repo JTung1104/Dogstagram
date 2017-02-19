@@ -14,6 +14,5 @@
  *= require_self
  */
 
-body {
-  background-color: #FAFAFA;
-}
+.brand-blue{ color:#125688 }
+.montserrat{ font-family:Montserrat }
