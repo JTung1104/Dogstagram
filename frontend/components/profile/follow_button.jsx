@@ -40,7 +40,7 @@ var FollowButton = React.createClass({
   },
   render: function () {
     return (
-      <div className="follow-box">
+      <div className="relative">
         {this.getButton()}
       </div>
     );

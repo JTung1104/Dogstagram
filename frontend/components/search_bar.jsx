@@ -2,6 +2,9 @@ import React from 'react';
 import FollowButton from './profile/follow_button';
 import UserStore from '../stores/user';
 import ApiUtil from '../util/api_util';
+import makeCn from '../util/makeCn';
+import styles from './search_bar.css';
+const cn = makeCn({ _:styles });
 
 var SearchBar = React.createClass({
   getInitialState: function () {
@@ -32,8 +35,8 @@ var SearchBar = React.createClass({
   getResults: function () {
     if (Object.keys(this.state.results).length > 0) {
       return (
-        <div className="results-outer-box">
-          <div className="results-inner-box">
+        <div className={cn("_outer-box border-box absolute z2 rounded bg-white ba b--light-gray")}>
+          <div className={cn("_inner-box")}>
             {this.getResultItems()}
           </div>
         </div>
@@ -49,16 +52,14 @@ var SearchBar = React.createClass({
 
       return (
         <div key={i}>
-          <a className="user-result-link"
+          <a className={cn("_link flex bb b--light-gray brand-blue")}
              href={"/#/users/" + results[result].id}
              onClick={this.handleClick}>
-            <div className="user-result-box">
-              <img src={url} className="user-result-pic"/>
-              <div className="user-result-username-box">
-                <span className="user-result-username">{results[result].username}</span>
+            <div className={cn("_result-box")}>
+              <img src={url} className={cn("_user-pic fl ba b--light-gray")}/>
+              <div className={cn("my1")}>
+                <span className={cn("f6 near-black helvetica")}>{results[result].username}</span>
               </div>
-            </div>
-            <div className="user-result-name">
             </div>
           </a>
           <FollowButton query={this.state.search} click={this.handleChange} user={results[result]}/>
@@ -70,11 +71,11 @@ var SearchBar = React.createClass({
   },
   render: function () {
     return (
-      <div className="search">
+      <div className={cn("_bar fl h1 times relative")}>
         <input
           type="text"
           placeholder="Search"
-          className="search-field"
+          className={cn("_field tc helvetica f6 pa1")}
           value={this.state.search}
           onChange={this.handleChange}/>
         {this.getResults()}
