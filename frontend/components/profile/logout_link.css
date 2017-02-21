@@ -1,9 +1,9 @@
 .link {
-	bottom: 24px;
+  bottom: 24px;
   left: 24px;
   margin: 5px 0px 0px 20px;
 }
 
 .link:hover {
-  color: #a6d2f3;
+  color: #83c1ef;
 }

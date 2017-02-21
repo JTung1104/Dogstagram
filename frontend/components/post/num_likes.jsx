@@ -1,4 +1,7 @@
 import React from 'react';
+import makeCn from '../../util/makeCn';
+import styles from './num_likes.css';
+const cn = makeCn({ _:styles });
 
 var NumLikes = React.createClass({
   numLikes: function () {
@@ -10,7 +13,7 @@ var NumLikes = React.createClass({
   },
   render: function () {
     return (
-      <span className="num-likes">{this.numLikes()}</span>
+      <span className={cn("num-likes helvetica f6")}>{this.numLikes()}</span>
     );
   }
 });

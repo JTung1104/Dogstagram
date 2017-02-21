@@ -67,7 +67,7 @@ class CommentItem extends React.Component {
             return (
                 <button
                     title="Delete Comment"
-                    className="delete-comment"
+                    className={cn("_delete fr bn bg-transparent")}
                     onClick={this.openModal}/>
             );
         }

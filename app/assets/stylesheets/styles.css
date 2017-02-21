@@ -26,6 +26,12 @@
 
 .comment_item__username___2MW5N {
   padding: 0px 10px 0px 0px;
+}
+
+.comment_item__delete___3MPsr:before {
+  color: rgb(165, 167, 170);
+  content: '\2715';
+  cursor: pointer;
 }.comment_table__table___3vbvG {
 	width:558px;
 	border-bottom: 1px solid rgb(238, 238, 238);
@@ -34,7 +40,32 @@
 
 .comment_table__user-show___2P0IP {
   min-height: 26.15em;
-}.comment_box__box___3f43b {
+}.num_likes__likes___34e9o {
+	color: rgb(75, 79, 84)
+}.comment_form__box___1zUuW {
+	height: 70px;
+}
+
+.comment_form__field___Edi1_ {
+	width: 110%;
+	left: 48px;
+  bottom: 43px;
+}.delete_button__delete-post___34K81 {
+  background-image: url("https://instagramstatic-a.akamaihd.net/h1/sprites/core/6f2033.png");
+  background-position: -494px -373px;
+  height: 44px;
+  width: 44px;
+  bottom: 10px;
+  right: 0px;
+}
+.like_button__button___mqqc_ {
+  box-sizing: content-box;
+  float: left;
+  height: 32px;
+  width: 32px;
+  padding: 20px 0px;
+}
+.comment_box__box___3f43b {
 	font-family: Montserrat;
   padding: 20px 20px 0px;
 }.picture__picture___2Wl23 {
@@ -114,10 +145,16 @@
   width: 30px;
   border-radius: 30px 30px 30px 30px;
   margin: 7px 10px 0px 0px;
+}.upload_picture_button__box___vs0qu {
+	right: 43px;
 }.header_profile_link__link___1Qcva {
 	bottom: 24px;
   left: 24px;
   margin: 5px 0px 0px 20px;
+}
+
+.header_profile_link__link___1Qcva:hover {
+  color: #a6d2f3;
 }.nav_bar__profile___Fb7_x {
   height: 77px;
   width: 936px;
@@ -137,5 +174,14 @@
 	width: 600px;
   top: 77px;
   padding-top: 60px;
+}.logout_link__link___2NTQ1 {
+  bottom: 24px;
+  left: 24px;
+  margin: 5px 0px 0px 20px;
 }
+
+.logout_link__link___2NTQ1:hover {
+  color: #83c1ef;
+}
+
 /*# sourceMappingURL=styles.css.map*/

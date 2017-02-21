@@ -1,6 +1,9 @@
 import React from 'react';
 import Modal from 'react-modal';
 import ApiUtil from '../../util/api_util';
+import makeCn from '../../util/makeCn';
+import styles from './delete_button.css';
+const cn = makeCn({ _:styles });
 
 var customStyle = {
   overlay : {
@@ -61,10 +64,10 @@ var DeleteButton = React.createClass({
   render: function () {
     if (this.props.post.user_id === currentUserId) {
       return (
-        <div className="delete-post-div">
+        <div className={cn("relative")}>
           <button
             title="Delete Post"
-            className="delete-post"
+            className={cn("_delete-post bg-transparent bn absolute")}
             onClick={this.openModal}/>
 
           <Modal

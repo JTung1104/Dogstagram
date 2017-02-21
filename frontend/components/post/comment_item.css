@@ -5,3 +5,9 @@
 .username {
   padding: 0px 10px 0px 0px;
 }
+
+.delete:before {
+  color: rgb(165, 167, 170);
+  content: '✕';
+  cursor: pointer;
+}

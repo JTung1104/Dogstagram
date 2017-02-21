@@ -3,6 +3,9 @@ import Modal from 'react-modal';
 import CommentForm from './post/comment_form';
 import ApiUtil from '../util/api_util';
 import PostStore from '../stores/post';
+import makeCn from '../util/makeCn';
+import styles from './upload_picture_button.css';
+const cn = makeCn({ _:styles });
 
 var customStyle = {
   overlay : {
@@ -97,7 +100,7 @@ var UploadPictureButton = React.createClass({
   },
   render: function () {
     return (
-      <div className="upload-picture-div">
+      <div className={cn("_box relative")}>
         <a onClick={this.openModal} href="#"
            className="upload-picture-button">
           <img

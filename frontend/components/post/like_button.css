@@ -1,0 +1,7 @@
+.button {
+  box-sizing: content-box;
+  float: left;
+  height: 32px;
+  width: 32px;
+  padding: 20px 0px;
+}

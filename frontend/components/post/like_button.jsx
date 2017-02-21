@@ -1,5 +1,8 @@
 import React from 'react';
 import ApiUtil from '../../util/api_util';
+import makeCn from '../../util/makeCn';
+import styles from './like_button.css';
+const cn = makeCn({ _:styles });
 
 var LikeButton = React.createClass({
   getInitialState: function () {
@@ -45,7 +48,7 @@ var LikeButton = React.createClass({
   likeButton: function () {
     if (this.state.liked) {
       return (
-        <a onClick={this.handleUnlike} className="like-button" href="#" role="button">
+        <a onClick={this.handleUnlike} className={cn("_button")} href="#" role="button">
           <img className="like-picture"
                src={"http://res.cloudinary.com/dsolojfgkabc/image/upload/valentines-heart_ccvqqz.png"}
                width="32"
@@ -54,7 +57,7 @@ var LikeButton = React.createClass({
       );
     } else {
       return (
-        <a onClick={this.handleLike} className="like-button" href="#" role="button">
+        <a onClick={this.handleLike} className={cn("_button")} href="#" role="button">
           <img className="like-picture"
                src={"http://res.cloudinary.com/dsolojfgkabc/image/upload/heart-shape-silhouette_sprx13.png"}
                width="32"

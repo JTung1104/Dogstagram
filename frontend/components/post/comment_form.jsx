@@ -1,5 +1,8 @@
 import React from 'react';
 import ApiUtil from '../../util/api_util';
+import makeCn from '../../util/makeCn';
+import styles from './comment_form.css';
+const cn = makeCn({ _:styles });
 
 class CommentForm extends React.Component {
     constructor(props) {
@@ -20,9 +23,9 @@ class CommentForm extends React.Component {
     
     render() {
         return (
-            <div className="comment-form-div">
-                <form onSubmit={this.handleSubmit} className="comment-form">
-                    <input className="comment-field"
+            <div className={cn("_box")}>
+                <form onSubmit={this.handleSubmit} className={cn("w-75 ma0 helvetica")}>
+                    <input className={cn("_field outline-0 bn relative helvetica pa0 f6")}
                         type="text"
                         placeholder="Add a comment..."
                         onChange={this.linkState('body')}
