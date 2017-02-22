@@ -6,6 +6,9 @@ import UserStore from '../../stores/user';
 import PostStore from '../../stores/post';
 import CommentBox from '../post/comment_box';
 import ApiUtil from '../../util/api_util';
+import makeCn from '../../util/makeCn';
+import styles from './user_show.css';
+const cn = makeCn({ _:styles });
 
 var UserShow = React.createClass({
   getInitialState: function () {
@@ -51,11 +54,11 @@ var UserShow = React.createClass({
     if (!this.state.user) { return <div></div>; }
 
     return (
-      <div className="user-show-background">
-        <div className="user-show">
+      <div className={cn("absolute absolute--fill bg-near-white")}>
+        <div className={cn("flex flex-column items-center justify-center")}>
           <ProfileNavBar props={this.props}/>
           <ProfileHeader user={this.state.user}/>
-          <div className="picture-grid">
+          <div className={cn("_picture-grid w-two-thirds flex flex-wrap justify-between")}>
             {this.getPictures()}
           </div>
         </div>

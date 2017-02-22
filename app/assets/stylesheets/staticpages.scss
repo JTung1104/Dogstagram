@@ -16,15 +16,6 @@ h1, h2, p, strong, em, a {
   background: transparent;
 }
 
-.user-show-background {
-  background-color: #FAFAFA;
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
-}
-
 @-webkit-keyframes hvr-pulse-grow {
   to {
     -webkit-transform: scale(1.1);
@@ -49,6 +40,7 @@ h1, h2, p, strong, em, a {
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .hvr-pulse-grow:hover, .hvr-pulse-grow:focus, .hvr-pulse-grow:active {
   -webkit-animation-name: hvr-pulse-grow;
   animation-name: hvr-pulse-grow;

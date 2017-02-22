@@ -169,7 +169,6 @@
 
 .nav_bar__right___2XDa3 {
   width: 120px;
-  padding: 30px 0px;
 }.index__index___1sqSh {
 	width: 600px;
   top: 77px;
@@ -183,5 +182,8 @@
 .logout_link__link___2NTQ1:hover {
   color: #83c1ef;
 }
-
+.user_show__picture-grid___3lhM_ > div {
+  border: 1px solid #eeefef;
+  margin-bottom: 28px;
+}
 /*# sourceMappingURL=styles.css.map*/
