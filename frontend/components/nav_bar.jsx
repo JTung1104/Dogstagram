@@ -9,7 +9,7 @@ const cn = makeCn({ _:styles });
 var NavBar = React.createClass({
   render: function () {
     return (
-      <header className={cn("bb b--light-gray")}>
+      <header className={cn("bg-white bb b--light-gray")}>
         <nav className={cn("_profile flex justify-between times")}>
           <h1 className={cn("_logo-header fl ma0")}>
             <a href="#" className={cn("f3 lobster-two blue")}>Dogstagram</a>
