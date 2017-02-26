@@ -1,6 +1,7 @@
 import _classnames from 'classnames'
 
 const virtualToFunctional = {
+  "-flex-center": "flex items-center justify-center"
 }
 
 function convertVirtualClassnames (classNames) {

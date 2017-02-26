@@ -11,11 +11,11 @@ var NavBar = React.createClass({
     return (
       <header className={cn("bg-white bb b--light-gray")}>
         <nav className={cn("_profile flex justify-between times")}>
-          <h1 className={cn("_logo-header fl ma0")}>
+          <h1 className={cn("-flex-center ma0")}>
             <a href="#" className={cn("f3 lobster-two blue")}>Dogstagram</a>
           </h1>
           <SearchBar/>
-          <div className={cn("flex items-center justify-center")}>
+          <div className={cn("-flex-center")}>
             <UploadPictureButton/>
             <HeaderProfileLink/>
           </div>

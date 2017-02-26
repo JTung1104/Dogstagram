@@ -71,7 +71,7 @@ var SearchBar = React.createClass({
   },
   render: function () {
     return (
-      <div className={cn("_bar fl h1 times relative")}>
+      <div className={cn("-flex-center times relative")}>
         <input
           type="text"
           placeholder="Search"
