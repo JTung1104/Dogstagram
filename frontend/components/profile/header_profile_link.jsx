@@ -16,7 +16,7 @@ var HeaderProfileLink = React.createClass({
   },
   render: function () {
     return (
-      <a className={cn("_link montserrat relative")} href={"#/users/" + currentUserId}>
+      <a className={cn("montserrat relative")} href={"#/users/" + currentUserId}>
         {this.state.username}
       </a>
     );

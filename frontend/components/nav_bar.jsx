@@ -15,7 +15,7 @@ var NavBar = React.createClass({
             <a href="#" className={cn("f3 lobster-two blue")}>Dogstagram</a>
           </h1>
           <SearchBar/>
-          <div className={cn("_right")}>
+          <div className={cn("flex items-center justify-center")}>
             <UploadPictureButton/>
             <HeaderProfileLink/>
           </div>
